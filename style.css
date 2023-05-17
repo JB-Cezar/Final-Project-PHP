@@ -85,6 +85,59 @@ p{
     align-items: center;
 }
 
+.about{
+    width: 100%;
+    height: 400px;
+    background-position: center;
+    background-size: cover;
+    background-image: url("https://images.pexels.com/photos/2882509/pexels-photo-2882509.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+}
+
+
+.menu{
+    width: 100%;
+    height: 800px;
+    background-position: center;
+    background-size: cover;
+    background-image: url("/img/pexels-brigitte-tohm-143640.jpg");
+
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+}
+
+.map{
+    width: 100%;
+    height: 500px;
+    background-position: center;
+    background-size: cover;
+    background-image: url("/img/pexels-mihis-alex-21014.jpg");
+
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+}
+
+footer{
+    width: 100%;
+    height: 400px;
+    background-position: center;
+    background-size: cover;
+    background-image: url("/img/pexels-josé-luis-photographer-2564846.jpg");
+
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+}
+
+
+
 .reviews{
     background-color: #ECECEC;
     padding: 4vh 0;
@@ -128,7 +181,7 @@ i:last-child{
 #leftA{
     display: flex;
     position: absolute;
-    bottom: -35%;
+    bottom: -1420px;
     left: 5%;
     font-size: 2.6rem;
     color: grey;
@@ -137,7 +190,7 @@ i:last-child{
     font-size: 2.6rem;
     display: flex;
     position: absolute;
-    bottom: -35%;
+    bottom: -1420px;
     right: 5%;
     color: grey;
 }

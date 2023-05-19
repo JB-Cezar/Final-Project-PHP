@@ -12,3 +12,5 @@ Presentation1 link:
 https://docs.google.com/presentation/d/1z-qTOEQkkDnM8PVS8ZuqA9hiKiko5uCrvumoFQYHGAs/edit?usp=sharing
 
 Diagram Example: https://www.canva.com/design/DAFjOmvnjpk/M41jw9qhOpc8lxckAj8K5g/edit
+
+Color Palette: https://colorhunt.co/palette/5463ffecececffc300ff1818

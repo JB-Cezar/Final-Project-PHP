@@ -1,0 +1,28 @@
+@media(min-width: $mobileScreen){
+
+.sign-main{
+    @include flex-column;
+    // @include flex-center;
+    >section{
+        @include flex-column;
+        @include flex-center;
+    }
+    h2{
+        color: black;
+    }
+    form{
+        @include columnRow(2vh);
+    }
+    aside{
+        @include flex-column;
+    }
+    input{
+        border: none;
+        border-bottom: 1px solid black;
+    }
+    
+    ul{
+        display: flex;
+    }
+}
+}

@@ -17,4 +17,36 @@ a {
 
 li {
   list-style-type: none;
+}
+
+@media (min-width: 300px) {
+  .sign-main {
+    display: flex;
+    flex-direction: column;
+  }
+  .sign-main > section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .sign-main h2 {
+    color: black;
+  }
+  .sign-main form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2vh;
+  }
+  .sign-main aside {
+    display: flex;
+    flex-direction: column;
+  }
+  .sign-main input {
+    border: none;
+    border-bottom: 1px solid black;
+  }
+  .sign-main ul {
+    display: flex;
+  }
 }/*# sourceMappingURL=style.css.map */

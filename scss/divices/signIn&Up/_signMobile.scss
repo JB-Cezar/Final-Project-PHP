@@ -1,28 +1,81 @@
 @media(min-width: $mobileScreen){
 
 .sign-main{
+    height: 80vh;
     @include flex-column;
+    background-image: url(/img/sign-img/sign-01.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     // @include flex-center;
     >section{
-        @include flex-column;
+        @include columnRow(7vh);
         @include flex-center;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.5);
     }
     h2{
-        color: black;
+        color:white;
+        padding-bottom: 5vh;
+        text-align: center;
+    }
+    .sign-left,
+    .signIn-right{
+        width: 60%;
     }
     form{
-        @include columnRow(2vh);
-    }
-    aside{
-        @include flex-column;
+        @include columnRow(3vh);
     }
     input{
+        padding:3%;
         border: none;
-        border-bottom: 1px solid black;
+        border-radius: 5px;
+        opacity: 0.4;
     }
-    
+    [type=submit]{
+        background-color: $box2;
+        opacity: 0.8;
+    }
     ul{
         display: flex;
+        @include flex-center;
+        column-gap: 2vh;
     }
+    i{
+        font-size: 30px;
+        color: white;
+    }
+    h3,p{
+        color: white;
+    }
+    h3{
+        text-align: center;
+    }
+    aside{
+        display: flex;
+        justify-content: center;
+    }
+    a{
+        cursor: pointer;
+        width: 40%;
+        color: $box2
+    }
+    article{
+        padding-bottom: 2vh;
+    }
+    .signIn-right,
+    .signUp-right{
+        i{
+            font-size: 18px;
+            padding-right: 2%;
+            color: $box2;
+        }
+    }
+
+}
+footer{
+    height: 20vh;
+    background-color: black;
 }
 }

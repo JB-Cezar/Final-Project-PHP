@@ -1,0 +1,26 @@
+@media(min-width: $tabletScreen){
+
+    .sign-main{
+        h2{
+            font-size: 36px;
+        }
+        ul{
+            column-gap: 4vh;
+        }
+        i{
+            font-size: 38px;
+        }
+        h3,p{
+            font-size: 24px;
+        }
+        a{
+            font-size: 24px;
+        }
+        .signIn-right,
+        .signUp-right{
+        i{
+            font-size: 24px;
+        }
+    }
+    }
+}

@@ -12,41 +12,49 @@
 
     <header></header>
 
-    <main class="sign-maim">
+    <main class="sign-main">
         <section>
             <!--sign left start-->
             <section class="sign-left">
                 <h2>Sign up</h2>
                 <form action="">
-                    <aside>
-                        <label for="name">Your name</label>
-                        <input type="text" name="name" id="name">
-                    </aside>
-                    <aside>
-                        <label for="email">E-mail</label>
-                        <input type="email" name="email" id="email">
-                    </aside>
-                    <aside>
-                        <label for="password">Password</label>
-                        <input type="password" name="password" id="password" >
-                    </aside>
-                    <aside>
-                        <label for="confirm-password">Confirm Password</label>
-                        <input type="password" name="confirm-password" id="confirm-password">
-                    </aside>
+                    <input type="text" name="name" id="name" required placeholder="Your name">
+                    <input type="email" name="email" id="email" required placeholder="Email">
+                    <input type="password" name="password" id="password" required placeholder="Password">
+                    <input type="password" name="confirm-password" id="confirm-password" placeholder="Confirm Password">
                     <input type="submit" value="Get Started!">
+                    <ul>
+                        <li>
+                            <i class="fa-brands fa-square-facebook"></i>
+                        </li>
+                        <li>
+                            <i class="fa-brands fa-square-twitter"></i>
+                        </li>
+                        <li>
+                            <i class="fa-brands fa-linkedin"></i>
+                        </li>
+                        <li>
+                            <i class="fa-brands fa-square-instagram"></i>
+                        </li>
+                    </ul>
                 </form>
             </section>
             <!--sign left end-->
             <!--sign right start-->
             <section class="signUp-right">
-                <article>
-                    <h2>One of us?</h2>
-                    <p>
-                        If you already has an account , just sign in.
-                    </p>
-                </article>
-                <a href="signIn.html">Sign in</a>
+                <section>
+                    <article>
+                        <h3>One of us?</h3>
+                        <p>
+                            If you already have an account , just sign in.
+                        </p>
+                    </article>
+                    <aside>
+                        <a href="signIn.html">
+                            <i class="fa-solid fa-circle-arrow-right"></i>
+                            Sign in</a>
+                    </aside>
+                </section>
             </section>
             <!--sign right end-->
         </section>
@@ -55,3 +63,5 @@
 
 </body>
 </html>
+<!-- <i class="fa-sharp fa-solid fa-arrow-turn-down-right"></i> -->
+<!-- <i class="fa-solid fa-truck-fast"></i> -->

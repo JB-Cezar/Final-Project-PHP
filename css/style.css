@@ -1,1 +1,94 @@
-/*# sourceMappingURL=style.css.map */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #5463FF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+p {
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+@media (min-width: 300px) {
+  #table {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10vh;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5vh;
+  }
+  #table .table {
+    border: 5px solid #FFC300;
+  }
+  #table table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ECECEC;
+  }
+  #table th, #table td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+    width: 70px;
+  }
+  #table thead {
+    background-color: lightgray;
+  }
+  #table .event1 {
+    background-color: #068DA9;
+  }
+  #table .event2 {
+    background-color: greenyellow;
+  }
+  #table .event3 {
+    background-color: lightcoral;
+  }
+  #table aside {
+    padding: 3px;
+    border: 2px solid rgba(0, 0, 0, 0.386);
+  }
+  #table #events {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1vh;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFC300;
+    border: 5px solid #FFC300;
+  }
+  #table #events aside:nth-child(1) {
+    background-color: #068DA9;
+  }
+  #table #events aside:nth-child(2) {
+    background-color: greenyellow;
+  }
+  #table #events aside:nth-child(3) {
+    background-color: lightcoral;
+  }
+  #table h2 {
+    color: #FF1818;
+  }
+  #table #truck {
+    border: 5px solid #FFC300;
+    background-color: #FFC300;
+  }
+}/*# sourceMappingURL=style.css.map */

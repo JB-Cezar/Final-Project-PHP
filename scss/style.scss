@@ -111,21 +111,70 @@ p{
     background-attachment: fixed;
 }
 
+//trucklist
+#trucks{
+    display: flex;
+    height: 500px;
+    > a{
+        width: 100%;
+        height: 100%;
+        text-decoration: none;
+        text-shadow: #FF1818 1px 0 10px;
+    }
+}
 
-.menu{
-    width: 100%;
-    height: 800px;
+.brazil{
+    background-image: url("https://blog.amigofoods.com/wp-content/uploads/2019/04/brazilian-foods.jpg");
     background-position: center;
     background-size: cover;
-    background-image: url("https://uploads-ssl.webflow.com/637f8005cf82256ba6e57888/6389d8047c6fa1eb055c3621_about-us-dotten-background.svg");
-    background-attachment: fixed;
-
-    color: white;
     display: flex;
+    width: 100%;
+    height: 100%;
     justify-content: center;
     align-items: center;
-    font-size: 5rem;
+    color: white;
+    font-weight: 900;
+    font-size: 3rem;
+    &:hover{
+        opacity: .8;
+        transition: .6s;
+    }
 }
+.colombia{
+    background-image: url("https://cdn.tasteatlas.com/images/toplistarticles/261d82ef99c8491cbb7b5fe7d262db5d.jpg?m=facebook");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: 900;
+    font-size: 3rem;
+    &:hover{
+        opacity: .8;
+        transition: .6s;
+    }
+}
+.japan{
+    background-image: url("https://cdn.tasteatlas.com/images/toplistarticles/8cc45833c34a4bc99d85375ecfde18f6.jpg?m=facebook");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: 900;
+    font-size: 3rem;
+    &:hover{
+        opacity: .8;
+        transition: .7s;
+    }
+}
+
 .gallery{
     width: 100%;
     height: 400px;
@@ -216,7 +265,7 @@ i:last-child{
 #leftA{
     display: flex;
     position: absolute;
-    bottom: -1800px;
+    bottom: -1500px;
     left: 5%;
     font-size: 2.6rem;
     color: grey;
@@ -225,7 +274,7 @@ i:last-child{
     font-size: 2.6rem;
     display: flex;
     position: absolute;
-    bottom: -1800px;
+    bottom: -1500px;
     right: 5%;
     color: grey;
 }

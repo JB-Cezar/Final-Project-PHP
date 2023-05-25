@@ -8,7 +8,6 @@ html {
 }
 
 body {
-  background-color: #5463FF;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -90,5 +89,10 @@ li {
   #table #truck {
     border: 5px solid #FFC300;
     background-color: #FFC300;
+  }
+}
+@media (min-width: 1000px) {
+  .truck-main img {
+    width: 40vh;
   }
 }/*# sourceMappingURL=style.css.map */

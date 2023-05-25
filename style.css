@@ -78,7 +78,7 @@ p{
     background-size: cover;
     background-image: url("img/pexels-kampus-production-5920744.jpg");
     background-attachment: fixed;
-    
+
     color: white;
     display: flex;
     justify-content: center;
@@ -152,7 +152,7 @@ footer{
     display: flex;
     justify-content: center;
     column-gap: 5vh;
-    
+
 }
 .review img{
     width: 200px;

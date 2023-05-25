@@ -134,7 +134,7 @@ p{
     align-items: center;
     color: white;
     font-weight: 900;
-    font-size: 3rem;
+    font-size: 2rem;
     &:hover{
         opacity: .8;
         transition: .6s;
@@ -151,7 +151,7 @@ p{
     align-items: center;
     color: white;
     font-weight: 900;
-    font-size: 3rem;
+    font-size: 2rem;
     &:hover{
         opacity: .8;
         transition: .6s;
@@ -168,11 +168,62 @@ p{
     align-items: center;
     color: white;
     font-weight: 900;
-    font-size: 3rem;
+    font-size: 2rem;
     &:hover{
         opacity: .8;
         transition: .7s;
     }
+}
+.indian{
+    background-image: url("https://images.ctfassets.net/3s5io6mnxfqz/6ZImCEzx6UuvuKaAiZEDDN/50479ee4a0902deb4eb1bab720ce248a/image1.jpg");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: 900;
+    font-size: 2rem;
+    &:hover{
+        opacity: .8;
+        transition: .7s;
+    }
+}
+.mexican{
+    background-image: url("https://ontheborder.com.au/wp-content/uploads/2022/03/Mexican-Cuisine-scaled.jpg");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: 900;
+    font-size: 2rem;
+    &:hover{
+        opacity: .8;
+        transition: .7s;
+    }
+}
+.korea{
+    background-image: url("https://www.ragus.co.uk/wp-content/uploads/2022/12/Korean_cuisine_01_ss_1588959085_1295x715px.jpg");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: 900;
+    font-size: 2rem;
+    &:hover{
+        opacity: .8;
+        transition: .7s;
+    } 
 }
 
 .gallery{

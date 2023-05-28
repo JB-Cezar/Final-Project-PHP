@@ -91,8 +91,93 @@ li {
     background-color: #FFC300;
   }
 }
-@media (min-width: 1000px) {
+@media (min-width: 300px) {
+  .truck-main {
+    padding: 5vh 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5vh;
+    align-items: center;
+    justify-content: center;
+  }
   .truck-main img {
     width: 40vh;
+  }
+  .truck-main .truck-menu,
+  .truck-main .truck-info {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 3vh;
+  }
+  .truck-main h2 {
+    text-align: center;
+  }
+  .truck-main h1 {
+    font-size: 35px;
+  }
+  .truck-top figure {
+    display: none;
+  }
+  .truck-top aside {
+    text-align: center;
+    padding-bottom: 3vh;
+  }
+  .truck-top img {
+    padding-left: 3vh;
+  }
+  .truck-about {
+    background-image: url(/img/about-bgi.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+  }
+  .truck-about section {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3vh;
+    text-align: center;
+    padding: 5vh 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  .truck-menu img {
+    width: 100%;
+  }
+  .truck-menu figure {
+    width: 100%;
+    background-color: beige;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .truck-menu figcaption {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1vh;
+  }
+  .truck-menu aside {
+    display: flex;
+    -moz-column-gap: 2vh;
+         column-gap: 2vh;
+  }
+  .truck-menu small {
+    background-color: lemonchiffon;
+    padding: 1vh;
+  }
+  .truck-info {
+    text-align: center;
+  }
+  .truck-info > section {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3vh;
+  }
+  .truck-info h2 {
+    padding-bottom: 2vh;
   }
 }/*# sourceMappingURL=style.css.map */

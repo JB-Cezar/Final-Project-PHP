@@ -6,11 +6,11 @@
 html{
   scroll-behavior: smooth;
 }
-body{
-  // background-color: $background;
-  @include flex-column;
-  @include flex-center;
-}
+// body{
+//   // background-color: $background;
+//   @include flex-column;
+//   @include flex-center;
+// }
 p{
   line-height: 1.5;
 }

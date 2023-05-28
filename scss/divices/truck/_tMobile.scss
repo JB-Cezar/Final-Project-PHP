@@ -28,7 +28,7 @@
             text-align: center;
             padding-bottom: 3vh;
         }
-        img{
+        .logo{
             padding-left: 3vh;
         }
     }
@@ -44,12 +44,15 @@
             padding: 5vh 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0,0,0,0.8);
+            background-color: rgba(0,0,0,0.7);
         }
     }
     .truck-menu{
         img{
             width: 100%;
+        }
+        article{
+            @include columnRow(3vh);
         }
         figure{
             width: 100%;
@@ -78,5 +81,12 @@
         h2{
             padding-bottom: 2vh;
         }
+        .truck-contact{
+            @include flex-column;
+            a{
+                color: black;
+            }
+        }
     }
+
 }

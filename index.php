@@ -11,11 +11,12 @@ require_once("./inc/Page.class.php");
 echo Page::htmlHeader();
 
 echo Page::header();
-echo Page::about();
 echo Page::truckList();
+echo Page::about();
+
 echo Page::gallery();
-echo Page::container();
 echo Page::reviews();
+echo Page::container();
 echo Page::map();
 echo Page::footer();
 

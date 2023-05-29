@@ -5,6 +5,11 @@
     src: url(../fonts/Boulevard\ Saint\ Denis.ttf);
 }
 
+@font-face {
+    font-family: 'Trend';
+    src: url(../fonts/Trend\ Sans\ W00\ Four.ttf);
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -109,29 +114,135 @@ p{
 
 .about{
     width: 100%;
-    height: 700px;
+    height: 1200px;
     background-position: center;
     background-size: cover;
     background-image: url("https://uploads-ssl.webflow.com/637f8005cf82256ba6e57888/6389d8047c6fa1eb055c3621_about-us-dotten-background.svg");
     background-attachment: fixed;
-    > h1{
+        h1{
         font-family: "Boulevard", sans-serif;
+        text-shadow: 3px 3px #e0cbcb;
         color:#FF1818;
-        font-size: 10rem;
+        font-size: 5.5rem;
         padding: 5vh 0 0 10vh;
-    }
-    >p{
-        font-size: 1.3rem;
         width: 40%;
-        padding-left: 5vh;
-        font-weight: 300;
+    }
+        p{
+            font-size: 1.1rem;
+            width: 45%;
+            padding-left: 5vh;
+            font-weight: 300;
+            display: flex;
+            align-items: center;
+            padding-top: 1vh;
+            color: dimgray;
+        }
+}
+
+.welcome{   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    > article{
+        display: flex;
+        width: 75%;
+        padding-bottom: 5vh;
+    }
+    > a{
+        text-decoration: none;
+        color: #FFC300;
+        font-weight: 900;
+        font-size: 1.1rem;
+        border: 1px solid transparent;
+        border-radius: 15px;
+        padding: 1vh 3vh;
+        &:hover{
+            background-color: #27374D;
+            border: 1px solid transparent;
+            border-radius: 20px;
+            padding: 1vh 3vh;
+            color: #e0cbcb;
+            transition: .5s;
+        }
+    }
+}
+
+.best{
+    >h2{
+        font-size: 2rem;
+        width: 50%;
+        font-family: "Trend", sans-serif;
+        text-shadow: 3px 3px #e0cbcb;
+        color: #5463FF;
+        font-weight: lighter;
+        text-align: center;
+        padding-bottom: 5vh;
+        > span{
+            color: #27374D;
+            font-size: 2rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+    }
+
+    padding-top: 17vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    > div{
+        display: flex;
+        justify-content: space-around;
+        width: 75%;
+        background-color: #27374D;
+        padding-bottom: 3vh;
+        border: 1px solid transparent;
+        border-radius: 10px;
+    }
+    figure{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 7vh;
+    }
+    figcaption{
+        text-align: center;
+        width: 50%;
+        > p{
+            width: 100%;
+            padding: 0 0 7vh 0;
+            color: white;
+        }
+        > a{
+            text-decoration: none;
+            color:#27374D;
+            background-color: #e0cbcb;
+            border: 3px solid transparent;
+            border-radius: 20px;
+            padding: 1vh 4vh;
+            font-weight: 700;
+            &:hover{
+                background-color: #5463FF;
+                color: white;
+                transition: .4s;
+            }
+        }
+    }
+    img{
+        width: 20vh;
+        height: 20vh;
+        padding: 3vh;
+    }
+    h3{
+        font-family: "Boulevard", sans-serif;
+        color: #e0cbcb;
+        font-size: 6rem;
     }
 }
 
 //trucklist
 #trucks{
     display: flex;
-    height: 500px;
+    height: 600px;
     > a{
         width: 100%;
         height: 100%;
@@ -245,17 +356,62 @@ p{
 
 .gallery{
     width: 100%;
-    height: 400px;
-    background-position: center;
-    background-size: cover;
-    background-image: url("https://uploads-ssl.webflow.com/637f8005cf82256ba6e57888/6389d8047c6fa1eb055c3621_about-us-dotten-background.svg");
-    background-attachment: fixed;
-
-    color: white;
+    height: 700px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 5rem;
+    background-color: #27374D;
+    > article{
+        width: 45%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: url("../img/gallery-1.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    > div{
+
+        width: 55%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+        > h2{
+            color: #e0cbcb;
+            font-family: "Trend", sans-serif;
+            font-weight: lighter;
+            font-size: 3rem;
+            text-align: left;
+            padding: 0 0 6vh 0;
+            width: 85%;
+        }
+
+    }
+    aside{
+        width: 95%;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 2vh;
+        > article{
+            display: flex;
+            flex-direction: column;
+            gap: 2vh;
+        }
+        img:nth-child(1){
+            width: 100%;
+            height: 45vh;
+            border: 1px solid transparent;
+            border-radius: 5px;
+        }
+        img:nth-child(2){
+            width: 100%;
+            height: 35vh;
+            border: 1px solid transparent;
+            border-radius: 5px;
+        }
+    }
 }
 
 #location{
@@ -297,17 +453,27 @@ footer{
     background-image: url("https://uploads-ssl.webflow.com/637f8005cf82256ba6e57888/6389d8047c6fa1eb055c3621_about-us-dotten-background.svg");
     background-attachment: fixed;
     padding: 4vh 0;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
+    
 }
 .reviews > h2{
     text-align: center;
-    font-size: 4rem;
+    font-size: 7rem;
+    color: #FF1818;
     padding-bottom: 1vh;
+    font-family: "Boulevard", sans-serif;
+    text-shadow: 3px 3px #e0cbcb;
 }
 
 .review{
     display: flex;
     justify-content: center;
     column-gap: 5vh;
+    
     
 }
 .review img{
@@ -321,6 +487,8 @@ footer{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    color: dimgray;
+
 }
 .review figcaption{
     text-align: center;
@@ -332,23 +500,30 @@ i{
 i:last-child{
     color: gainsboro;
 }
+#person{
+    font-family: "Boulevard",sans-serif;
+    color: #FFC300;
+    font-size: 2rem;
+}
 
 /* navigation arrows */
 #leftA{
     display: flex;
     position: absolute;
-    bottom: -2420px;
+    bottom: -2850px;
     left: 5%;
     font-size: 2.6rem;
-    color: grey;
+    color:#FF1818;
+    text-shadow: 2px 2px #e0cbcb;
 }
 #rightA{
     font-size: 2.6rem;
     display: flex;
     position: absolute;
-    bottom: -2420px;
+    bottom: -2850px;
     right: 5%;
-    color: grey;
+    color:#FF1818;
+    text-shadow: 1px 1px #e0cbcb;
 }
 
 

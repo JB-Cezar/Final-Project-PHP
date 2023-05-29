@@ -44,12 +44,42 @@ class Page{
     public static function about(){
         $about = '
         <div class="about" id="about">
-            <h1>
-                About Us
-            </h1>
-            <p>
-                "Food Trucks" is your culinary companion on the move, bringing an exciting world of flavors and tastes directly to your neighborhood. We are a passionate group of food enthusiasts dedicated to satisfying your cravings with our fleet of vibrant food trucks.
-            </p>
+            <div class="welcome">
+                <article>
+                    <h1>
+                        Welcome to Flavor Central!
+                    </h1>
+                    <p>
+                        "Food Trucks" is your culinary companion on the move, bringing an exciting world of flavors and tastes directly to your neighborhood. We are a passionate group of food enthusiasts dedicated to satisfying your cravings with our fleet of vibrant food trucks.
+                    </p>
+                </article>
+                <a href="#">READ MORE</a>
+            </div>
+            <div class="best">
+                <h2><span>Savor a Mobile Culinary Experience </span> Explore Our Diverse Food Truck Fleet!</h2>
+                <div>
+                    <figure>
+                        <img src="./img/grocery-bag.png" alt="pic-1">
+                        <figcaption>
+                            <h3>Delivery</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit cumque quis modi libero ipsum consectetur provident et hic doloremque perferendis.
+                            </p>
+                            <a href="#">This link</a>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="./img/fast-food.png" alt="pic-2">
+                        <figcaption>
+                            <h3>Catering</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit cumque quis modi libero ipsum consectetur provident et hic doloremque perferendis.
+                            </p>
+                            <a href="#">This link</a>
+                        </figcaption>
+                    </figure>
+                    </div>
+                </div>
         </div>';
 
         return $about;
@@ -95,7 +125,24 @@ class Page{
     public static function gallery(){
         $gallery = '
         <div class="gallery" id="gallery">
-            <h2>Gallery</h2>
+            <article>
+                
+            </article>
+            <div>
+                <h2>
+                    Capturing Satisfied Smiles
+                </h2>
+                <aside>
+                    <article>
+                        <img src="https://images.pexels.com/photos/5920742/pexels-photo-5920742.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="gallery-2">
+                        <img src="https://images.pexels.com/photos/5920765/pexels-photo-5920765.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="gallery-3">
+                    </article>
+                    <article>
+                        <img src="https://images.pexels.com/photos/5920772/pexels-photo-5920772.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="gallery-4">
+                        <img src="https://images.pexels.com/photos/5920769/pexels-photo-5920769.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="gallery-5">
+                    </article>
+                </aside>
+            </div>
         </div>';
         return $gallery;
     }

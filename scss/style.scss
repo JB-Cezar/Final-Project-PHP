@@ -354,6 +354,32 @@ p{
     } 
 }
 
+//truckList v2
+
+#truckList{
+    padding: 5vh 0 12vh 0;
+    display: flex;
+    justify-content: space-evenly;
+    background-position: center;
+    background-size: cover;
+    background-image: url("https://uploads-ssl.webflow.com/637f8005cf82256ba6e57888/6389d8047c6fa1eb055c3621_about-us-dotten-background.svg");
+    background-attachment: fixed;
+    img{
+        width: 18vh;
+        height: 18vh;
+    }
+    figcaption{
+        text-align: center;
+        color: dimgray;
+        padding-top: 1vh;
+        font-size: 1.3rem;
+    }
+    > a{
+        text-decoration: none;
+        
+    }
+}
+
 .gallery{
     width: 100%;
     height: 700px;
@@ -414,35 +440,41 @@ p{
     }
 }
 
-#location{
-    width: 100%;
-    height: 500px;
-    background-position: center;
-    background-size: cover;
-    background-image: url("../img/pexels-mihis-alex-21014.jpg");
 
+#home-footer{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    background-color: #27374D;
     align-items: center;
-    font-size: 5rem;
-    > h2{
-        color: white;
-        font-family: "Boulevard",sans-serif;
+    padding: 1vh 0;
+    > ul{
+        display: flex;
+        align-items: center;
+        width: 35%;
     }
-}
-
-footer{
-    width: 100%;
-    height: 400px;
-    background-position: center;
-    background-size: cover;
-    background-image: url("../img/pexels-josé-luis-photographer-2564846.jpg");
-
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 5rem;
+    img{
+        width: 7vh;
+        height: 7vh;
+    }
+    li{
+        list-style: none;
+        border: unset;
+        display: flex;
+        width: 100%;
+    }
+    >a, a{
+        text-decoration: none;
+        color: white;
+    }
+    i{
+        width: 6vh;
+        height: 6vh;
+        border: 1px solid white;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 
@@ -510,7 +542,7 @@ i:last-child{
 #leftA{
     display: flex;
     position: absolute;
-    bottom: -2850px;
+    bottom: -2500px;
     left: 5%;
     font-size: 2.6rem;
     color:#FF1818;
@@ -520,7 +552,7 @@ i:last-child{
     font-size: 2.6rem;
     display: flex;
     position: absolute;
-    bottom: -2850px;
+    bottom: -2500px;
     right: 5%;
     color:#FF1818;
     text-shadow: 1px 1px #e0cbcb;

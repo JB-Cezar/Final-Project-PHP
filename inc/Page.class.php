@@ -20,7 +20,7 @@ class Page{
 
     public static function header(){
         $header = '
-        <header>
+        <header id="header">
             <article>
                 <nav>
                     <a href="#">
@@ -85,41 +85,97 @@ class Page{
         return $about;
     }
 
-    public static function truckList(){
-        $truckList = '
-        <div id="trucks" class="trucks">
-            <a href="#">
-                <div class="brazil">
+    // public static function truckList(){
+    //     $truckList = '
+    //     <div id="trucks" class="trucks">
+    //         <a href="#">
+    //             <div class="brazil">
+    //                 Brazilian
+    //             </div>
+    //         </a>
+    //         <a href="#">
+    //             <div class="colombia">
+    //                 Colombian
+    //             </div>
+    //         </a>
+    //         <a href="#">
+    //             <div class="japan">
+    //                 Japanese
+    //             </div>
+    //         </a>
+    //         <a href="#">
+    //             <div class="indian">
+    //                 Indian
+    //             </div>
+    //         </a>
+    //         <a href="#">
+    //             <div class="mexican">
+    //                 Mexican
+    //             </div>
+    //         </a>
+    //         <a href="#">
+    //             <div class="korea">
+    //                 Korean
+    //             </div>
+    //         </a>
+    //     </div>';
+    //     return $truckList;
+    // }
+
+    public static function truckListV2(){
+        $truckListV2 = '
+        <div id="truckList">
+        <a href="#">
+            <figure>
+                <img src="./img/coxinha.png" alt="truck-1">
+                <figcaption>
                     Brazilian
-                </div>
-            </a>
-            <a href="#">
-                <div class="colombia">
+                </figcaption>
+            </figure>
+        </a>
+        <a href="#">
+            <figure>
+                <img src="./img/bandeja-paisa.png" alt="truck-2">
+                <figcaption>
                     Colombian
-                </div>
-            </a>
-            <a href="#">
-                <div class="japan">
+                </figcaption>
+            </figure>
+        </a>
+        <a href="#">
+            <figure>
+                <img src="./img/ramen.png" alt="truck-3">
+                <figcaption>
                     Japanese
-                </div>
-            </a>
-            <a href="#">
-                <div class="indian">
+                </figcaption>
+            </figure>
+        </a>
+        <a href="#">
+            <figure>
+                <img src="./img/samosa.png" alt="truck-4">
+                <figcaption>
                     Indian
-                </div>
-            </a>
-            <a href="#">
-                <div class="mexican">
+                </figcaption>
+            </figure>
+        </a>
+        <a href="#">
+            <figure>
+                <img src="./img/taco.png" alt="truck-5">
+                <figcaption>
                     Mexican
-                </div>
-            </a>
-            <a href="#">
-                <div class="korea">
+                </figcaption>
+            </figure>
+        </a>
+        <a href="#">
+            <figure>
+                <img src="./img/bibimbap.png" alt="truck-6">
+                <figcaption>
                     Korean
-                </div>
-            </a>
-        </div>';
-        return $truckList;
+                </figcaption>
+            </figure>
+        </a>
+        </div>
+        ';
+        return $truckListV2;
     }
 
     public static function gallery(){
@@ -193,16 +249,31 @@ class Page{
 
     public static function map(){
         $map = '
-        <div id="location" class="map">
-            <h2>LOCATION</h2>
+        <div id="location" class="map" style="width:100%; overflow:hidden; height=300px">
+            <iframe src="https://www.google.com/maps/d/embed?mid=1jxPweOU1xO7hv1tnYIW9lDqufD_h2lY&ehbc=2E312F" width="100%" height="600px" frameborder="0" style="border:0; margin-top: -150px;"></iframe>
         </div>';
         return $map;
     }
 
     public static function footer(){
         $footer = '
-        <footer id="contact">
-            <h2>CONTACT</h2>
+        <footer id="home-footer">
+        <ul>
+            <li><a href="#">Accessibility</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+        </ul>
+        <a href="#header">
+            <img src="./img/food-truck.png" alt="logo-2">
+        </a>
+        <ul class="social-media">
+            <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-tiktok"></i></a></li>
+        </ul>
         </footer>';
         return $footer;
     }

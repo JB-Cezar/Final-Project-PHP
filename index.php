@@ -11,7 +11,8 @@ require_once("./inc/Page.class.php");
 echo Page::htmlHeader();
 
 echo Page::header();
-echo Page::truckList();
+// echo Page::truckList();
+echo Page::truckListV2();
 echo Page::about();
 
 echo Page::gallery();

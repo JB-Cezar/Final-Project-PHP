@@ -1,0 +1,72 @@
+id,truckName,typeOfFood,description,dayOff,open,close,email,phoneNumber,address,logo
+
+1,
+La Mosca Cocina Mexicana,
+Mexican food,
+"Tasty Truck is serving up everything you could ask for on the streets of Vancouver! This is Mexican food made right. Crafted with fresh and meticulously prepared ingredients, you won't regret paying this food trailer a visit.Established in June 2009.  Our menu offers quality, freshness and affordability with an environmental and nutritional conscience.",
+"Sunday",
+10:00 AM,
+6:00 PM,
+tgullam0@ow.ly,
+218-244-1604,
+3386 Kenwood Way,
+http://dummyimage.com/204x100.png/ff4444/ffffff
+
+2,
+Espeto Brazil,
+Brazilian food,
+"Espeto Brazil  is giving  an authentic experience at every turn. It's a food truck that's got traditional Brazilian cuisine on board, which you probably gathered given the namesake. What you might not guess, however, is that they've updated it for the modern foodie scene, giving you street food on a whole new level of delicious."
+,"Monday",
+11:00 AM,
+8:00 PM,
+mwoolliams1@reuters.com,
+413-300-9837,
+33 Spaight Street,
+http://dummyimage.com/244x100.png/ff4444/ffffff
+
+3,
+Indian Express,
+Indian food,
+"Indian Express is an unorthodox food truck, and we mean that in the best way of course. It's hard enough to find authentic Indian food in Vancouver, let alone out of a food truck. But Indian Express is the tasty exception to the rule, importing the exotic flavors and spices from a country whose unique cuisine is uniquely satisfying to all. This food truck's specialty is in street food, culled from the streets of India",
+"Tuesday",
+12:00 AM,
+5:00 PM,
+centicott2@google.co.uk,
+805-273-6405,
+475 Dwight Center,
+http://dummyimage.com/201x100.png/dddddd/000000
+
+4,
+Korean Kitchen,
+Korean food,
+"* Korean Kitchen is bringing a taste of authenticity to the streets of Vancouver. Can't get more real than that. But this isn't your regular old Korean food truck. No, Korean Kitchen sticks to tradition by serving up a bevy of traditional eats, but also brings a distinctive Own style to cater to the ever popular fusion food truck trend.",
+"Wednesday",
+10:00 AM,
+4:00 PM,
+cburtonwood3@over-blog.com,
+186-401-2207,
+598 Portage Hill,
+http://dummyimage.com/157x100.png/dddddd/000000
+
+5,
+Sushi GO!,
+Japanese food,
+"This great sushi truck is serving the OC curbsides with fantastic sushi pieces and rolls. All the classic nigiri and rolls you might expect, plus a few new tasty options. With hand rolls and veggie options to round out the menu, this truck can't go wrong! Stop by today!",
+"Thursday",
+10:00 AM,
+6:00 PM,
+bmacvicar4@blinklist.com,
+422-848-7697,
+3 Vermont Parkway,
+http://dummyimage.com/238x100.png/ff4444/ffffff
+
+6,
+Delicias Colombianas,
+Colombian food,
+"Quick Bites is San Antonio's premier way to get great Colombian cuisine on the go! You'll find only the finest in authentic, home style Colombian dishes, like their delicious empanadas and fried plantains. Sure to satisfy your hunger, Quick Bites is just right for you!",
+"Monday",
+9:00 AM,
+6:00 PM,
+bseymour5@oaic.gov.au,341-392-2142,
+92986 Anzinger Park,
+http://dummyimage.com/174x100.png/ff4444/ffffff

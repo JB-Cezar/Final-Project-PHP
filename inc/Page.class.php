@@ -27,11 +27,11 @@ class Page{
                     <img src="https://cdn-icons-png.flaticon.com/512/10344/10344222.png" alt="logo">
                     </a>
                     <ul>
-                        <li><a href="#about">ABOUT</a></li>
-                        <li><a href="#trucks">TRUCKS</a></li>
+                        <li><a href="about.php">ABOUT</a></li>
+                        <li><a href="#truckList">TRUCKS</a></li>
                         <li><a href="#location">DINE IN</a></li>
                         <li><a href="calendar.php">CALENDAR</a></li>
-                        <li><a href="#contact">CONTACT</a></li>
+                        <li><a href="#home-footer">CONTACT</a></li>
                     </ul>
                     <a href="#">PICK-UP & DELIVERY</a>
                 </nav>

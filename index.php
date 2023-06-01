@@ -8,7 +8,7 @@ require_once("./inc/Page.class.php");
 
 
 // html page
-echo Page::htmlHeader();
+echo Page::htmlHeader("Final-Project");
 
 echo Page::header();
 // echo Page::truckList();

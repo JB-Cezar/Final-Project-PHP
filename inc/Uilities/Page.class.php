@@ -17,6 +17,27 @@ class Page{
         ';
         return $htmlHeader;
     }
+    public static function pageHeade(string $title):string{
+        $htmlHeader = '
+            <header>
+                <article>
+                    <nav>
+                        <img src="https://cdn-icons-png.flaticon.com/512/10344/10344222.png" alt="logo">
+                        <ul>
+                            <li><a href="#">Home <small>|</small></a></li>
+                            <li><a href="#">About <small>|</small></a></li>
+                            <li><a href="#">Sign Up <small>|</small></a></li>
+                            <li><a href="#">Location <small>|</small></a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                        <a href="#">DELIVERY</a>
+                    </nav>
+                </article>
+                <video src="/video/pexels-kelly-2941127-2048x1080-24fps.mp4" autoplay muted loop></video>
+            </header>
+        ';
+        return $htmlHeader;
+    }
     public static function mainContent(): string{
         $mainContent = '<main>';
         $mainContent .= self::servicesRow();

@@ -41,25 +41,25 @@ class Page{
         return $header;
     }
 
-    public static function about(){
+    public static function about($title="",$description="",$link=""){
         $about = '
         <div class="about" id="about">
             <div class="welcome">
                 <article>
                     <h1>
-                        Welcome to Flavor Central!
+                        '.$title.'
                     </h1>
                     <p>
-                        "Food Trucks" is your culinary companion on the move, bringing an exciting world of flavors and tastes directly to your neighborhood. We are a passionate group of food enthusiasts dedicated to satisfying your cravings with our fleet of vibrant food trucks.
+                        '.$description.'
                     </p>
                 </article>
-                <a href="#">READ MORE</a>
+                <a href="#">'.$link.'</a>
             </div>
             <div class="best">
                 <h2><span>Savor a Mobile Culinary Experience </span> Explore Our Diverse Food Truck Fleet!</h2>
                 <div>
                     <figure>
-                        <img src="./img/grocery-bag.png" alt="pic-1">
+                        <img src="../img/grocery-bag.png" alt="pic-1">
                         <figcaption>
                             <h3>Delivery</h3>
                             <p>
@@ -69,7 +69,7 @@ class Page{
                         </figcaption>
                     </figure>
                     <figure>
-                        <img src="./img/fast-food.png" alt="pic-2">
+                        <img src="../img/fast-food.png" alt="pic-2">
                         <figcaption>
                             <h3>Catering</h3>
                             <p>
@@ -85,42 +85,22 @@ class Page{
         return $about;
     }
 
-    // public static function truckList(){
-    //     $truckList = '
-    //     <div id="trucks" class="trucks">
-    //         <a href="#">
-    //             <div class="brazil">
-    //                 Brazilian
-    //             </div>
-    //         </a>
-    //         <a href="#">
-    //             <div class="colombia">
-    //                 Colombian
-    //             </div>
-    //         </a>
-    //         <a href="#">
-    //             <div class="japan">
-    //                 Japanese
-    //             </div>
-    //         </a>
-    //         <a href="#">
-    //             <div class="indian">
-    //                 Indian
-    //             </div>
-    //         </a>
-    //         <a href="#">
-    //             <div class="mexican">
-    //                 Mexican
-    //             </div>
-    //         </a>
-    //         <a href="#">
-    //             <div class="korea">
-    //                 Korean
-    //             </div>
-    //         </a>
-    //     </div>';
-    //     return $truckList;
-    // }
+    public static function aboutDesc(){
+        $aboutDes = '
+            <div class="welcome">
+            <article>
+                <h1>
+                    Welcome to Flavor Central! 
+                </h1>
+                <p>
+                    Food Trucks" is your culinary companion on the move, bringing an exciting world of flavors and tastes directly to your neighborhood. We are a passionate group of food enthusiasts dedicated to satisfying your cravings with our fleet of vibrant food trucks.
+                </p>
+            </article>
+            <a href="#">READ MORE</a>
+            </div>
+        ';
+        return $aboutDes;
+    }
 
     public static function truckListV2(){
         $truckListV2 = '

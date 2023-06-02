@@ -3,7 +3,6 @@
 class Truck{
 
     private int $truckId;
-    private int $menuId;
     private string $truckName;
     private string $category;
     private string $dayOff;
@@ -14,6 +13,7 @@ class Truck{
     private string $phoneNumber;
     private string $address;
     private string $logo;
+    private int $menuId;
 
     public function getTruckId():int{
         return $this->truckId;

@@ -14,10 +14,10 @@ class Product{
      * @var string $vg;
      */
     private int $productId;
-    private string $pic;
     private string $productName;
     private float $price;
     private string $description;
+    private string $picture;
     private int $menuId;
 
     public function getProductId():int{

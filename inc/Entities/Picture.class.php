@@ -2,15 +2,15 @@
 
 class Picture{
 
-    private int $picId;
+    private int $pictureId;
     private string $picture;
     private int $truckId;
 
-    public function getPicId(){
+    public function getPictureId(){
         return $this->picId;
     }
 
-    public function setPicId(int $picId){
+    public function setPictureId(int $picId){
         $this->picId = $picId;
     }
 

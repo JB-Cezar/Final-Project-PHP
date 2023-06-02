@@ -3,7 +3,7 @@
 class Menu{
 
     private int $menuId;
-    private string $name;
+    private string $menuName;
 
     public function getMenuId(): int{
         return $this->menuId;
@@ -13,11 +13,11 @@ class Menu{
         $this->menuId = $menuId;
     }
 
-    public function getName(): string{
-        return $this->name;
+    public function getmenuName(): string{
+        return $this->menuName;
     }
 
-    public function setName(string $name){
-        $this->name = $name;
+    public function setmenuName(string $menuName){
+        $this->menuName = $menuName;
     }
 }

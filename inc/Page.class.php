@@ -10,7 +10,7 @@ class Page{
             <meta charset="UTF-8">
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <link rel="stylesheet" href="../css/style.css">
+            <link rel="stylesheet" href="./css/style.css">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
             <title>'.$title.'</title>
         </head>
@@ -23,7 +23,7 @@ class Page{
         <header id="header">
             <article>
                 <nav>
-                    <a href="../index.php">
+                    <a href="index.php">
                     <img src="https://cdn-icons-png.flaticon.com/512/10344/10344222.png" alt="logo">
                     </a>
                     <ul>
@@ -36,7 +36,7 @@ class Page{
                     <a href="#">PICK-UP & DELIVERY</a>
                 </nav>
             </article>
-            <video src="../video/pexels-kelly-2941127-2048x1080-24fps.mp4" autoplay muted loop></video>
+            <video src="./video/pexels-kelly-2941127-2048x1080-24fps.mp4" autoplay muted loop></video>
         </header>';
         return $header;
     }
@@ -59,7 +59,7 @@ class Page{
                 <h2><span>Savor a Mobile Culinary Experience </span> Explore Our Diverse Food Truck Fleet!</h2>
                 <div>
                     <figure>
-                        <img src="../img/grocery-bag.png" alt="pic-1">
+                        <img src="./img/grocery-bag.png" alt="pic-1">
                         <figcaption>
                             <h3>Delivery</h3>
                             <p>
@@ -69,7 +69,7 @@ class Page{
                         </figcaption>
                     </figure>
                     <figure>
-                        <img src="../img/fast-food.png" alt="pic-2">
+                        <img src="./img/fast-food.png" alt="pic-2">
                         <figcaption>
                             <h3>Catering</h3>
                             <p>
@@ -87,6 +87,7 @@ class Page{
 
     public static function aboutDesc(){
         $aboutDes = '
+        <div class="about-about">
             <div class="welcome">
             <article>
                 <h1>
@@ -97,6 +98,7 @@ class Page{
                 </p>
             </article>
             <a href="#">READ MORE</a>
+            </div>
             </div>
         ';
         return $aboutDes;
@@ -244,7 +246,7 @@ class Page{
             <li><a href="#">Terms of Service</a></li>
         </ul>
         <a href="#header">
-            <img src="../img/food-truck.png" alt="logo-2">
+            <img src="./img/food-truck.png" alt="logo-2">
         </a>
         <ul class="social-media">
             <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>

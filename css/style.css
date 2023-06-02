@@ -137,6 +137,32 @@ video {
   color: dimgray;
 }
 
+.about-about {
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  background-image: url("https://uploads-ssl.webflow.com/637f8005cf82256ba6e57888/6389d8047c6fa1eb055c3621_about-us-dotten-background.svg");
+  background-attachment: fixed;
+}
+.about-about h1 {
+  font-family: "Boulevard", sans-serif;
+  text-shadow: 3px 3px #e0cbcb;
+  color: #FF1818;
+  font-size: 5.5rem;
+  padding: 5vh 0 0 10vh;
+  width: 40%;
+}
+.about-about p {
+  font-size: 1.1rem;
+  width: 45%;
+  padding-left: 5vh;
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  padding-top: 1vh;
+  color: dimgray;
+}
+
 .welcome {
   display: flex;
   flex-direction: column;

@@ -94,7 +94,7 @@ class Page{
                     Welcome to Flavor Central! 
                 </h1>
                 <p>
-                    Food Trucks" is your culinary companion on the move, bringing an exciting world of flavors and tastes directly to your neighborhood. We are a passionate group of food enthusiasts dedicated to satisfying your cravings with our fleet of vibrant food trucks.
+                    Flavor Wheels is your culinary companion on the move, bringing an exciting world of flavors and tastes directly to your neighborhood. We are a passionate group of food enthusiasts dedicated to satisfying your cravings with our fleet of vibrant food trucks.
                 </p>
             </article>
             <a href="#">READ MORE</a>
@@ -102,6 +102,23 @@ class Page{
             </div>
         ';
         return $aboutDes;
+    }
+
+    public static function searchBar(){
+        $sb = '
+        <div class="employee">
+        <nav>
+            <h3>
+                Flavour Enthusiast
+            </h3>
+            <form action="'.$_SERVER["PHP_SELF"].'" method="POST">
+                <input type="search" name="search" id="search" placeholder="Search">
+                <input type="submit" name="submit-search" value="Search">
+            </form>
+       </nav> 
+        </div>
+        ';
+        return $sb;
     }
 
     public static function truckListV2(){
@@ -264,7 +281,8 @@ class Page{
     
     //html presets
     public static function htmlFooter(){
-        $htmlFooter = '</body>
+        $htmlFooter = '
+        </body>
         </html>';
         return $htmlFooter;
     }

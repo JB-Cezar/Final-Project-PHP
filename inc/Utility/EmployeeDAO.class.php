@@ -51,7 +51,25 @@ class EmployeeDAO{
         self::$db->bind(":salary",$employee->getSalary());
         self::$db->execute();
 
-        return self::$db->countRow();
+        return self::$db->lastInsertedId();
+    }
+
+    public static function updateEmployee(Employee $employee){
+        $sql = "UPDATE employee SET first_name=:first_name,last_name=:last_name,email=:email,gender=:gender,username=:username,password=:password,department=:department,salary=:salary WHERE employeeId=:employeeId";
+
+        self::$db->query($sql);
+        self::$db->bind(":employeeId",$employee->getId());
+        self::$db->bind(":first_name",$employee->getFirst_name());
+        self::$db->bind(":last_name",$employee->getLast_name());
+        self::$db->bind(":email",$employee->getEmail());
+        self::$db->bind(":gender",$employee->getGender());
+        self::$db->bind(":username",$employee->getUsername());
+        self::$db->bind(":password",$employee->getPassword());
+        self::$db->bind(":department",$employee->getDepartment());
+        self::$db->bind(":salary",$employee->getSalary());
+        self::$db->execute();
+
+        return self::$db->lastInsertedId();
     }
 
     

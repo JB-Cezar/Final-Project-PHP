@@ -3,7 +3,7 @@
     .sign-main{
         height: 90vh;
         @include flex-column;
-        background-image: url(/img/sign-img/sign-01.jpg);
+        background-image: url("./../img/sign-img/sign-01.jpg");
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;

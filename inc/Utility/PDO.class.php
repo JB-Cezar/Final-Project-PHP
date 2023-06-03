@@ -1,6 +1,6 @@
 <?php
 
-class PDO  {
+class PDOClass  {
 
     //Connection Details
     private $host = DB_HOST;

@@ -112,7 +112,7 @@ class Page{
                 Flavour Enthusiast
             </h3>
             <form action="'.$_SERVER["PHP_SELF"].'" method="POST">
-                <input type="search" name="search" id="search" placeholder="Search">
+                <input type="search" name="search" id="search" placeholder="name, department">
                 <input type="submit" name="submit-search" value="Search">
             </form>
        </nav> 
@@ -121,6 +121,34 @@ class Page{
         return $sb;
     }
 
+
+    public static function figureContainer($empList,$limit){
+        $fg = '
+            <div id="EmpContainer"><div>';
+            $counter = 1;
+            foreach($empList as $emp){
+                if($counter <=$limit){
+                    $fg.=self::EmpContent($emp);
+                    $counter++;
+                }  
+            }    
+            $fg .= '</div></div>';
+        return $fg;
+    }
+
+    public static function EmpContent($emp){
+        $html = '
+        <figure class="emp-figure">
+            <img src="'.$emp->getPicture().'" alt="'.$emp->getEmployeeId().'">
+            <figcaption>
+                <h4>'.$emp->getFirst_name().' '.$emp->getLast_name().'</h4>
+                <h5>'.$emp->getDepartment().'</h5>
+            </figcaption>
+        </figure>
+
+        ';
+        return $html;
+    }
     public static function truckListV2(){
         $truckListV2 = '
         <div id="truckList">

@@ -5,23 +5,23 @@ class EmployeeDAO{
     private static $db;
 
     public static function startDB(){
-        self::$db = new PDO("Employee");
+        self::$db = new PDOClass("Employee");
     }
 
     public static function getAllEmployees(){
-        $sql = "SELECT * FROM employee"
+        $sql = "SELECT * FROM employee";
 
         self::$db->query($sql);
         self::$db->execute();
 
-        return self::$db->resultSet();
+        return self::$db->getResultSet();
     }
 
     public static function getEmployeeById($id){
         $sql = "SELECT * FROM employee WHERE employeeId=:employeeId";
 
         self::$db->query($sql);
-        self::$db->bind(":employeeId",$id)
+        self::$db->bind(":employeeId",$id);
         self::$db->execute();
 
         return self::$db->singleResult();
@@ -31,7 +31,7 @@ class EmployeeDAO{
         $sql = "DELETE FROM employee WHERE employeeId=:employeeId";
 
         self::$db->query($sql);
-        self::$db->bind(":employeeId",$id)
+        self::$db->bind(":employeeId",$id);
         self::$db->execute();
 
         return self::$db->countRow();

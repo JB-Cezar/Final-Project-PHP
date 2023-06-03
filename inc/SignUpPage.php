@@ -42,12 +42,12 @@ class signUpPage{
     }
     public static function signUpMainContent(){
         $signUpMainContent = '<main class="sign-main">';
-        $signUpMainContent.=self::section();
+        $signUpMainContent.=self::sectionUp();
         $signUpMainContent .= '</main>';
 
         return $signUpMainContent;
     }
-    public static function section(){
+    public static function sectionUp(){
         $section = '
         <section>'.self::signUpLeftRow().self::signUpRightRow().'
         </section>

@@ -53,7 +53,7 @@ class Page{
                         '.$description.'
                     </p>
                 </article>
-                <a href="#">'.$link.'</a>
+                <a href="about.php">'.$link.'</a>
             </div>
             <div class="best">
                 <h2><span>Savor a Mobile Culinary Experience </span> Explore Our Diverse Food Truck Fleet!</h2>
@@ -62,10 +62,10 @@ class Page{
                         <img src="./img/grocery-bag.png" alt="pic-1">
                         <figcaption>
                             <h3>Delivery</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit cumque quis modi libero ipsum consectetur provident et hic doloremque perferendis.
+                            <p id="del-p">
+                                Experience culinary convenience like never before with our exceptional food delivery service. From a wide array of mouthwatering dishes to prompt and reliable delivery, we bring the flavors you love right to your doorstep, ensuring a delightful and hassle-free dining experience.
                             </p>
-                            <a href="#">This link</a>
+                            <a href="#">Read more</a>
                         </figcaption>
                     </figure>
                     <figure>
@@ -73,9 +73,9 @@ class Page{
                         <figcaption>
                             <h3>Catering</h3>
                             <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit cumque quis modi libero ipsum consectetur provident et hic doloremque perferendis.
+                                Elevate your event with our food truck catering, serving up a delightful fusion of flavors and an unforgettable dining experience. Our expert team brings the culinary magic to you, offering a diverse menu, impeccable service, and a touch of excitement to make your occasion truly special.
                             </p>
-                            <a href="#">This link</a>
+                            <a href="#">Read more</a>
                         </figcaption>
                     </figure>
                     </div>
@@ -111,16 +111,16 @@ class Page{
             <h3>
                 Flavour Enthusiast
             </h3>
-            <form action="'.$_SERVER["PHP_SELF"].'" method="POST">
-                <input type="search" name="search" id="search" placeholder="name, department">
-                <input type="submit" name="submit-search" value="Search">
+            <form action="'.$_SERVER["PHP_SELF"].'" method="GET">
+                <input type="search" name="search-figure" id="search" placeholder="name, department">
+                <input type="submit" value="Search">
+                <input type="hidden" name="search" value="search">
             </form>
        </nav> 
         </div>
         ';
         return $sb;
     }
-
 
     public static function figureContainer($empList,$limit){
         $fg = '
@@ -149,6 +149,7 @@ class Page{
         ';
         return $html;
     }
+
     public static function truckListV2(){
         $truckListV2 = '
         <div id="truckList">

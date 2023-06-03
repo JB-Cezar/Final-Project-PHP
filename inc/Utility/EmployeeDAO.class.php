@@ -58,7 +58,7 @@ class EmployeeDAO{
         $sql = "UPDATE employee SET first_name=:first_name,last_name=:last_name,email=:email,gender=:gender,username=:username,password=:password,department=:department,salary=:salary WHERE employeeId=:employeeId";
 
         self::$db->query($sql);
-        self::$db->bind(":employeeId",$employee->getId());
+        self::$db->bind(":employeeId",$employee->getEmployeeId());
         self::$db->bind(":first_name",$employee->getFirst_name());
         self::$db->bind(":last_name",$employee->getLast_name());
         self::$db->bind(":email",$employee->getEmail());
@@ -70,6 +70,20 @@ class EmployeeDAO{
         self::$db->execute();
 
         return self::$db->lastInsertedId();
+    }
+
+    public static function findEmployees(string $input){
+        $sql = "SELECT * FROM employee WHERE employeeId LIKE :id OR first_name LIKE :fName OR last_name LIKE :lName OR department LIKE :department ORDER BY employeeId";
+
+        self::$db->query($sql);
+        self::$db->bind(":id","%$input%");
+        self::$db->bind(":fName","%$input%");
+        self::$db->bind(":lName","%$input%");
+        self::$db->bind(":department","%$input%");
+        
+        self::$db->execute();
+
+        return self::$db->getResultSet();
     }
 
     

@@ -269,20 +269,20 @@ class Page{
             </section>
         ';
     }
-    public static function menuRow(array $newMenu){
+    public static function menuRow(array $newProduct){
         $rowList ='';
 
-        foreach($newMenu as $singleMenu){
+        foreach($newProduct as $singleProduct){
             $rowList .= '
                 <figure>
-                    <img src="'.$singleMenu->getPicture().'" alt="'.$singleMenu->getName().'">
+                    <img src="'.$singleProduct->getPicture().'" alt="'.$singleMenu->getName().'">
                     <figcaption>
                         <aside class="price">
-                            <h3>'.$singleMenu->getName().'</h3>
-                            <p>'.$singleMenu->getPrice().'</p>
+                            <h3>'.$singleProduct->getName().'</h3>
+                            <p>'.$singleProduct->getPrice().'</p>
                         </aside>
                         <p>
-                            '.$singleMenu->getDescription().'
+                            '.$singleProduct->getDescription().'
                         </p>
                     </figcaption>
                 </figure>

@@ -43,7 +43,7 @@ class signUpPage{
     public static function signUpMainContent(){
         $signUpMainContent = '<main class="sign-main">';
         $signUpMainContent.=self::sectionUp();
-        $signUpMainContent .= '</main>';
+        $signUpMainContent.= '</main>';
 
         return $signUpMainContent;
     }

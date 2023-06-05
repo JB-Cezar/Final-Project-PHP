@@ -57,8 +57,7 @@ class signUpPage{
     public static function signUpLeftRow(){
         $row='
         <section class="sign-left">
-                <h2>Sign up</h2>';
-                $row .='
+                <h2>Sign up</h2>
                 <form action="'.$_SERVER["PHP_SELF"].'" method="POST">
                     <input type="text" name="name" id="name" required placeholder="Your name">
                     <input type="email" name="email" id="email" required placeholder="Email">

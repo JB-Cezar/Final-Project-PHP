@@ -37,4 +37,16 @@ class UserData{
 	public function setPassword(string $password) {
 		$this->password = $password;
 	}
+
+	public function verifyPass(string $passVerif){
+		return password_verify($passVerif, $this->getPassword());
+	}
+
+	// public function verifyEmail(string $emailVerif){
+	// 	$status = false;
+	// 	if($emailVerif === $this->getEmail()){
+	// 		$status = true;
+	// 	}
+	// 	return $status;
+	// }
 }

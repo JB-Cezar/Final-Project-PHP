@@ -4,12 +4,14 @@ require_once("./inc/config.inc.php");
 require_once("./inc/Entities/UserData.class.php");
 require_once("./inc/Utilities/PDOClass.class.php");
 require_once("./inc/Utilities/DAO/UserDAO.class.php");
+require_once("./inc/Utilities/LoginVerification.class.php");
 require_once("./inc/SignUpPage.php");
 
+session_start();
+LoginVerification::verify();
 UserDAO::initDB();
 
 echo signUpPage::htmlHeader();
-//password length
 if(strlen($_POST["password"]) < 8){ //pass length confirmation
     echo signUpPage::errorPassLength();
     echo signUpPage::signUpMainContent();
@@ -35,6 +37,4 @@ if(strlen($_POST["password"]) < 8){ //pass length confirmation
     echo signUpPage::htmlFooter();
 }
 
-
-print_r($_POST);
 

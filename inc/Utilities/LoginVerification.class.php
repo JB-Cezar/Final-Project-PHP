@@ -9,7 +9,7 @@ class LoginVerification{
         if(!isset($_SESSION)){
             session_start();
         }
-        if(!isset($_SESSION["active"])){
+        if(!isset($_SESSION["logged"])){
             self::$login = true;
         }else{
             session_destroy();

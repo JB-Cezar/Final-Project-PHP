@@ -94,7 +94,7 @@ class signUpPage{
                         </p>
                     </article>
                     <aside>
-                        <a href="signIn.html">
+                        <a href="signIn.php">
                             <i class="fa-solid fa-circle-arrow-right"></i>
                             Sign in</a>
                     </aside>

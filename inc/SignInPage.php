@@ -59,7 +59,7 @@ class SignInPage{
         $row = '
         <section class="sign-left" id="sign-left">
                 <h2>Sign In</h2>
-                <form action="">
+                <form action="'.$_SERVER["PHP_SELF"].'" method="POST">
                     <input type="email" name="email" id="email" required placeholder="Email">
                     <input type="password" name="password" id="password" required placeholder="Password">
                     <input type="submit" value="Sign In">
@@ -95,7 +95,7 @@ class SignInPage{
                         </p>
                     </article>
                     <aside>
-                        <a href="signUp.html">
+                        <a href="signUp.php">
                             <i class="fa-solid fa-circle-arrow-right"></i>
                             Sign Up</a>
                     </aside>

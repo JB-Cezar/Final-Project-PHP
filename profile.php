@@ -13,24 +13,41 @@ UserDAO::initDB();
 if(!empty($_POST)){
     $updateAcc = new UserData();
     $updateAcc->setId($_SESSION["user"]->getId());
-    $updateAcc->setName($_POST["name"]);
-    $updateAcc->setAddress($_POST["address"]);
-    $updateAcc->setEmail($_POST["email"]);
-    $updateAcc->setPhone($_POST["phone"]);
-
+    if(!empty(($_POST)["name"])){
+        $updateAcc->setName($_POST["name"]);
+    }
+    if(!empty(($_POST)["address"])){
+        $updateAcc->setAddress($_POST["address"]);
+    }
+    if(!empty(($_POST)["email"])){
+        $updateAcc->setEmail($_POST["email"]);
+    }
+    if(!empty(($_POST)["phone"])){
+        $updateAcc->setPhone($_POST["phone"]);
+    }
+    if(!empty(($_POST)["picture"])){
+        $updateAcc->setPicture("askdjsakldsa.jpg");
+    }
+    if(!empty(($_POST)["gender"])){
+        $updateAcc->setGender($_POST["gender"]);
+    }
+    
     $pass = password_hash($_POST["password"],PASSWORD_DEFAULT);
     $updateAcc->setPassword($pass);
-    $updateAcc->setPicture("askdjsakldsa.jpg");
-    $updateAcc->setGender($_POST["gender"]);
-
-
+    
     UserDAO::updateUser($updateAcc);
 }
 
-var_dump($_SESSION["user"]);
+
 //html presets
 echo SignInPage::htmlHeader();
-echo ProfilePage::navProfile();
-echo ProfilePage::profile();
+echo ProfilePage::navProfile(
+    $_SESSION["user"]->getAddress()
+);
+echo ProfilePage::profile(
+    $_SESSION["user"]->getPicture(),
+    $_SESSION["user"]->getName()
+);
+
 //html presets
 echo SignInPage::htmlFooter();

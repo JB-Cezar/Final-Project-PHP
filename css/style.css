@@ -487,11 +487,15 @@ li {
   align-items: center;
   width: 20%;
 }
-.profile-nav article > i {
+.profile-nav article > #prof-pic {
   border-left: 1px solid dimgray;
   padding-left: 3vh;
   font-size: 1.5rem;
   color: #FFC300;
+}
+
+#loc {
+  color: red;
 }
 
 .profile {
@@ -538,9 +542,12 @@ li {
 }
 .profile-options > section {
   display: flex;
-  align-items: start;
-  height: 150px;
+  align-items: center;
   gap: 1vh;
+  color: #27374D;
+}
+.profile-options h3 {
+  text-transform: capitalize;
 }
 
 .profile-settings {

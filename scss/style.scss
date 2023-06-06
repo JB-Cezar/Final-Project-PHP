@@ -30,7 +30,7 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
-        > i{
+        > #prof-pic{
             border-left: 1px solid dimgray;
             padding-left: 3vh;
             font-size: 1.5rem;
@@ -39,6 +39,10 @@
         width: 20%;
     }
     
+}
+
+#loc{
+    color: red;
 }
 
 .profile{
@@ -83,10 +87,13 @@
     }
     > section{
         display: flex;
-        align-items: start;
-        height: 150px;
+        align-items: center;
         gap: 1vh;
+        color: #27374D;
 
+    }
+    h3{
+        text-transform:capitalize;
     }
 }
 

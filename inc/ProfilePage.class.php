@@ -2,30 +2,37 @@
 
 class ProfilePage{
 
-    public static function navProfile(){
+    public static function navProfile($location=""){
         $ht = '
         <nav class="profile-nav">
             <div>
                 <img src="https://cdn-icons-png.flaticon.com/512/3658/3658388.png" alt="profile-logo">
                 <article>
-                    <p>location</p>
-                    <i class="fa-regular fa-circle-user"></i>
+                    <i class="fa-sharp fa-solid fa-location-dot" id="loc"></i>
+                    <p>'.$location.'</p>
+                    <i class="fa-regular fa-circle-user" id="prof-pic"></i>
                 </article>
             </div>
         </nav>';
         return $ht;
     }
 
-    public static function profile(){
+    public static function profile($img="",$name=""){
         $ht = '
         <div class="profile">
             <div>
             <div class="profile-options">
                 <article>
-                    <img src="./img/328503072_699077365045368_5332669083217987917_n.png" alt="profiel-pic">
+                    <img src="';
+                    if(!empty($img)){
+                        $ht .= $img;
+                    }else{
+                        $ht .= 'https://cdn-icons-png.flaticon.com/512/847/847969.png';
+                    }
+                    $ht.='" alt="profile-pic">
                     <aside>
                         <h5>My Profile</h5>
-                        <h3>Chefsaurio</h3>
+                        <h3>'.$name.'</h3>
                     </aside>
                 </article>
                 <section>

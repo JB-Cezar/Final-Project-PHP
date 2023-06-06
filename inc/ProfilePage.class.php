@@ -44,7 +44,7 @@ class ProfilePage{
 
     public static function info(){
         $ht = '
-        <form action="'.$_SERVER["PHP_SELF"].'" method="POST" class="persInfo">
+        <form action="'.$_SERVER["PHP_SELF"].'" method="POST" class="persInfo" enctype="multipart/form-data">
             <h3>Account Information</h3>
             <div class="info-1">
                 <aside>
@@ -64,8 +64,8 @@ class ProfilePage{
                     <input type="tel" id="phone" name="phone">
                 </aside>
                 <aside>
-                    <label for="dateOfB">Date of Birth</label>
-                    <input type="text" name="dateOfB" id="dateOfB">
+                    <label for="password">Password</label>
+                    <input type="text" name="password" id="password">
                 </aside>
                 <aside>
                     <label for="profilePic">Profile Pic</label>

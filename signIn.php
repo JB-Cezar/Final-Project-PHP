@@ -18,6 +18,8 @@ if(!empty($_POST)){
             $_SESSION["email"] = $checkUser;
             header("Location:profile.php");
             exit();
+        }else{
+            echo SignInPage::loginError();
         }
     }
 }

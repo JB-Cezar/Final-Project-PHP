@@ -39,4 +39,8 @@ class UserDAO{
 
         return self::$db->lastInsertedId();
     }
+
+    public static function updateUser(UserData $user){
+        
+    }
 }

@@ -126,6 +126,11 @@ class SignInPage{
         </footer>';
         return $footer;
     }
+
+    public static function loginError(){
+        $ht = '<h6 id="error">Your password is invalid</h6>';
+        return $ht;
+    }
     public static function htmlFooter(){
         $htmlFooter = '</body>
         </html>';

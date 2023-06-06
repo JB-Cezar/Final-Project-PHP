@@ -26,8 +26,7 @@ class ProductDAO{
     }
 
     public static function getAllProducts(){
-        $sql = "SELECT * FROM produc";
-
+        $sql = "SELECT * FROM product";
         self::$db->query($sql);
         self::$db->execute();
 
@@ -43,5 +42,13 @@ class ProductDAO{
         self::$db->execute();
 
         return self::$db->singleResult();
+    }
+    public static function getProductsByMenuId($menuId){
+        $sql = "SELECT * FROM product WHERE menuId = :menuId";
+        self::$db->query($sql);
+        self::$db->bind(":menuId",$menuId);
+        self::$db->execute();
+
+        return self::$db->resultSet();
     }
 }

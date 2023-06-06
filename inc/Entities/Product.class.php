@@ -29,11 +29,11 @@ class Product{
     }
 
     public function getPic():string{
-        return $this->pic;
+        return $this->picture;
     }
 
-    public function setPic(string $pic){
-        $this->pic = $pic;
+    public function setPic(string $picture){
+        $this->pic = $picture;
     }
 
     public function getProductName():string{

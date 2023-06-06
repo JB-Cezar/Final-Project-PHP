@@ -10,6 +10,7 @@ class Page{
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>'.$title.'</title>
+            <link rel="stylesheet" href="/css/style.css">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
             <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
         </head>
@@ -17,7 +18,7 @@ class Page{
         ';
         return $htmlHeader;
     }
-    public static function pageHeade(){
+    public static function pageHead(){
         $htmlHeader = '
             <header>
                 <article>
@@ -38,12 +39,6 @@ class Page{
         ';
         return $htmlHeader;
     }
-    public static function mainContent(): string{
-        $mainContent = '<main>';
-        $mainContent .= self::truckPage();
-        $mainContent .= '</main>';
-        return $mainContent;
-    }
     public static function topRow() : string{
         $row = '
 
@@ -57,7 +52,7 @@ class Page{
         ';
         return $htmlPageEnd;
     }
-    public static function truckPage() : string {
+    public static function truckPage($newProduct) {
         $htmlTruckPage = '
             <main class="truck-main">
                 <section class="truck-top">
@@ -80,9 +75,14 @@ class Page{
                             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit nemo culpa, quod dolorum recusandae est unde? Quidem eveniet itaque quibusdam dolor ab commodi suscipit placeat quasi ullam illum veniam necessitatibus dignissimos, ipsum error amet aliquam enim soluta, doloribus provident eius!
                         </p>
                     </section>
-                </section>'.
-                self::menuTable()
-                .'<section class="truck-info">
+                </section>
+                <section class="truck-menu">
+                <h2>Menu</h2>
+                <article>'.
+                    self::menuRow($newProduct).
+                '</article>
+            </section>
+                <section class="truck-info">
                     <section>
                         <article class="location">
                             <h2>Location</h2>
@@ -111,15 +111,16 @@ class Page{
         ';
         return $htmlTruckPage;
     }
-    public static function menuTable($newMenu){
+    public static function menuTable($newProduct){
         $menu ='
             <section class="truck-menu">
                 <h2>Menu</h2>
                 <article>'.
-                    self::menuRow($newMenu)
-                .'</article>
+                    self::menuRow($newProduct).
+                '</article>
             </section>
         ';
+        return $menu;
     }
     public static function menuRow(array $newProduct){
         $rowList ='';
@@ -127,10 +128,10 @@ class Page{
         foreach($newProduct as $singleProduct){
             $rowList .= '
                 <figure>
-                    <img src="'.$singleProduct->getPicture().'" alt="'.$singleMenu->getName().'">
+                    <img src="'.$singleProduct->getPic().'" alt="'.$singleProduct->getProductName().'">
                     <figcaption>
                         <aside class="price">
-                            <h3>'.$singleProduct->getName().'</h3>
+                            <h3>'.$singleProduct->getProductName().'</h3>
                             <p>'.$singleProduct->getPrice().'</p>
                         </aside>
                         <p>
@@ -139,7 +140,7 @@ class Page{
                     </figcaption>
                 </figure>
             ';
-            return $rowList;
         }
+        return $rowList;
     }
 }

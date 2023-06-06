@@ -23,12 +23,13 @@ if(!empty($_POST)){
         }
     }
 }
+session_start();
 
-// if(!empty($_GET)){
-//     if($_GET["logged"]=="out"){
-//         session_destroy();
-//     }
-// }
+if(!empty($_GET)){
+    if($_GET["logged"]=="out"){
+        session_destroy();
+    }
+}
 
 
 

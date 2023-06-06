@@ -55,8 +55,8 @@ class TruckPage{
         $row = '
         <section class="truck-top">
             <aside>
-                <h1>Truck name</h1>
-                <p>~ mexican food ~</p>
+                <h1>'..'</h1>
+                <p>'..'</p>
             </aside>
             <img class="logo" src="/img/truck-mexic/Mexican_03.jpg" alt="mexican">
             <figure>
@@ -69,7 +69,7 @@ class TruckPage{
         ';
         return $row;
     }
-    public static function truckAboutRow(array $truck){
+    public static function truckAboutRow(){
         $row = '
         <section class="truck-about">
             <section>
@@ -82,7 +82,7 @@ class TruckPage{
         ';
         return $row;
     }
-    public static function truckMenuRow(array $menu,$picture,$product){
+    public static function truckMenuRow(){
         $row='
         <section class="truck-menu">
             <h2>'.$menu['menuName'].'</h2>
@@ -164,28 +164,29 @@ class TruckPage{
         ';
         return $row;
     }
-    public static function truckInfoRow(array $truckInfo){
+    public static function truckInfoRow(){
         $row='
         <section class="truck-info">
             <section>
                 <article class="location">
                     <h2>Location</h2>
-
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d325.31634149957466!2d-123.1204656!3d49.2852886!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5486714e32658949%3A0xb0eb86b45e1c7e00!2sMr.%20Shawarma%20Vancouver%20Shawarma%20and%20Cheesesteak%2C%20Burger%2C%20and%20Falafel!5e0!3m2!1sen!2sca!4v1685243852156!5m2!1sen!2sca" width="350" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <address>'.$truck['address'].'</address>
                 </article>
                 <article class="info">
                     <aside>
-                        <h2> Opening</h2>
-                        <p>8:00~16:00</p>
+                        <h2> Open</h2>
+                        <p>'.$truck['openHour'].'</p>
+                        <h2> close</h2>
+                        <p>'.$truck['closeHour'].'</p>
                     </aside>
                     <aside>
                         <h2>Day off</h2>
-                        <p>Sunday</p>
+                        <p>'.$truck['dayOff'].'</p>
                     </aside>
                     <aside class="truck-contact">
                         <h2>Contact</h2>
-                        <a href="tel">000-000-0000</a>
-                        <a href="#">Email@mail.com</a>
+                        <a href="tel">'.$truck['phoneNumber'].'</a>
+                        <a href="#">'.$truck['email'].'</a>
                     </aside>
                 </article>
             </section>

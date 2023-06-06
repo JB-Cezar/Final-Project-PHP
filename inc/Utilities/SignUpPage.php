@@ -49,7 +49,8 @@ class signUpPage{
     }
     public static function sectionUp(){
         $section = '
-        <section>'.self::signUpLeftRow().self::signUpRightRow().'
+        <section>
+        '.self::signUpLeftRow().self::signUpRightRow().'
         </section>
         ';
         return $section;

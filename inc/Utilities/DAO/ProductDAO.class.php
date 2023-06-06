@@ -26,7 +26,7 @@ class ProductDAO{
     }
 
     public static function getAllProducts(){
-        $sql = "SELECT * FROM produc";
+        $sql = "SELECT * FROM product";
 
         self::$db->query($sql);
         self::$db->execute();

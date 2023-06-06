@@ -1,6 +1,7 @@
 <?php
 
 class PDOService {
+
     private  $_host = DB_HOST;
     private  $_user = DB_USER;
     private  $_pass = DB_PASS;
@@ -27,19 +28,10 @@ class PDOService {
 
         try {
             $this->_dbh = new PDO($dsn, $this->_user, $this->_pass, $options);
-
-            //to get food truck ID
-            // $foodTruckID = $_GET['truckId'];
-
-            // $query = "SELECT * FROM menu WHERE truckId = :foodTruckID";
-            // $statement = $this->_dbh->prepare($query);
-            // $statement->bindParam(':foodTruckID', $foodTruckID);
-            // $statement->execute();
-            // $menuPage = $statement->fetch(PDO::FETCH_ASSOC);
-
         } catch (PDOException $pe)   {
             $this->_error = $pe->getMessage();
         }
+
     }
 
     public function query(string $query)    {
@@ -67,23 +59,27 @@ class PDOService {
         $this->_pstmt->bindValue($param, $value, $type);
 
     }
+
     public function execute()   {
         return $this->_pstmt->execute();
     }
 
     public function resultSet() {
+
         return $this->_pstmt->fetchAll(PDO::FETCH_CLASS, $this->_className);
     }
 
     public function singleResult()  {
 
         $this->_pstmt->setFetchMode(PDO::FETCH_CLASS, $this->_className);
+
         return $this->_pstmt->fetch(PDO::FETCH_CLASS);
     }
 
     public function rowCount()  {
         return $this->_pstmt->rowCount();
     }
+
 
     public function lastInsertedId()  {
         return $this->_dbh->lastInsertId();

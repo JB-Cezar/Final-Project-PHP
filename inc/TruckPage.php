@@ -69,33 +69,33 @@ class TruckPage{
         ';
         return $row;
     }
-    public static function truckAboutRow(){
+    public static function truckAboutRow(array $truck){
         $row = '
         <section class="truck-about">
             <section>
                 <h2>About us</h2>
                 <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit nemo culpa, quod dolorum recusandae est unde? Quidem eveniet itaque quibusdam dolor ab commodi suscipit placeat quasi ullam illum veniam necessitatibus dignissimos, ipsum error amet aliquam enim soluta, doloribus provident eius!
+                    '.$truck['description'].'
                 </p>
             </section>
         </section>
         ';
         return $row;
     }
-    public static function truckMenuRow(array $menu){
+    public static function truckMenuRow(array $menu,$picture,$product){
         $row='
         <section class="truck-menu">
             <h2>'.$menu['menuName'].'</h2>
             <article>
                 <figure>
-                    <img src="/img/truck-mexic/tacos-01.jpg" alt="tacos-01">
+                    <img src="'.$picture['picture'].'">
                     <figcaption>
                         <aside class="price">
-                            <h3>Tacos</h3>
-                            <p>$15</p>
+                            <h3>'.$product['productName'].'</h3>
+                            <p>'.$product['price'].'</p>
                         </aside>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci nemo reprehenderit, cum iste tenetur assumenda?
+                        '.$product['description'].'
                         </p>
                     </figcaption>
                 </figure>
@@ -164,7 +164,7 @@ class TruckPage{
         ';
         return $row;
     }
-    public static function truckInfoRow(){
+    public static function truckInfoRow(array $truckInfo){
         $row='
         <section class="truck-info">
             <section>

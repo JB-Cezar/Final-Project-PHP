@@ -30,7 +30,7 @@ if(strlen($_POST["password"]) < 8){ //pass length confirmation
         $password = password_hash($_POST["password"],PASSWORD_DEFAULT);
         $newAccount->setPassword($password);
         UserDAO::insertUser($newAccount);
-        header("Location: profile.php");
+        header("Location: signIn.php");
         exit();
     }
     echo signUpPage::signUpMainContent();

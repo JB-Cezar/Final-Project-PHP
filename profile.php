@@ -13,29 +13,48 @@ UserDAO::initDB();
 if(!empty($_POST)){
     $updateAcc = new UserData();
     $updateAcc->setId($_SESSION["user"]->getId());
-    if(!empty(($_POST)["name"])){
+    if (!empty($_POST["name"])) {
         $updateAcc->setName($_POST["name"]);
-    }
-    if(!empty(($_POST)["address"])){
-        $updateAcc->setAddress($_POST["address"]);
-    }
-    if(!empty(($_POST)["email"])){
-        $updateAcc->setEmail($_POST["email"]);
-    }
-    if(!empty(($_POST)["phone"])){
-        $updateAcc->setPhone($_POST["phone"]);
-    }
-    if(!empty(($_POST)["picture"])){
-        $updateAcc->setPicture("askdjsakldsa.jpg");
-    }
-    if(!empty(($_POST)["gender"])){
-        $updateAcc->setGender($_POST["gender"]);
+    } else {
+        $updateAcc->setName($_SESSION["user"]->getName());
     }
     
+    if (!empty($_POST["address"])) {
+        $updateAcc->setAddress($_POST["address"]);
+    } else {
+        $updateAcc->setAddress($_SESSION["user"]->getAddress());
+    }
+    
+    if (!empty($_POST["email"])) {
+        $updateAcc->setEmail($_POST["email"]);
+    } else {
+        $updateAcc->setEmail($_SESSION["user"]->getEmail());
+    }
+    
+    if (!empty($_POST["phone"])) {
+        $updateAcc->setPhone($_POST["phone"]);
+    } else {
+        $updateAcc->setPhone($_SESSION["user"]->getPhone());
+    }
+    
+    if (!empty($_POST["picture"])) {
+        $updateAcc->setPicture($_POST["picture"]);
+    } else {
+        $updateAcc->setPicture($_SESSION["user"]->getPicture());
+    }
+    
+    if (!empty($_POST["gender"])) {
+        $updateAcc->setGender($_POST["gender"]);
+    } else {
+        $updateAcc->setGender($_SESSION["user"]->getGender());
+    }
+
     $pass = password_hash($_POST["password"],PASSWORD_DEFAULT);
     $updateAcc->setPassword($pass);
     
     UserDAO::updateUser($updateAcc);
+    header("Location: profile.php");
+    exit();
 }
 
 

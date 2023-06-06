@@ -11,6 +11,7 @@ require_once("./inc/Uilities/PDOService.class.php");
 require_once("./inc/Uilities/DAO/MenuDAO.class.php");
 require_once("./inc/Uilities/Page.class.php");
 
-echo Page::pageHeader();
+echo Page::pageHeader("test");
 echo Page::pageHeade();
+echo Page::mainContent();
 echo Page::pageEnd();

@@ -17,7 +17,7 @@ class Page{
         ';
         return $htmlHeader;
     }
-    public static function pageHeade(string $title):string{
+    public static function pageHeade(){
         $htmlHeader = '
             <header>
                 <article>
@@ -40,7 +40,7 @@ class Page{
     }
     public static function mainContent(): string{
         $mainContent = '<main>';
-        $mainContent .= self::servicesRow();
+        $mainContent .= self::truckPage();
         $mainContent .= '</main>';
         return $mainContent;
     }
@@ -80,157 +80,9 @@ class Page{
                             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit nemo culpa, quod dolorum recusandae est unde? Quidem eveniet itaque quibusdam dolor ab commodi suscipit placeat quasi ullam illum veniam necessitatibus dignissimos, ipsum error amet aliquam enim soluta, doloribus provident eius!
                         </p>
                     </section>
-                </section>
-                <section class="truck-menu">
-                    <h2>Menu</h2>
-                    <article>
-                        <figure>
-                            <img src="/img/truck-mexic/tacos-01.jpg" alt="tacos-01">
-                            <figcaption>
-                                <aside class="price">
-                                    <h3>Tacos</h3>
-                                    <p>$15</p>
-                                </aside>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci nemo reprehenderit, cum iste tenetur assumenda?
-                                </p>
-                                <aside>
-                                    <small>GF</small>
-                                    <small>VG</small>
-                                </aside>
-                            </figcaption>
-                        </figure>
-                        <figure>
-                            <img src="/img/truck-mexic/tacos-02.jpg" alt="tacos-02">
-                            <figcaption>
-                                <aside>
-                                    <h3>Tacos</h3>
-                                    <p>$15</p>
-                                </aside>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci nemo reprehenderit, cum iste tenetur assumenda?
-                                </p>
-                                <aside>
-                                    <small>GF</small>
-                                    <small>VG</small>
-                                </aside>
-                            </figcaption>
-                        </figure>
-                        <figure>
-                            <img src="/img/truck-mexic/tacos-03.jpg" alt="tacos-01">
-                            <figcaption>
-                                <aside>
-                                    <h3>Tacos</h3>
-                                    <p>$15</p>
-                                </aside>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci nemo reprehenderit, cum iste tenetur assumenda?
-                                </p>
-                                <aside>
-                                    <small>GF</small>
-                                    <small>VG</small>
-                                </aside>
-                            </figcaption>
-                        </figure>
-                        <figure>
-                            <img src="/img/truck-mexic/salada-01.jpg" alt="salada-01">
-                            <figcaption>
-                                <aside>
-                                    <h3>Tacos</h3>
-                                    <p>$15</p>
-                                </aside>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci nemo reprehenderit, cum iste tenetur assumenda?
-                                </p>
-                                <aside>
-                                    <small>GF</small>
-                                    <small>VG</small>
-                                </aside>
-                            </figcaption>
-                        </figure>
-                        <figure>
-                            <img src="/img/truck-mexic/quesadilla-01.jpg" alt="quesadilla-01">
-                            <figcaption>
-                                <aside>
-                                    <h3>Tacos</h3>
-                                    <p>$15</p>
-                                </aside>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci nemo reprehenderit, cum iste tenetur assumenda?
-                                </p>
-                                <aside>
-                                    <small>GF</small>
-                                    <small>VG</small>
-                                </aside>
-                            </figcaption>
-                        </figure>
-                        <figure>
-                            <img src="/img/truck-mexic/nachos-01.jpg" alt="tacos-01">
-                            <figcaption>
-                                <aside>
-                                    <h3>Tacos</h3>
-                                    <p>$15</p>
-                                </aside>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci nemo reprehenderit, cum iste tenetur assumenda?
-                                </p>
-                                <aside>
-                                    <small>GF</small>
-                                    <small>VG</small>
-                                </aside>
-                            </figcaption>
-                        </figure>
-                        <figure>
-                            <img src="/img/truck-mexic/burrito-01jpg.jpg" alt="tacos-01">
-                            <figcaption>
-                                <aside>
-                                    <h3>Tacos</h3>
-                                    <p>$15</p>
-                                </aside>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci nemo reprehenderit, cum iste tenetur assumenda?
-                                </p>
-                                <aside>
-                                    <small>GF</small>
-                                    <small>VG</small>
-                                </aside>
-                            </figcaption>
-                        </figure>
-                        <figure>
-                            <img src="/img/truck-mexic/churros-02.jpg" alt="tacos-01">
-                            <figcaption>
-                                <aside>
-                                    <h3>Tacos</h3>
-                                    <p>$15</p>
-                                </aside>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci nemo reprehenderit, cum iste tenetur assumenda?
-                                </p>
-                                <aside>
-                                    <small>GF</small>
-                                    <small>VG</small>
-                                </aside>
-                            </figcaption>
-                        </figure>
-                        <figure>
-                            <img src="/img/truck-mexic/churro-01.jpg" alt="tacos-01">
-                            <figcaption>
-                                <aside>
-                                    <h3>Tacos</h3>
-                                    <p>$15</p>
-                                </aside>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci nemo reprehenderit, cum iste tenetur assumenda?
-                                </p>
-                                <aside>
-                                    <small>GF</small>
-                                    <small>VG</small>
-                                </aside>
-                            </figcaption>
-                        </figure>
-                    </article>
-                </section>
-                <section class="truck-info">
+                </section>'.
+                self::menuTable()
+                .'<section class="truck-info">
                     <section>
                         <article class="location">
                             <h2>Location</h2>

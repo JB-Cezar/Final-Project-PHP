@@ -24,7 +24,7 @@ if(strlen($_POST["password"]) < 8){ //pass length confirmation
     exit();
 }else{
     if(!empty($_POST)){
-        $newAccount = new UserDATA();
+        $newAccount = new UserData();
         $newAccount->setName($_POST["name"]);
         $newAccount->setEmail($_POST["email"]);
         $password = password_hash($_POST["password"],PASSWORD_DEFAULT);

@@ -41,6 +41,19 @@ class UserDAO{
     }
 
     public static function updateUser(UserData $user){
-        
+        $sql = "UPDATE userdata SET name=:name,address=:address,email=:email,phone=:phone,password=:password,picture=:picture,gender=:gender WHERE userID=:userID";
+
+        self::$db->query($sql);
+        self::$db->bind(":userID",$user->getId());
+        self::$db->bind(":name",$user->getName());
+        self::$db->bind(":address",$user->getAddress());
+        self::$db->bind(":email",$user->getEmail());
+        self::$db->bind(":phone",$user->getPhone());
+        self::$db->bind(":password",$user->getPassword());
+        self::$db->bind(":picture",$user->getPicture());
+        self::$db->bind(":gender",$user->getGender());
+
+        self::$db->execute();
+        return self::$db->lastInsertedId();
     }
 }

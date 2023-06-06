@@ -82,10 +82,10 @@ class TruckPage{
         ';
         return $row;
     }
-    public static function truckMenuRow(){
+    public static function truckMenuRow(array $menu){
         $row='
         <section class="truck-menu">
-            <h2>Menu</h2>
+            <h2>'.$menu['menuName'].'</h2>
             <article>
                 <figure>
                     <img src="/img/truck-mexic/tacos-01.jpg" alt="tacos-01">

@@ -3,4 +3,4 @@
 define("DB_USER","root");
 define("DB_PASS","");
 define("DB_HOST","localhost");
-define("DB_NAME","food_truck");
+define("DB_NAME","FinalProjectPHP");

@@ -27,10 +27,19 @@ class PDOService {
 
         try {
             $this->_dbh = new PDO($dsn, $this->_user, $this->_pass, $options);
+
+            //to get food truck ID
+            // $foodTruckID = $_GET['truckId'];
+
+            // $query = "SELECT * FROM menu WHERE truckId = :foodTruckID";
+            // $statement = $this->_dbh->prepare($query);
+            // $statement->bindParam(':foodTruckID', $foodTruckID);
+            // $statement->execute();
+            // $menuPage = $statement->fetch(PDO::FETCH_ASSOC);
+
         } catch (PDOException $pe)   {
             $this->_error = $pe->getMessage();
         }
-
     }
 
     public function query(string $query)    {

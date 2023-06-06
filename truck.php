@@ -1,6 +1,7 @@
 <?php
 
 require_once("./inc/TruckPage.php");
+require_once("./inc/Utilities/PDO.class.php");
 
 echo TruckPage::htmlHeader();
 echo TruckPage::header();

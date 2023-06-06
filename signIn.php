@@ -15,7 +15,7 @@ if(!empty($_POST)){
         if($checkUser->verifyPass($_POST["password"])){
             session_start();
             $_SESSION["loggedin"] = true;
-            $_SESSION["email"] = $checkUser;
+            $_SESSION["user"] = $checkUser;
             header("Location:profile.php");
             exit();
         }else{
@@ -23,6 +23,14 @@ if(!empty($_POST)){
         }
     }
 }
+
+// if(!empty($_GET)){
+//     if($_GET["logged"]=="out"){
+//         session_destroy();
+//     }
+// }
+
+
 
 echo SignInPage::htmlHeader();
 echo SignInPage::signInMainContent();

@@ -85,7 +85,7 @@ class ProfilePage{
             </div>
             <div class="info-3">
                 <input type="submit" name="submit" value="Update Information">
-                <a href="signIn.php">Sign Out</a>
+                <a href="signIn.php?logged=out">Sign Out</a>
             </div>
         </form>
         ';

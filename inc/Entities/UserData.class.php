@@ -1,7 +1,7 @@
 <?php
 
 class UserData{
-    private int $id = 0;
+    private int $userID = 0;
     private string $name = "";
 	private string $address = "";
     private string $email = "";
@@ -11,11 +11,11 @@ class UserData{
 	private string $gender = "";
 
 	public function getId() {
-		return $this->id;
+		return $this->userID;
 	}
 
 	public function setId(int $id) {
-		$this->id = $id;
+		$this->userID = $id;
 	}
 
 	public function getName() {

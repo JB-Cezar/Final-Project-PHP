@@ -462,4 +462,172 @@ li {
     width: 90%;
     padding-bottom: 13vh;
   }
+}
+.profile-nav {
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid lightgray;
+  background-color: whitesmoke;
+}
+.profile-nav > div {
+  padding: 1vh 0;
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  align-items: center;
+}
+.profile-nav > div img {
+  width: 8vh;
+  height: 8vh;
+}
+.profile-nav article {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 20%;
+}
+.profile-nav article > i {
+  border-left: 1px solid dimgray;
+  padding-left: 3vh;
+  font-size: 1.5rem;
+  color: #FFC300;
+}
+
+.profile {
+  padding: 5vh 0;
+  background-position: center;
+  background-size: cover;
+  background-image: url("https://uploads-ssl.webflow.com/637f8005cf82256ba6e57888/6389d8047c6fa1eb055c3621_about-us-dotten-background.svg");
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+}
+.profile > div {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  gap: 6vh;
+}
+
+.profile-options {
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  gap: 3vh;
+  padding: 3vh 4vh;
+  border: 1px solid transparent;
+  border-radius: 10px;
+}
+.profile-options img {
+  width: 15vh;
+  height: 15vh;
+  border: 1px solid transparent;
+  border-radius: 50%;
+}
+.profile-options > article {
+  display: flex;
+  -moz-column-gap: 2vh;
+       column-gap: 2vh;
+}
+.profile-options aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 1vh;
+}
+.profile-options > section {
+  display: flex;
+  align-items: start;
+  height: 150px;
+  gap: 1vh;
+}
+
+.profile-settings {
+  background-color: whitesmoke;
+  border: 1px solid transparent;
+  border-radius: 10px;
+}
+
+.persInfo {
+  display: flex;
+  flex-direction: column;
+  padding: 4vh 0;
+}
+.persInfo aside {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+.persInfo > h3 {
+  padding: 3vh 5vh;
+}
+
+.info-1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3vh;
+  padding-top: 6vh;
+  padding-bottom: 3vh;
+}
+.info-1 label {
+  color: grey;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.info-1 input {
+  border-top: unset;
+  border-bottom: 1px solid dimgray;
+  border-right: unset;
+  border-left: unset;
+  padding: 2vh 1vh;
+}
+.info-1 input[type=file] {
+  border: unset;
+}
+
+.info-2 {
+  padding-left: 12vh;
+  padding-bottom: 5vh;
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+.info-2 > h4 {
+  color: grey;
+  font-size: 1rem;
+}
+
+.info-3 {
+  display: flex;
+  justify-content: space-around;
+}
+.info-3 > input {
+  padding: 2vh 3vh;
+  border: 1px solid transparent;
+  background-color: #27374D;
+  color: white;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.info-3 > input:hover {
+  background-color: #FFC300;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.info-3 > a {
+  padding: 2vh 3vh;
+  border: 1px solid transparent;
+  background-color: #FFC300;
+  color: white;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.info-3 > a:hover {
+  background-color: #27374D;
+  cursor: pointer;
+  transition: 0.5s;
 }/*# sourceMappingURL=style.css.map */

@@ -16,9 +16,37 @@ require_once("./inc/Uilities/DAO/TruckDAO.class.php");
 require_once("./inc/Uilities/DAO/UserDAO.class.php");
 require_once("./inc/Uilities/Page.class.php");
 
+$number = 1; 
+
+$option = 2; //$_GET['opcao']
+
+switch ($option) {
+    case 1:
+        $number = 1; 
+        break;
+    case 2:
+        $number = 2; 
+        break;
+    case 3:
+        $number = 3; 
+        break;
+    case 4:
+        $number = 4; 
+        break;
+    case 5:
+        $number = 5; 
+        break;
+    case 6:
+        $number = 7; 
+        break;
+    default:
+        $number = 1; 
+        break;
+}
+
 ProductDAO::startDb();
 echo Page::pageHeader("test");
 echo Page::pageHead();
-$newMenu = ProductDAO::getProductsByMenuId(2);
+$newMenu = ProductDAO::getProductsByMenuId($number);
 echo Page::truckPage($newMenu);
 echo Page::pageEnd();

@@ -1,0 +1,21 @@
+@media(min-width:$desktopScreen){
+
+    .truck-top{
+        width: 100%;
+    }
+    .truck-menu{
+        padding: 15vh 0;
+        figure{
+            width: 32%;
+        }
+    }
+    .truck-info{
+        padding-bottom: 20vh;
+        iframe{
+            height: 60vh;
+        }
+        p{
+            font-size: 24px;
+        }
+    }
+}

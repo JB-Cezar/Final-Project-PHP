@@ -29,11 +29,11 @@ class Page{
                     <ul>
                         <li><a href="about.php">ABOUT</a></li>
                         <li><a href="#truckList">TRUCKS</a></li>
-                        <li><a href="#location">DINE IN</a></li>
+                        <li><a href="index.php#location">DINE IN</a></li>
                         <li><a href="calendar.php">CALENDAR</a></li>
                         <li><a href="#home-footer">CONTACT</a></li>
                     </ul>
-                    <a href="#">PICK-UP & DELIVERY</a>
+                    <a href="signIn.php">SIGN IN</a>
                 </nav>
             </article>
             <video src="./video/pexels-kelly-2941127-2048x1080-24fps.mp4" autoplay muted loop></video>

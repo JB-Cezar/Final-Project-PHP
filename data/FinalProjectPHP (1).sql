@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jun 03, 2023 at 01:54 AM
+-- Generation Time: Jun 08, 2023 at 01:17 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -29,79 +29,72 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `employee` (
   `employeeId` int(11) NOT NULL,
-  `firstName` char(50) DEFAULT NULL,
-  `lastName` char(50) DEFAULT NULL,
-  `email` varchar(100) NOT NULL,
-  `gender` char(30) DEFAULT NULL,
+  `first_name` char(50) DEFAULT NULL,
+  `last_name` char(50) DEFAULT NULL,
+  `email` char(50) DEFAULT NULL,
+  `gender` char(50) DEFAULT NULL,
   `username` char(50) DEFAULT NULL,
-  `password` char(50) DEFAULT NULL,
-  `department` varchar(100) DEFAULT NULL,
-  `salary` float(5,2) DEFAULT NULL,
-  `truckId` int(11) NOT NULL
+  `password` varchar(250) DEFAULT NULL,
+  `department` char(50) DEFAULT NULL,
+  `salary` float DEFAULT NULL,
+  `picture` varchar(200) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `employee`
 --
 
-INSERT INTO `employee` (`employeeId`, `firstName`, `lastName`, `email`, `gender`, `username`, `password`, `department`, `salary`, `truckId`) VALUES
-(1, 'Georgeanne', 'Gwynn', 'ggwynn0@columbia.edu', 'Female', 'ggwynn0', 'RekbHuWWx', 'Sales', 999.99, 1),
-(2, 'Audi', 'Marler', 'amarler1@google.co.jp', 'Female', 'amarler1', 'IhJAk3zC', 'Accounting', 999.99, 2),
-(3, 'Rodney', 'Goadsby', 'rgoadsby2@addthis.com', 'Male', 'rgoadsby2', 'xSh7t9m', 'Services', 999.99, 3),
-(4, 'Salem', 'Cobbold', 'scobbold3@tumblr.com', 'Male', 'scobbold3', 'YQIvv00PL', 'Research and Development', 999.99, 4),
-(5, 'Celia', 'Livett', 'clivett4@slate.com', 'Female', 'clivett4', 'aNkfpb2A4a', 'Product Management', 999.99, 5),
-(6, 'Cammy', 'Letterick', 'cletterick5@4shared.com', 'Female', 'cletterick5', 'Oelgfj', 'Business Development', 999.99, 6),
-(7, 'Clay', 'Izkovici', 'cizkovici6@chron.com', 'Male', 'cizkovici6', 'XM2O8WF5es', 'Sales', 999.99, 1),
-(8, 'Nancie', 'Gilffillan', 'ngilffillan7@mayoclinic.com', 'Agender', 'ngilffillan7', 'AniKqrC', 'Engineering', 999.99, 2),
-(9, 'Avril', 'Buse', 'abuse8@geocities.com', 'Female', 'abuse8', '9PGrOgDhoYk8', 'Marketing', 999.99, 3),
-(10, 'Gaspar', 'Bitchener', 'gbitchener9@sun.com', 'Male', 'gbitchener9', '22KVzUt', 'Legal', 999.99, 4),
-(11, 'Joannes', 'Mathew', 'jmathewa@icio.us', 'Female', 'jmathewa', 'WXZpgWeE', 'Human Resources', 999.99, 5),
-(12, 'Beatriz', 'Burtonshaw', 'bburtonshawb@google.pl', 'Female', 'bburtonshawb', '256CpE', 'Sales', 999.99, 6),
-(13, 'Sergeant', 'Iannetti', 'siannettic@bluehost.com', 'Polygender', 'siannettic', 'GHr1ce', 'Sales', 999.99, 1),
-(14, 'Cherianne', 'Housbey', 'chousbeyd@ifeng.com', 'Female', 'chousbeyd', 'ZEs58DAJ73E', 'Marketing', 999.99, 2),
-(15, 'Arleyne', 'Scorthorne', 'ascorthornee@smh.com.au', 'Female', 'ascorthornee', '8ykraGogoyIJ', 'Services', 999.99, 3),
-(16, 'Ferrel', 'Nystrom', 'fnystromf@webs.com', 'Male', 'fnystromf', 'Zfm28AXeUeqY', 'Support', 999.99, 4),
-(17, 'Delcina', 'Ebbing', 'debbingg@e-recht24.de', 'Female', 'debbingg', 'hBw2ZGKP', 'Accounting', 999.99, 5),
-(18, 'Tamiko', 'Fender', 'tfenderh@altervista.org', 'Female', 'tfenderh', 'i8MZMgC', 'Accounting', 999.99, 6),
-(19, 'Lynnett', 'Coppeard', 'lcoppeardi@umn.edu', 'Female', 'lcoppeardi', '6JhPXBtQcUPD', 'Human Resources', 999.99, 1),
-(20, 'Fred', 'Celez', 'fcelezj@alibaba.com', 'Female', 'fcelezj', 'tmrWyAeL7', 'Services', 999.99, 2),
-(21, 'Eugen', 'Glozman', 'eglozmank@dropbox.com', 'Male', 'eglozmank', 'PSYAlWvIQ', 'Training', 999.99, 3),
-(22, 'Katharina', 'Le Sieur', 'klesieurl@geocities.jp', 'Female', 'klesieurl', 'rZdhvraNhPaW', 'Research and Development', 999.99, 4),
-(23, 'Hakeem', 'Hudd', 'hhuddm@squarespace.com', 'Male', 'hhuddm', 'mDOckVf70V3', 'Accounting', 999.99, 4),
-(24, 'Ernst', 'Castledine', 'ecastledinen@utexas.edu', 'Male', 'ecastledinen', 'zJN8nVaKy3H', 'Product Management', 999.99, 5),
-(25, 'Olympe', 'Goaks', 'ogoakso@ebay.com', 'Female', 'ogoakso', '252Ey7oTlx44', 'Engineering', 999.99, 5),
-(26, 'Hillier', 'Heath', 'hheathp@devhub.com', 'Male', 'hheathp', 'lJCkq0i', 'Sales', 999.99, 6),
-(27, 'Wenona', 'Shitliff', 'wshitliffq@desdev.cn', 'Female', 'wshitliffq', 'j6mgsEhfX7', 'Accounting', 999.99, 1),
-(28, 'Doralin', 'Gillimgham', 'dgillimghamr@google.de', 'Female', 'dgillimghamr', 'K2sImgxSZcM', 'Business Development', 999.99, 2),
-(29, 'Roxie', 'Gingle', 'rgingles@eventbrite.com', 'Female', 'rgingles', 'f9Kzx4', 'Marketing', 999.99, 3),
-(30, 'Kerby', 'Itzkov', 'kitzkovt@mac.com', 'Male', 'kitzkovt', 'r5U2VlH', 'Accounting', 999.99, 4),
-(31, 'Peg', 'Kapiloff', 'pkapiloffu@facebook.com', 'Female', 'pkapiloffu', 'Y9AjkGKgMs9V', 'Research and Development', 999.99, 5),
-(32, 'Kingston', 'Jikylls', 'kjikyllsv@vinaora.com', 'Polygender', 'kjikyllsv', 'Yl6WleCe7', 'Human Resources', 999.99, 6),
-(33, 'Kathi', 'Gascone', 'kgasconew@noaa.gov', 'Female', 'kgasconew', 'e2aBlX9g', 'Engineering', 999.99, 1),
-(34, 'Jareb', 'Girardy', 'jgirardyx@delicious.com', 'Male', 'jgirardyx', 'ygMwLbeTI', 'Support', 999.99, 2),
-(35, 'Gavan', 'Gowthrop', 'ggowthropy@jugem.jp', 'Male', 'ggowthropy', 'ZND8hBJ3b', 'Support', 999.99, 3),
-(36, 'Dal', 'Lethebridge', 'dlethebridgez@army.mil', 'Male', 'dlethebridgez', '8XXh07k6ep8R', 'Product Management', 999.99, 4),
-(37, 'Fonzie', 'Domke', 'fdomke10@dell.com', 'Male', 'fdomke10', 'QNM8awlb5vD', 'Product Management', 999.99, 5),
-(38, 'Florentia', 'De Laci', 'fdelaci11@dot.gov', 'Bigender', 'fdelaci11', 'UPVvqGVwN', 'Legal', 999.99, 6),
-(39, 'Katerina', 'Barwood', 'kbarwood12@ft.com', 'Female', 'kbarwood12', 'YBCsb3SDFe', 'Accounting', 999.99, 1),
-(40, 'Jourdan', 'Sommerland', 'jsommerland13@nasa.gov', 'Non-binary', 'jsommerland13', 'W7V7vXTQ', 'Human Resources', 999.99, 2),
-(41, 'Theresina', 'Donovan', 'tdonovan14@odnoklassniki.ru', 'Bigender', 'tdonovan14', '4NblhfTfWEz2', 'Product Management', 999.99, 3),
-(42, 'Robinet', 'Meryett', 'rmeryett15@photobucket.com', 'Female', 'rmeryett15', 'C7PSawDrHPV', 'Marketing', 999.99, 4),
-(43, 'Pavia', 'McMyler', 'pmcmyler16@nasa.gov', 'Female', 'pmcmyler16', 'EwJFri', 'Support', 999.99, 5),
-(44, 'Delmer', 'Cubuzzi', 'dcubuzzi17@newyorker.com', 'Male', 'dcubuzzi17', '6p0vpPZ', 'Support', 999.99, 6),
-(45, 'Tess', 'Wrench', 'twrench18@amazon.com', 'Female', 'twrench18', 'PW49flRqP4y', 'Engineering', 999.99, 1),
-(46, 'Rowland', 'Gobbett', 'rgobbett19@com.com', 'Male', 'rgobbett19', '4mmta16Gk', 'Human Resources', 999.99, 2),
-(47, 'Shoshana', 'Skaif', 'sskaif1a@upenn.edu', 'Female', 'sskaif1a', 'PVNon5g', 'Product Management', 999.99, 3),
-(48, 'Sarette', 'Colten', 'scolten1b@pbs.org', 'Female', 'scolten1b', 'FLZMqWo1H2sC', 'Support', 999.99, 4),
-(49, 'Gabe', 'Jarad', 'gjarad1c@wired.com', 'Male', 'gjarad1c', '3cA8KQFc', 'Support', 999.99, 5),
-(50, 'Fayette', 'Faircliff', 'ffaircliff1d@constantcontact.com', 'Female', 'ffaircliff1d', 'BTrc9TGOrijz', 'Support', 999.99, 6),
-(51, 'Joshua', 'Aylmore', 'jaylmore1e@sbwire.com', 'Male', 'jaylmore1e', 'ris4sOeMcbj', 'Research and Development', 999.99, 1),
-(52, 'Lind', 'Manueli', 'lmanueli1f@nba.com', 'Genderqueer', 'lmanueli1f', 'NmHYHlfarRJ', 'Research and Development', 999.99, 2),
-(53, 'Mendie', 'McArdle', 'mmcardle1g@bbb.org', 'Male', 'mmcardle1g', 'IgyeDHlRcrvw', 'Product Management', 999.99, 3),
-(54, 'Mendel', 'Thunders', 'mthunders1h@parallels.com', 'Male', 'mthunders1h', '9wTLNLk', 'Marketing', 999.99, 4),
-(55, 'Nikos', 'Denton', 'ndenton1i@salon.com', 'Male', 'ndenton1i', 'QseuPTK3lr4', 'Research and Development', 999.99, 5),
-(56, 'Kristel', 'Rennick', 'krennick1j@linkedin.com', 'Female', 'krennick1j', '0jrWT7q8', 'Sales', 999.99, 6),
-(57, 'Nigel', 'Swaile', 'nswaile1k@nytimes.com', 'Male', 'nswaile1k', '8U6gZFczQ', 'Sales', 999.99, 1);
+INSERT INTO `employee` (`employeeId`, `first_name`, `last_name`, `email`, `gender`, `username`, `password`, `department`, `salary`, `picture`) VALUES
+(1, 'Addison', 'Mc Caughen', 'amccaughen0@mit.edu', 'Male', 'amccaughen0', '5pzLWBARs', 'Services', 131281, 'https://images.pexels.com/photos/2381069/pexels-photo-2381069.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
+(2, 'Stella', 'Lindborg', 'slindborg1@redcross.org', 'Female', 'slindborg1', 'tM1s2wg', 'sales', 130052, 'https://images.pexels.com/photos/618613/pexels-photo-618613.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
+(3, 'Eliza', 'Boult', 'eboult2@indiatimes.com', 'Female', 'eboult2', 'iw71fI', 'sales', 148810, 'https://images.pexels.com/photos/2182973/pexels-photo-2182973.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
+(4, 'Laurie', 'McVey', 'lmcvey3@whitehouse.gov', 'Female', 'lmcvey3', 'VWBd587t', 'Product Management', 140917, 'https://images.pexels.com/photos/3756679/pexels-photo-3756679.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
+(5, 'Elene', 'Boud', 'eboud4@hc360.com', 'Female', 'eboud4', 'eeepd1MQpMcq', 'sales', 109820, 'https://images.pexels.com/photos/12935094/pexels-photo-12935094.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
+(6, 'Clyve', 'Cuming', 'ccuming5@yelp.com', 'Male', 'ccuming5', 'sAdj6xZxHe', 'Accounting', 147057, 'https://images.pexels.com/photos/8297074/pexels-photo-8297074.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
+(7, 'Roddie', 'Peskin', 'rpeskin6@meetup.com', 'Male', 'rpeskin6', 'TMZtfqZthuKD', 'sales', 111054, 'https://images.pexels.com/photos/4349751/pexels-photo-4349751.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
+(8, 'Bartel', 'Gribble', 'bgribble7@purevolume.com', 'Male', 'bgribble7', 'Q6QYUW', 'Human Resources', 125268, 'https://images.pexels.com/photos/6592547/pexels-photo-6592547.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
+(9, 'Haven', 'Dunbobbin', 'hdunbobbin8@utexas.edu', 'Male', 'hdunbobbin8', '5hvNFItsDSK', 'Accounting', 125055, 'https://images.pexels.com/photos/3808818/pexels-photo-3808818.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
+(10, 'Marten', 'Ginner', 'mginner9@ocn.ne.jp', 'Male', 'mginner9', '6p8UnIqjQk', 'Legal', 128906, 'https://images.pexels.com/photos/5668798/pexels-photo-5668798.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
+(11, 'Ardath', 'McAnulty', 'amcanultya@wunderground.com', 'Female', 'amcanultya', 'LLoScMi7', 'sales', 95142.8, 'https://images.pexels.com/photos/618613/pexels-photo-618613.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
+(12, 'Cam', 'Donohue', 'codonohueb@moonfruit.com', 'Male', 'codonohueb', 'YC8cYAk', 'Services', 112854, 'https://images.pexels.com/photos/2381069/pexels-photo-2381069.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
+(13, 'Una', 'Sink', 'usinkc@examiner.com', 'Female', 'usinkc', 'JBWIKCiq8PQ', 'Business Development', 110881, 'https://images.pexels.com/photos/859264/pexels-photo-859264.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
+(14, 'Eulalie', 'DawemployeeIdowitz', 'edawemployeeIdowitzd@scientificamerican.com', 'Female', 'edawemployeeIdowitzd', 'M69FGTFy', 'sales', 95162.1, 'https://images.pexels.com/photos/618613/pexels-photo-618613.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
+(15, 'Filippa', 'Dugall', 'fdugalle@wikimedia.org', 'Female', 'fdugalle', 'f85pnMY', 'sales', 120643, 'https://images.pexels.com/photos/618613/pexels-photo-618613.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
+(16, 'Lonnard', 'Tibb', 'ltibbf@gov.uk', 'Male', 'ltibbf', 'V3o6EN', 'Research and Development', 130250, 'https://images.pexels.com/photos/756484/pexels-photo-756484.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
+(17, 'Lennard', 'Hallen', 'lhalleng@liveinternet.ru', 'Male', 'lhalleng', 'I3tzMk1fX', 'Research and Development', 132375, 'https://images.pexels.com/photos/756484/pexels-photo-756484.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
+(18, 'Ninnette', 'Bestar', 'nbestarh@themeforest.net', 'Female', 'nbestarh', 'YnPWBXe', 'Human Resources', 134686, 'https://images.pexels.com/photos/6592547/pexels-photo-6592547.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
+(19, 'Neda', 'Pach', 'npachi@about.com', 'Female', 'npachi', 'ToV8HI8K', 'Legal', 123127, 'https://images.pexels.com/photos/5668798/pexels-photo-5668798.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
+(20, 'Laraine', 'Lamont', 'llamontj@tamu.edu', 'Female', 'llamontj', 'dkNlBmw', 'sales', 94966.6, 'https://images.pexels.com/photos/618613/pexels-photo-618613.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
+(21, 'Neville', 'Skottle', 'nskottlek@xing.com', 'Male', 'nskottlek', 'EJHV5DD', 'Services', 120857, 'https://images.pexels.com/photos/2381069/pexels-photo-2381069.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
+(22, 'Stephi', 'Robion', 'srobionl@virginia.edu', 'Female', 'srobionl', 'zL0ABnGDLh', 'Services', 96864.9, 'https://images.pexels.com/photos/2381069/pexels-photo-2381069.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
+(23, 'Linn', 'Slyme', 'lslymem@comcast.net', 'Male', 'lslymem', 'IjuVHNvq', 'sales', 143238, 'https://images.pexels.com/photos/618613/pexels-photo-618613.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
+(24, 'Uriel', 'employeeIddon', 'uemployeeIddonn@who.int', 'Male', 'uemployeeIddonn', 'UxdUCzo', 'sales', 142420, 'https://images.pexels.com/photos/618613/pexels-photo-618613.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
+(25, 'Melody', 'Crallan', 'mcrallano@scientificamerican.com', 'Female', 'mcrallano', 'sScbe7', 'Accounting', 104032, 'https://images.pexels.com/photos/8297074/pexels-photo-8297074.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
+(26, 'Wilhelmine', 'Hirsthouse', 'whirsthousep@aboutads.info', 'Female', 'whirsthousep', 'jHsUafptyPLi', 'Research and Development', 148942, 'https://images.pexels.com/photos/756484/pexels-photo-756484.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
+(27, 'Sergio', 'Sallans', 'ssallansq@geocities.com', 'Polygender', 'ssallansq', 'aIICRp', 'Services', 141100, 'https://images.pexels.com/photos/2381069/pexels-photo-2381069.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
+(28, 'Forest', 'Faircliff', 'ffaircliffr@csmonitor.com', 'Male', 'ffaircliffr', '1kv4XNln2nCe', 'Research and Development', 119250, 'https://images.pexels.com/photos/756484/pexels-photo-756484.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
+(29, 'Alexine', 'Patsall', 'apatsalls@huffingtonpost.com', 'Female', 'apatsalls', 'AYazbPd5e', 'sales', 139124, 'https://images.pexels.com/photos/618613/pexels-photo-618613.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
+(30, 'Jackelyn', 'McKeady', 'jmckeadyt@desdev.cn', 'Non-binary', 'jmckeadyt', 'oNzFkMU50X', 'Product Management', 130682, 'https://images.pexels.com/photos/4467687/pexels-photo-4467687.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
+(31, 'Yuri', 'O Shea', 'yosheau@apple.com', 'Male', 'yosheau', '5AKa4aw', 'Services', 99638.6, 'https://images.pexels.com/photos/2381069/pexels-photo-2381069.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
+(32, 'Jocelin', 'Oldroyde', 'joldroydev@wikia.com', 'Female', 'joldroydev', 'v4P7uj6l', 'Human Resources', 82963.9, 'https://images.pexels.com/photos/6592547/pexels-photo-6592547.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
+(33, 'Ladonna', 'Tombleson', 'ltomblesonw@bandcamp.com', 'Female', 'ltomblesonw', 'i1pet7Fxq8', 'Accounting', 133891, 'https://images.pexels.com/photos/8297074/pexels-photo-8297074.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
+(34, 'Renelle', 'Brayford', 'rbrayfordx@bluehost.com', 'Female', 'rbrayfordx', 'HMCMETw', 'Training', 103880, 'https://images.pexels.com/photos/3201694/pexels-photo-3201694.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
+(35, 'Garnet', 'Heller', 'ghellery@rakuten.co.jp', 'Bigender', 'ghellery', 'ZW7zh4', 'Business Development', 87996.6, 'https://images.pexels.com/photos/859264/pexels-photo-859264.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
+(36, 'Tori', 'Bordiss', 'tbordissz@ed.gov', 'Female', 'tbordissz', 'uOKaQZ', 'Marketing', 114047, 'https://images.pexels.com/photos/2422278/pexels-photo-2422278.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
+(37, 'Marietta', 'Lear', 'mlear10@bloomberg.com', 'Female', 'mlear10', 'q6wTc8eZU5p7', 'Accounting', 93920.1, 'https://images.pexels.com/photos/8297074/pexels-photo-8297074.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
+(38, 'Andra', 'Beverage', 'abeverage11@ucsd.edu', 'GenderfluemployeeId', 'abeverage11', '1lXl6cx', 'sales', 113949, 'https://images.pexels.com/photos/618613/pexels-photo-618613.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
+(39, 'Daune', 'Romme', 'dromme12@chronoengine.com', 'Female', 'dromme12', 'vX9oD8gYU43', 'Accounting', 83612.4, 'https://images.pexels.com/photos/8297074/pexels-photo-8297074.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
+(40, 'Mike', 'Collumbine', 'mcollumbine13@huffingtonpost.com', 'Male', 'mcollumbine13', 'zYKNr1v', 'Product Management', 116906, 'https://images.pexels.com/photos/4467687/pexels-photo-4467687.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
+(41, 'Jane', 'Rosenfield', 'jrosenfield14@networkadvertising.org', 'Female', 'jrosenfield14', 'Ii00eXF', 'Human Resources', 105769, 'https://images.pexels.com/photos/6592547/pexels-photo-6592547.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
+(42, 'Beau', 'Strathearn', 'bstrathearn15@dailymail.co.uk', 'Male', 'bstrathearn15', 'tp0IFT', 'sales', 88542.1, 'https://images.pexels.com/photos/618613/pexels-photo-618613.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
+(43, 'Godiva', 'Whordley', 'gwhordley16@trellian.com', 'Female', 'gwhordley16', 'FDh7Jx34gvzL', 'Marketing', 116594, 'https://images.pexels.com/photos/2422278/pexels-photo-2422278.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
+(44, 'Nerissa', 'Dureden', 'ndureden17@nps.gov', 'Female', 'ndureden17', 'Xs29IMWbfQbA', 'Services', 148407, 'https://images.pexels.com/photos/2381069/pexels-photo-2381069.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
+(45, 'Sharl', 'Herrero', 'sherrero18@dell.com', 'Female', 'sherrero18', 'MbwoOUDmj3', 'Accounting', 119712, 'https://images.pexels.com/photos/8297074/pexels-photo-8297074.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
+(46, 'Salem', 'St Quenin', 'sstquenin19@tinyurl.com', 'Male', 'sstquenin19', 'UWMf9RW', 'Services', 112947, 'https://images.pexels.com/photos/2381069/pexels-photo-2381069.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
+(47, 'Claudianus', 'Males', 'cmales1a@deviantart.com', 'Bigender', 'cmales1a', 'VnKrcSQOi0', 'Product Management', 116168, 'https://images.pexels.com/photos/4467687/pexels-photo-4467687.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
+(48, 'Dani', 'Wasiel', 'dwasiel1b@dedecms.com', 'Male', 'dwasiel1b', 'C2iHgyBVRc', 'Product Management', 147876, 'https://images.pexels.com/photos/4467687/pexels-photo-4467687.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
+(49, 'Francene', 'Gemlbett', 'fgemlbett1c@skype.com', 'Female', 'fgemlbett1c', '6h8gocpNNZIV', 'Services', 103864, 'https://images.pexels.com/photos/2381069/pexels-photo-2381069.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
+(50, 'Craggy', 'Pawellek', 'cpawellek1d@bloglovin.com', 'Polygender', 'cpawellek1d', 'fwElfr', 'Business Development', 96786.4, 'https://images.pexels.com/photos/859264/pexels-photo-859264.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
 
 -- --------------------------------------------------------
 
@@ -152,8 +145,8 @@ INSERT INTO `picture` (`pictureId`, `picture`, `truckId`) VALUES
 (7, 'https://media.blogto.com/events/2018/04/17/Da_f2SFVMAILCiG.jpg?w=2048&cmd=resize&quality=70', 2),
 (8, 'https://media.blogto.com/events/2018/04/17/Da_f2SFVMAILCiG.jpg?w=2048&cmd=resize&quality=70', 2),
 (9, 'https://saltwire.imgix.net/2022/7/10/indian-street-food-truck-a-venture-between-boss-and-employee_lnEveoQ.jpg?cs=srgb&fit=crop&h=568&w=847&dpr=1&auto=enhance%2Ccompress%2Cformat', 3),
-(10, 'img1.wsimg.com/isteam/ip/bbd10d2a-46ab-4730-9a5b-2576a71f45d6/22-rock-the-knight-07600.jpg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1280', 3),
-(11, 'https://kubrick.htvapps.com/htv-prod-media.s3.amazonaws.com/images/heard-1623185614.jpg?crop=1.00xw:0.846xh;0,0.125xh&resize=900:*', 3),
+(10, 'https://nmgprod.s3.amazonaws.com/media/files/42/f7/42f74085497ea051bb2552287d209d17/cover_image.jpeg.760x400_q85_crop_upscale.jpg', 3),
+(11, 'https://kubrick.htvapps.com/htv-prod-media.s3.amazonaws.com/images/heard-1623185614.jpg', 3),
 (12, 'https://www.mtlblog.com/media-library/an-edition-of-les-premiers-vendredis-on-montreal-s-montreal-s-olympic-stadium-esplanade.jpg?id=33637243&width=1245&height=700&quality=85&coordinates=148%2C0%2C0%2C0', 3),
 (13, 'https://media-cdn.tripadvisor.com/media/photo-s/17/9b/2d/04/a-korean-tv-show-about.jpg', 4),
 (14, 'https://www.todocanada.ca/wp-content/uploads/Megacone-Creamery-e1654608013708.jpg', 4),
@@ -166,7 +159,7 @@ INSERT INTO `picture` (`pictureId`, `picture`, `truckId`) VALUES
 (21, 'https://colombianstation.com/wp-content/uploads/2020/08/Food-Truck.jpg', 6),
 (22, 'https://uproxx.com/wp-content/uploads/2018/07/truck-grid-uproxx.jpg', 6),
 (23, 'https://smallbiztrends.com/ezoimgfmt/media.smallbiztrends.com/2022/04/food-truck-festival-850x476.png?ezimgfmt=rs:660x370/rscb12/ng:webp/ngcb12', 6),
-(24, 'www.santander.es/sites/default/files/styles/nodo_noticia/public/ambiente_i_campeonato_internacional_food_trucks_0.jpg?itok=jmiRz9zV', 6);
+(24, 'https://www.canadianfoodtruckfestivals.com/wp-content/uploads/pickering_1937.jpg', 6);
 
 -- --------------------------------------------------------
 
@@ -189,13 +182,9 @@ CREATE TABLE `product` (
 
 INSERT INTO `product` (`productId`, `productName`, `price`, `description`, `picture`, `menuId`) VALUES
 (1, 'Chicken Tacos', 10.00, 'Three grilled soft corn tortillas, with diced onion and cilantro. Side of grilled onion & cactus, lime and our signature hot sauce. Choose from salsa verde (green) or salsa roja (red).', 'https://www.allrecipes.com/thmb/UuPQ632-v8TVuGv3kH7buxuO_mw=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/242342-fiesta-slow-cooker-shredded-chicken-tacos-ddmfs-3X2-0902-775cf5010b5b46cdbdf2ca50993628a9.jpg', 1),
-
 (2, 'Cheesesteak Tacos', 12.00, 'Grilled steak and sautéed onion topped with our white cheese sauce and freshly diced cilantro', 'https://img1.wsimg.com/isteam/ip/c451c370-1b12-4117-85ed-4c20ffaa75b3/B4C9CC2D-1E2E-4AD5-94A5-BDCB664C7828_1_201_a.jpeg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1280', 1),
-
-(3, 'Dry Burrito', 11.00, 'Your choice of grilled steak, chicken or ground beef. Seasoned rice, beans, cheese, lettuce, tomato, and crema rolled in a 12 flour tortilla. Served with a side of our red hot sauce.', 'https://www.inspiredtaste.net/wp-content/uploads/2019/10/Easy-Breakfast-Burrito-Recipe-1-1200.jpg', 1),
-
+(3, 'Dry Burrito ', 11.00, 'Your choice of grilled steak, chicken or ground beef. Seasoned rice, beans, cheese, lettuce, tomato, and crema rolled in a 12 flour tortilla. Served with a side of our red hot sauce.', 'https://www.inspiredtaste.net/wp-content/uploads/2019/10/Easy-Breakfast-Burrito-Recipe-1-1200.jpg', 1),
 (4, 'Cheese Quesadilla ', 10.00, 'Grilled 10 flour tortilla with melted cheddar jack cheese, served with side of cream and garnished with lettuce and tomato.', 'https://www.simplyrecipes.com/thmb/S77yyGItsM98kjwNacwU0hC9XpI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Simply-Recipes-Quesadilla-LEAD-4-523a569564b4453484be4cdf05ce0d6a.jpg', 1),
-
 (5, 'Nachos', 8.00, 'Hand cut tortillas fried into crispy chips and topped to your liking. Add any additional topping of pico, guacamole, cream, or extra cheese.', 'https://static.onecms.io/wp-content/uploads/sites/43/2023/01/06/51147-SuperNachos-MFS-2X3-0095.jpg', 1),
 (6, 'Churro', 5.00, 'Fried pastry stick coated with cinnamon and sugar. ', 'https://vegnews.com/media/W1siZiIsIjI0Njg5L1ZlZ05ld3MuQ2h1cnJvcy5qcGciXSxbInAiLCJ0aHVtYiIsIjEzNjB4ODA0IyIseyJmb3JtYXQiOiJqcGcifV0sWyJwIiwib3B0aW1pemUiXV0/VegNews.Churros.jpg?sha=3868f3a3467c856d', 1),
 (7, 'Coxinha', 12.00, 'Crispy potato-based teardrop shaped croquette stuffed with shredded chicken and spices. Served with a side of aioli sauce (optional).', 'https://tb-static.uber.com/prod/image-proc/processed_images/924e7c1042ca570a1f5492b47041eed3/5954bcb006b10dbfd0bc160f6370faf3.jpeg', 2),
@@ -214,8 +203,8 @@ INSERT INTO `product` (`productId`, `productName`, `price`, `description`, `pict
 (20, 'Original Kimbop', 12.00, 'Korean style sushi roll with cucumber, carrot, egg, fried tofu, burdock root, pickled radish.', 'https://www.seriouseats.com/thmb/WtcBGMWbdUcAIVe8zg4VCm2aqc4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__2020__01__20200122-gimbap-vicky-wasik-24-f5ed1075f35846a29e0812ee053a1bf8.jpg', 4),
 (21, 'Cheese Kimbop', 10.00, 'Half string cheese / Half sausage.', 'https://christieathome.com/wp-content/uploads/2021/05/Kimchi-Fried-Rice-Cheese-Kimbap-11.jpg', 4),
 (22, 'Original Toppoki', 13.00, 'Spicy rice cakes with fish cakes & veggie.', 'https://asset-a.grid.id/crop/0x0:0x0/945x630/photo/grid/original/7883_toppoki.jpg', 4),
-(23, 'Pan Fried Toppoki', 13.00, 'Vegan. Sweet & spicy pan fried rice cakes', 'https://encrypted-tbn0.gstatic.com/imagesq=tbn:ANd9GcQ1U91RuLBVUJlHWI0hO0EKlobTnDxdn8FFNQ&usqp=CAU', 4),
-(24, 'Kimchi Fried Rice', 16.00, 'Spicy fried rice with kimchi, pork, and egg.', 'https://encrypted-tbn0.gstatic.com/imagesq=tbn:ANd9GcRJlM06AK8CwvKCvO465wuS7JfTjN_tGJziA&usqp=CAU', 4),
+(23, 'Pan Fried Toppoki', 13.00, 'Vegan. Sweet & spicy pan fried rice cakes', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs03xPncDA8rC0gs5jLvswsFUWggBa5zhbHw&usqp=CAU', 4),
+(24, 'Kimchi Fried Rice', 16.00, 'Spicy fried rice with kimchi, pork, and egg.', 'https://www.simplyrecipes.com/thmb/jYm7ax6fInIcvskRiWF1yLESBeI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Simply-Recipes-Kimchi-Fried-Rice-LEAD-4-1b73ba2f1c6b4d9fb9d25430ab73c32f.jpg', 4),
 (25, 'Prawn Avocado Roll', 10.00, 'Boiled shrimp, avocado, Kinshi-egg and tobiko', 'https://takenakavancouver.com/wp-content/uploads/2021/07/prawn-avocado-roll-647x440.jpg', 5),
 (26, 'Salmon Avocado Roll', 12.00, 'Salmon, avocado and Kinshi-egg', 'https://takenakavancouver.com/wp-content/uploads/2021/07/salmon-avocado-roll-647x440.jpeg', 5),
 (27, 'Yuzu Tuna Roll', 15.00, 'Yuzu sauce marinated tuna tataki, Yuzu-Kosho mayo, Yuzu tobiko, pickles and cucumber', 'https://takenakavancouver.com/wp-content/uploads/2021/07/yuzu-tuna-roll-647x440.jpeg', 5),
@@ -245,7 +234,7 @@ CREATE TABLE `truck` (
   `description` varchar(2000) DEFAULT NULL,
   `email` varchar(100) NOT NULL,
   `phoneNumber` varchar(20) DEFAULT NULL,
-  `address` varchar(150) DEFAULT NULL,
+  `address` varchar(5000) DEFAULT NULL,
   `logo` varchar(5000) DEFAULT NULL,
   `menuId` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -255,12 +244,29 @@ CREATE TABLE `truck` (
 --
 
 INSERT INTO `truck` (`truckId`, `truckName`, `category`, `dayOff`, `openHour`, `closeHour`, `description`, `email`, `phoneNumber`, `address`, `logo`, `menuId`) VALUES
-(1, 'La Mosca Cocina Mexicana', 'Mexican food', 'Sunday', '10', '16', 'Tasty Truck is serving up everything you could ask for on the streets of Vancouver! This is Mexican food made right. Crafted with fresh and meticulously prepared ingredients, you will not regret paying this food trailer a visit.Established in June 2009.  Our menu offers quality, freshness and affordability with an environmental and nutritional conscience.', 'tgullam0@ow.ly', '218-244-1604', 'Vancouver, BC V6C 2R7', 'https://images-workbench.99static.com/mca4De76LMQRgukgDRgaElmv4Qw=/http://s3.amazonaws.com/projects-files/157/15766/1576644/0a2bdb34-ea78-44bf-8d7b-8a673f1ddd03.jpg', 1),
-(2, 'Espeto Brazil', 'Brazilian food', 'Monday', '9', '18', 'Espeto Brazil  is giving  an authentic experience at every turn. It is a food truck  that is got traditional Brazilian cuisine on board, which you probably gathered given the namesake. What you might not guess, however, is that they have updated it for the modern foodie scene, giving you street food on a whole new level of delicious.', 'mwoolliams1@reuters.com', '413-300-9837', 'Vancouver, BC V6Z 1E4', 'https://img.freepik.com/premium-vector/brazilian-cuisine-food-menu-brazil-national-dishes_8071-34711.jpg?w=1380', 2),
-(3, 'Indian Express', 'Indian food', 'Tuesday', '10', '19', 'Indian Express is an unorthodox food truck, and we mean that in the best way of course. It is hard enough to find authentic Indian food in Vancouver, let alone out of a food truck. But Indian Express is the tasty exception to the rule, importing the exotic flavors and spices from a country whose unique cuisine is uniquely satisfying to all. This food trucks specialty is in street food, culled from the streets of India', 'centicott2@google.co.uk', '805-273-6405', '350 W Georgia St, Vancouver, BC V6B 6B1', 'https://img.freepik.com/premium-vector/indian-food-logo-template_66941-114.jpg', 3),
-(4, 'Korean Kitchen', 'Korean food', 'Wednesday', '11', '20', 'Korean Kitchen is bringing a taste of authenticity to the streets of Vancouver. Can not get more real than that. But this is not your regular old Korean food truck. No, Korean Kitchen sticks to tradition by serving up a bevy of traditional eats, but also brings a distinctive Own style to cater to the ever popular fusion food truck trend.', 'cburtonwood3@over-blog.com', '186-401-2207', '100 W 49th Ave, Vancouver, BC V5Y 2Z6', 'https://thumbs.dreamstime.com/b/korean-food-logo-round-linear-dishes-white-background-eps-179136501.jpg', 4),
-(5, 'Sushi GO!', 'Japanese food', 'Wednesday', '10', '19', 'This great sushi truck is serving the OC curbsides with fantastic sushi pieces and rolls. All the classic nigiri and rolls you might expect, plus a few new tasty options. With hand rolls and veggie options to round out the menu, this truck can not go wrong! Stop by today!', 'bmacvicar4@blinklist.com', '422-848-7697', '2155 Allison Rd, Vancouver, BC V6T 1T5', 'https://media.istockphoto.com/id/1219849596/vector/japanese-sushi-seafood-logo-design-vector-chopstick-and-bowl-template-food-and-beverages.jpg?s=612x612&w=0&k=20&c=qg0BTTsvPsMuoKiJPTU8xjXR31MPjurJ6xGuvDTvzaU=', 5),
-(6, 'Delicias Colombianas', 'Colombian food', 'Thursday', '12', '21', 'Quick Bites is San Antonios premier way to get great Colombian cuisine on the go! You will find only the finest in authentic, home style Colombian dishes, like their delicious empanadas and fried plantains. Sure to satisfy your hunger, Quick Bites is just right for you!', 'bseymour5@oaic.gov.au', '341-392-2142', 'Beach Ave, Vancouver, BC V6C 3C1', 'https://awelp.com/wp-content/uploads/2018/10/logo-colombiana-color-a.jpg', 6);
+(1, 'La Mosca Cocina Mexicana', 'Mexican food', 'Sunday', '10', '16', 'Tasty Truck is serving up everything you could ask for on the streets of Vancouver! This is Mexican food made right. Crafted with fresh and meticulously prepared ingredients, you wont regret paying this food trailer a visit.Established in June 2009.  Our menu offers quality, freshness and affordability with an environmental and nutritional conscience.', 'tgullam0@ow.ly', '218-244-1604', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2602.5290973332835!2d-123.12332588847003!3d49.28531957044887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54867181bfa70395%3A0xa6b3654d1dade921!2sVancouver%2C%20BC%20V6C%202R7!5e0!3m2!1sen!2sca!4v1686121212978!5m2!1sen!2sca ', 'https://images-workbench.99static.com/mca4De76LMQRgukgDRgaElmv4Qw=/http://s3.amazonaws.com/projects-files/157/15766/1576644/0a2bdb34-ea78-44bf-8d7b-8a673f1ddd03.jpg', 1),
+(2, 'Salgadinhos Brazil', 'Brazilian food', 'Monday', '9', '18', 'Espeto Brazil  is giving  an authentic experience at every turn. It iss a food truck  that is  got traditional Brazilian cuisine on board, which you probably gathered given the namesake. What you might not guess, however, is that they have updated it for the modern foodie scene, giving you street food on a whole new level of delicious.', 'mwoolliams1@reuters.com', '413-300-9837', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2602.7083436661237!2d-123.12144833847017!3d49.28192347068933!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5486717f08f80c77%3A0x44d7f76bbaf3c9fa!2sVancouver%2C%20BC%20V6Z%201E4!5e0!3m2!1sen!2sca!4v1686121696480!5m2!1sen!2sca', 'https://img.freepik.com/premium-vector/brazilian-cuisine-food-menu-brazil-national-dishes_8071-34711.jpg?w=1380', 2),
+(3, 'Indian Express', 'Indian food', 'Tuesday', '10', '19', 'Indian Express is an unorthodox food truck, and we mean that in the best way of course. Its hard enough to find authentic Indian food in Vancouver, let alone out of a food truck. But Indian Express is the tasty exception to the rule, importing the exotic flavors and spices from a country whose unique cuisine is uniquely satisfying to all. This food trucks specialty is in street food, culled from the streets of India', 'centicott2@google.co.uk', '805-273-6405', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2602.8271781891194!2d-123.11805748847036!3d49.27967187084883!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5486717e99624263%3A0xbcf5014e2923c1fb!2s350%20W%20Georgia%20St%2C%20Vancouver%2C%20BC%20V6B%206B3!5e0!3m2!1sen!2sca!4v1686121772307!5m2!1sen!2sca', 'https://img.freepik.com/premium-vector/indian-food-logo-template_66941-114.jpg', 3),
+(4, 'Korean Kitchen', 'Korean food', 'Wednesday', '11', '20', 'Korean Kitchen is bringing a taste of authenticity to the streets of Vancouver. Cant get more real than that. But this isnt your regular old Korean food truck. No, Korean Kitchen sticks to tradition by serving up a bevy of traditional eats, but also brings a distinctive Own style to cater to the ever popular fusion food truck trend.', 'cburtonwood3@over-blog.com', '186-401-2207', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20841.641215201922!2d-123.1390397479556!3d49.234599533449824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548673f54e6bc621%3A0xb4b7ef4d0fe7a488!2sQueen%20Elizabeth%20Park!5e0!3m2!1sen!2sca!4v1686122147510!5m2!1sen!2sca', 'https://thumbs.dreamstime.com/b/korean-food-logo-round-linear-dishes-white-background-eps-179136501.jpg', 4),
+(5, 'Sushi GO!', 'Japanese food', 'Wednesday', '10', '19', 'This great sushi truck is serving the OC curbsides with fantastic sushi pieces and rolls. All the classic nigiri and rolls you might expect, plus a few new tasty options. With hand rolls and veggie options to round out the menu, this truck cant go wrong! Stop by today!', 'bmacvicar4@blinklist.com', '422-848-7697', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2603.5359745893306!2d-123.24495948847117!3d49.2662404717997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548672c7f30a003f%3A0x7087c7e84660155d!2s2155%20Allison%20Rd%2C%20Vancouver%2C%20BC%20V6T%201T5!5e0!3m2!1sen!2sca!4v1686122246268!5m2!1sen!2sca', 'https://media.istockphoto.com/id/1219849596/vector/japanese-sushi-seafood-logo-design-vector-chopstick-and-bowl-template-food-and-beverages.jpg?s=612x612&w=0&k=20&c=qg0BTTsvPsMuoKiJPTU8xjXR31MPjurJ6xGuvDTvzaU=', 5),
+(6, 'Delicias Colombianas', 'Colombian food', 'Thursday', '12', '21', 'Quick Bites is San Antonios premier way to get great Colombian cuisine on the go! Youll find only the finest in authentic, home style Colombian dishes, like their delicious empanadas and fried plantains. Sure to satisfy your hunger, Quick Bites is just right for you!', 'bseymour5@oaic.gov.au', '341-392-2142', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2602.725955875919!2d-123.14206358847024!3d49.281589770713005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5486722e9770fef3%3A0x77039d947c816f86!2sBeach%20Ave%2C%20Vancouver%2C%20BC!5e0!3m2!1sen!2sca!4v1686122369160!5m2!1sen!2sca', 'https://awelp.com/wp-content/uploads/2018/10/logo-colombiana-color-a.jpg', 6);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `userdata`
+--
+
+CREATE TABLE `userdata` (
+  `userID` int(11) NOT NULL,
+  `name` char(50) DEFAULT NULL,
+  `address` varchar(100) DEFAULT NULL,
+  `email` varchar(100) DEFAULT NULL,
+  `phone` int(11) DEFAULT NULL,
+  `password` varchar(255) DEFAULT NULL,
+  `picture` varchar(200) DEFAULT NULL,
+  `gender` char(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Indexes for dumped tables
@@ -270,9 +276,7 @@ INSERT INTO `truck` (`truckId`, `truckName`, `category`, `dayOff`, `openHour`, `
 -- Indexes for table `employee`
 --
 ALTER TABLE `employee`
-  ADD PRIMARY KEY (`employeeId`),
-  ADD UNIQUE KEY `email` (`email`),
-  ADD KEY `truckId` (`truckId`);
+  ADD PRIMARY KEY (`employeeId`);
 
 --
 -- Indexes for table `menu`
@@ -303,14 +307,30 @@ ALTER TABLE `truck`
   ADD KEY `menuId` (`menuId`);
 
 --
--- Constraints for dumped tables
+-- Indexes for table `userdata`
+--
+ALTER TABLE `userdata`
+  ADD PRIMARY KEY (`userID`);
+
+--
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- Constraints for table `employee`
+-- AUTO_INCREMENT for table `employee`
 --
 ALTER TABLE `employee`
-  ADD CONSTRAINT `employee_ibfk_1` FOREIGN KEY (`truckId`) REFERENCES `truck` (`truckId`);
+  MODIFY `employeeId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
+
+--
+-- AUTO_INCREMENT for table `userdata`
+--
+ALTER TABLE `userdata`
+  MODIFY `userID` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- Constraints for dumped tables
+--
 
 --
 -- Constraints for table `picture`

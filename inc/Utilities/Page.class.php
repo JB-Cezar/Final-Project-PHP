@@ -75,7 +75,7 @@ class Page{
                         <h1>'.$name->getTruckName().'</h1>
                         <p>~ '.$name->getCategory().' ~</p>
                     </aside>
-                    <img class="'.$name->getLogo().'" alt="'.$name->getCategory().'">
+                    <img src="'.$name->getLogo().'" alt="'.$name->getCategory().'">
                     <figure>
                     '.self::truckPicture($newPicture).'
                     </figure>
@@ -139,8 +139,8 @@ class Page{
                 <section>
                     <article class="location">
                         <h2>Location</h2>
-                        <address>'.$information->getAddress().'</address>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d325.31634149957466!2d-123.1204656!3d49.2852886!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5486714e32658949%3A0xb0eb86b45e1c7e00!2sMr.%20Shawarma%20Vancouver%20Shawarma%20and%20Cheesesteak%2C%20Burger%2C%20and%20Falafel!5e0!3m2!1sen!2sca!4v1685243852156!5m2!1sen!2sca" width="350" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                        <iframe src="'.$information->getAddress().'" width="350" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </article>
                     <article class="info">
                         <aside>

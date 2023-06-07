@@ -18,7 +18,7 @@ echo Page::htmlHeader("Final-Project");
 if(isset($_SESSION["user"])){
     echo Page::header($_SESSION["user"]->getName());
 }else{
-    echo Page::header("SIGN IN");
+    echo Page::header();
 }
 
 // echo Page::truckList();

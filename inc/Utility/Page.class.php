@@ -35,9 +35,9 @@ class Page{
                     <ul>
                         <li><a href="';
                         if(isset($_SESSION["user"])){
-                            $header.= "index.php?logged=in";
+                            $header.= "about.php?logged=in";
                         }else{
-                            $header.="index.php?logged=out";
+                            $header.="about.php?logged=out";
                         }
                         $header.= '">ABOUT</a></li>
                         <li><a href="index.php#truckList">TRUCKS</a></li>
@@ -65,7 +65,7 @@ class Page{
                             $header .= $user;
                         }
                     }else{
-                        $header .= $user;
+                        $header .= "SIGN IN";
                     }
                     $header .= '</a>
                 </nav>

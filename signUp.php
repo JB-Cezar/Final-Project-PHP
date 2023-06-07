@@ -31,6 +31,5 @@ if(!empty($_POST)){
 
 echo signUpPage::htmlHeader();
 echo signUpPage::signUpMainContent();
-echo Page::footer();
 echo signUpPage::htmlFooter();
 

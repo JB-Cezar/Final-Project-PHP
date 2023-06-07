@@ -30,6 +30,5 @@ if(!empty($_POST)){
 
 echo SignInPage::htmlHeader();
 echo SignInPage::signInMainContent();
-echo Page::footer();
 echo SignInPage::htmlFooter();
 

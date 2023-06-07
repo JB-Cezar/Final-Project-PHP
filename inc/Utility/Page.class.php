@@ -58,14 +58,16 @@ class Page{
                     
                     $header.='class="signStatus">';
 
-                    if(!empty($_GET) && isset($_SESSION["user"])){
-                        if($_GET["logged"]=="out"){
-                            $header .= 'SIGN IN';
-                        }else if($_GET["logged"]=="in"){
-                            $header .= $user;
+                    if(!empty($_GET)){
+                        if(isset($_SESSION["user"])){
+                            if($_GET["logged"]=="in"){
+                                $header .= $user;
+                            }else if($_GET["logged"]="out"){
+                                $header .= 'SIGN IN';
+                            }
+                        }else{
+                            $header.= 'SIGN IN';
                         }
-                    }else{
-                        $header .= "SIGN IN";
                     }
                     $header .= '</a>
                 </nav>

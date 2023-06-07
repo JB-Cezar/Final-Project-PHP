@@ -28,7 +28,7 @@ echo Page::htmlHeader("About");
 if(isset($_SESSION["user"])){
     echo Page::header($_SESSION["user"]->getName());
 }else{
-    echo Page::header("SIGN IN");
+    echo Page::header();
 }
 echo Page::aboutDesc();
 echo Page::searchBar();

@@ -120,7 +120,7 @@ li {
     padding-left: 3vh;
   }
   .truck-about {
-    background-image: url(../../img/about-bgi.jpg);
+    background-image: url(../img/about-bgi.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

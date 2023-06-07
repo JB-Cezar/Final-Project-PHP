@@ -153,7 +153,7 @@ class Page{
     public static function truckListV2(){
         $truckListV2 = '
         <div id="truckList">
-        <a href="#">
+        <a href="truck.php?option=2">
             <figure>
                 <img src="./img/coxinha.png" alt="truck-1">
                 <figcaption>
@@ -161,7 +161,7 @@ class Page{
                 </figcaption>
             </figure>
         </a>
-        <a href="#">
+        <a href="truck.php?option=6">
             <figure>
                 <img src="./img/bandeja-paisa.png" alt="truck-2">
                 <figcaption>
@@ -169,7 +169,7 @@ class Page{
                 </figcaption>
             </figure>
         </a>
-        <a href="#">
+        <a href="truck.php?option=5">
             <figure>
                 <img src="./img/ramen.png" alt="truck-3">
                 <figcaption>
@@ -177,7 +177,7 @@ class Page{
                 </figcaption>
             </figure>
         </a>
-        <a href="#">
+        <a href="truck.php?option=3">
             <figure>
                 <img src="./img/samosa.png" alt="truck-4">
                 <figcaption>
@@ -185,7 +185,7 @@ class Page{
                 </figcaption>
             </figure>
         </a>
-        <a href="#">
+        <a href="truck.php?option=1">
             <figure>
                 <img src="./img/taco.png" alt="truck-5">
                 <figcaption>
@@ -193,7 +193,7 @@ class Page{
                 </figcaption>
             </figure>
         </a>
-        <a href="#">
+        <a href="truck.php?option=4">
             <figure>
                 <img src="./img/bibimbap.png" alt="truck-6">
                 <figcaption>

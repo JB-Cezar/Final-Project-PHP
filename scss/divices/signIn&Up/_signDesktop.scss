@@ -1,0 +1,74 @@
+@media(min-width: $desktopScreen){
+
+    .sign-main{
+        height: 120vh;
+        background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+        // background-color: ;
+        >section{
+            padding: 10vh 0;
+            flex-direction: row;
+            background-color: rgba(250,250,250,.1);
+        }
+        //
+        i,h2,h3{
+            color: black;
+        }
+        .sign-left{
+            width: 50%;
+            height: 90%;
+            background-color: white;
+            @include columnRow(3vh);
+            @include flex-center;
+        }
+        form{
+            row-gap: 6vh;
+        }
+        input{
+            padding: 3%;
+            border-bottom: 1px solid gray;
+        }
+        .signIn-right{
+            width: 25%;
+            height: 90%;
+            background-image: url("./../img/sign-img/sign-02.jpg");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            // @include columnRow(5vh);
+            // @include flex-center;
+        }
+        .signUp-right{
+            width: 25%;
+            height: 90%;
+            background-image: url("./../img/sign-img/sign-02.jpg");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            // @include columnRow(5vh);
+            // @include flex-center;
+        }
+        .signIn-right,
+        .signUp-right{
+            >section{
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0,0,0,.5);
+                @include columnRow(5vh);
+                // @include flex-center;
+            }
+        }
+        article{
+            padding-top:20vh;
+        }
+        h3{
+            color: white;
+            padding-bottom: 2vh;
+        }
+        p{
+            text-align: center;
+            width: 90%;
+            padding-bottom: 13vh;
+        }
+
+    }
+}

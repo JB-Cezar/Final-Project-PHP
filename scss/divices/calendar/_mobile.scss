@@ -1,0 +1,62 @@
+@media(min-width:$mobileScreen){
+    #table{
+        @include columnRow(10vh);
+        @include flex-center;
+        // background-color: red;
+        padding-top: 5vh;
+        .table{
+          border: 5px solid $box2;
+        }
+        table {
+          width: 100%;
+          border-collapse: collapse;
+          background-color: $box;
+        }
+    
+        th, td {
+           border: 1px solid black;
+           padding: 8px;
+          text-align: center;
+          width: 70px;
+        }
+    
+        thead {
+          background-color: lightgray;
+        }
+        .event1{
+            background-color: #068DA9;
+        }
+        .event2{
+            background-color: greenyellow;
+        }
+        .event3{
+            background-color: lightcoral;
+        }
+        aside{
+            padding: 3px;    
+            border: 2px solid rgba(0, 0, 0, 0.386);        
+        }
+        #events{
+            @include columnRow(1vh);
+            @include flex-center;
+            background-color: $box2;
+            border: 5px solid $box2;
+            & aside:nth-child(1) {
+                background-color: #068DA9;
+            }
+            & aside:nth-child(2) {
+                background-color: greenyellow;
+            }
+            & aside:nth-child(3) {
+                background-color: lightcoral;
+            }
+        }
+        h2{
+            color: $title;
+        }
+        #truck{
+            border: 5px solid $box2;
+            background-color: $box2;
+        }
+    }
+}

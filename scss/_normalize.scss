@@ -1,0 +1,23 @@
+*{
+  padding: 0;
+  margin:0;
+
+}
+html{
+  scroll-behavior: smooth;
+}
+// body{
+//   // background-color: $background;
+//   @include flex-column;
+//   @include flex-center;
+// }
+p{
+  line-height: 1.5;
+}
+a{
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}

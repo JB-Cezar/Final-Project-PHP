@@ -23,11 +23,23 @@ class Page{
         <header id="header">
             <article>
                 <nav>
-                    <a href="index.php">
+                    <a href="';
+                    if(isset($_SESSION["user"])){
+                        $header.= "index.php?logged=in";
+                    }else{
+                        $header.="index.php?logged=out";
+                    }
+                    $header.= '">
                     <img src="https://cdn-icons-png.flaticon.com/512/10344/10344222.png" alt="logo">
                     </a>
                     <ul>
-                        <li><a href="about.php">ABOUT</a></li>
+                        <li><a href="';
+                        if(isset($_SESSION["user"])){
+                            $header.= "index.php?logged=in";
+                        }else{
+                            $header.="index.php?logged=out";
+                        }
+                        $header.= '">ABOUT</a></li>
                         <li><a href="index.php#truckList">TRUCKS</a></li>
                         <li><a href="index.php#location">DINE IN</a></li>
                         <li><a href="calendar.php">CALENDAR</a></li>
@@ -39,9 +51,9 @@ class Page{
                             $header .= 'signIn.php"';
                         }else if($_GET["logged"]=="in"){
                             $header .= 'profile.php"';
-                        }else{
-                            $header.='signIn.php"';
                         }
+                    }else{
+                        $header.= 'signIn.php"';
                     }
                     
                     $header.='class="signStatus">';
@@ -51,9 +63,9 @@ class Page{
                             $header .= 'SIGN IN';
                         }else if($_GET["logged"]=="in"){
                             $header .= $user;
-                        }else{
-                            $header.='SIGN IN';
                         }
+                    }else{
+                        $header .= $user;
                     }
                     $header .= '</a>
                 </nav>

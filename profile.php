@@ -6,6 +6,7 @@ require_once("./inc/Utilities/PDOClass.class.php");
 require_once("./inc/Utilities/DAO/UserDAO.class.php");
 require_once("./inc/ProfilePage.class.php");
 require_once("./inc/SignInPage.php");
+require_once("./inc/Utility/Page.class.php");
 
 session_start();
 UserDAO::initDB();
@@ -78,6 +79,6 @@ echo ProfilePage::profile(
     $_SESSION["user"]->getPicture(),
     $_SESSION["user"]->getName()
 );
-
+echo Page::footer();
 //html presets
 echo SignInPage::htmlFooter();

@@ -18,7 +18,7 @@ class Page{
         return $htmlHeader;
     }
 
-    public static function header(){
+    public static function header($user=""){
         $header = '
         <header id="header">
             <article>
@@ -28,12 +28,34 @@ class Page{
                     </a>
                     <ul>
                         <li><a href="about.php">ABOUT</a></li>
-                        <li><a href="#truckList">TRUCKS</a></li>
+                        <li><a href="index.php#truckList">TRUCKS</a></li>
                         <li><a href="index.php#location">DINE IN</a></li>
                         <li><a href="calendar.php">CALENDAR</a></li>
                         <li><a href="#home-footer">CONTACT</a></li>
                     </ul>
-                    <a href="signIn.php">SIGN IN</a>
+                    <a href="';
+                    if(!empty($_GET) && isset($_SESSION["user"])){
+                        if($_GET["logged"]=="out"){
+                            $header .= 'signIn.php"';
+                        }else if($_GET["logged"]=="in"){
+                            $header .= 'profile.php"';
+                        }else{
+                            $header.='signIn.php"';
+                        }
+                    }
+                    
+                    $header.='class="signStatus">';
+
+                    if(!empty($_GET) && isset($_SESSION["user"])){
+                        if($_GET["logged"]=="out"){
+                            $header .= 'SIGN IN';
+                        }else if($_GET["logged"]=="in"){
+                            $header .= $user;
+                        }else{
+                            $header.='SIGN IN';
+                        }
+                    }
+                    $header .= '</a>
                 </nav>
             </article>
             <video src="./video/pexels-kelly-2941127-2048x1080-24fps.mp4" autoplay muted loop></video>
@@ -291,7 +313,7 @@ class Page{
             <li><a href="#">Privacy Policy</a></li>
             <li><a href="#">Terms of Service</a></li>
         </ul>
-        <a href="#header">
+        <a href="#">
             <img src="./img/food-truck.png" alt="logo-2">
         </a>
         <ul class="social-media">

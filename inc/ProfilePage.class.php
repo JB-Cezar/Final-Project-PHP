@@ -6,7 +6,9 @@ class ProfilePage{
         $ht = '
         <nav class="profile-nav">
             <div>
-                <img src="https://cdn-icons-png.flaticon.com/512/3658/3658388.png" alt="profile-logo">
+                <a href="index.php?logged=in">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3658/3658388.png" alt="profile-logo">
+                </a>
                 <article>
                     <i class="fa-sharp fa-solid fa-location-dot" id="loc"></i>
                     <p>'.$location.'</p>
@@ -92,7 +94,7 @@ class ProfilePage{
             </div>
             <div class="info-3">
                 <input type="submit" name="submit" value="Update Information">
-                <a href="signIn.php?logged=out">Sign Out</a>
+                <a href="index.php?logged=out">Sign Out</a>
             </div>
         </form>
         ';

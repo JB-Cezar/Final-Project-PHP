@@ -5,6 +5,7 @@ require_once("./inc/Entities/UserData.class.php");
 require_once("./inc/Utilities/PDOClass.class.php");
 require_once("./inc/Utilities/DAO/UserDAO.class.php");
 require_once("./inc/SignInPage.php");
+require_once("./inc/Utility/Page.class.php");
 
 
 if(!empty($_POST)){
@@ -23,17 +24,12 @@ if(!empty($_POST)){
         }
     }
 }
-session_start();
 
-if(!empty($_GET)){
-    if($_GET["logged"]=="out"){
-        session_destroy();
-    }
-}
 
 
 
 echo SignInPage::htmlHeader();
 echo SignInPage::signInMainContent();
+echo Page::footer();
 echo SignInPage::htmlFooter();
 

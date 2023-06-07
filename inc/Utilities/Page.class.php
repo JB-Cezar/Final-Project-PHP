@@ -36,7 +36,7 @@ class Page{
                         <a href="#">DELIVERY</a>
                     </nav>
                 </article>
-                <video src="/video/pexels-kelly-2941127-2048x1080-24fps.mp4" autoplay muted loop></video>
+                <video src="video/pexels-kelly-2941127-2048x1080-24fps.mp4" autoplay muted loop></video>
             </header>
         ';
         return $htmlHeader;
@@ -61,31 +61,7 @@ class Page{
                 '.self::menuRow($newProduct).'
                 </article>
             </section>
-                <section class="truck-info">
-                    <section>
-                        <article class="location">
-                            <h2>Location</h2>
-
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d325.31634149957466!2d-123.1204656!3d49.2852886!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5486714e32658949%3A0xb0eb86b45e1c7e00!2sMr.%20Shawarma%20Vancouver%20Shawarma%20and%20Cheesesteak%2C%20Burger%2C%20and%20Falafel!5e0!3m2!1sen!2sca!4v1685243852156!5m2!1sen!2sca" width="350" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        </article>
-                        <article class="info">
-                            <aside>
-                                <h2> Opening</h2>
-                                <p>8:00~16:00</p>
-                            </aside>
-                            <aside>
-                                <h2>Day off</h2>
-                                <p>Sunday</p>
-                            </aside>
-                            <aside class="truck-contact">
-                                <h2>Contact</h2>
-                                <a href="tel">000-000-0000</a>
-                                <a href="#">Email@mail.com</a>
-                            </aside>
-                        </article>
-                    </section>
-                </section>
-
+            '.self::truckInfoRow($newTruck).'
             </main>
         ';
         return $htmlTruckPage;
@@ -100,7 +76,9 @@ class Page{
                         <p>~ '.$name->getCategory().' ~</p>
                     </aside>
                     <img class="'.$name->getLogo().'" alt="'.$name->getCategory().'">
+                    <figure>
                     '.self::truckPicture($newPicture).'
+                    </figure>
                 </section>
             ';
         }
@@ -111,9 +89,7 @@ class Page{
         $row = '';
         foreach ($newPicture as $pic) {
             $row .= '
-            <figure>
                 <img src="'.$pic->getPicture().'" alt="">
-            </figure>
             ';
         }
         return $row;
@@ -154,5 +130,39 @@ class Page{
             ';
         }
         return $rowList;
+    }
+    public static function truckInfoRow(array $newTruck){
+        $row = '';
+        foreach($newTruck as $information){
+            $row='
+            <section class="truck-info">
+                <section>
+                    <article class="location">
+                        <h2>Location</h2>
+                        <address>'.$information->getAddress().'</address>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d325.31634149957466!2d-123.1204656!3d49.2852886!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5486714e32658949%3A0xb0eb86b45e1c7e00!2sMr.%20Shawarma%20Vancouver%20Shawarma%20and%20Cheesesteak%2C%20Burger%2C%20and%20Falafel!5e0!3m2!1sen!2sca!4v1685243852156!5m2!1sen!2sca" width="350" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </article>
+                    <article class="info">
+                        <aside>
+                            <h2> Open</h2>
+                            <p>'.$information->getOpenHour().':00</p>
+                            <h2> close</h2>
+                            <p>'.$information->getCloseHour().':00</p>
+                        </aside>
+                        <aside>
+                            <h2>Day off</h2>
+                            <p>'.$information->getDayOff().'</p>
+                        </aside>
+                        <aside class="truck-contact">
+                            <h2>Contact</h2>
+                            <a href="tel">'.$information->getPhoneNumber().'</a>
+                            <a href="#">'.$information->getEmail().'</a>
+                        </aside>
+                    </article>
+                </section>
+            </section>
+            ';
+        }
+        return $row;
     }
 }

@@ -12,8 +12,6 @@ UserDAO::initDB();
 date_default_timezone_set("America/Vancouver");
 $picSrc = "user_img/";
 
-
-
 if(!empty($_POST)){
     $updateAcc = new UserData();
     $updateAcc->setId($_SESSION["user"]->getId());
@@ -41,12 +39,6 @@ if(!empty($_POST)){
         $updateAcc->setPhone($_SESSION["user"]->getPhone());
     }
     
-    if (!empty($_POST["picture"])) {
-        $updateAcc->setPicture($_POST["picture"]);
-    } else {
-        $updateAcc->setPicture($_SESSION["user"]->getPicture());
-    }
-    
     if (!empty($_POST["gender"])) {
         $updateAcc->setGender($_POST["gender"]);
     } else {
@@ -55,22 +47,22 @@ if(!empty($_POST)){
 
     $pass = password_hash($_POST["password"],PASSWORD_DEFAULT);
     $updateAcc->setPassword($pass);
+
+    if(!empty($_FILES)){
+        $imgLink = explode(".",$_FILES["profilePic"]["name"]);
+        $ms = floor(microtime(true)*1000);
+        $currentDate = date("H-i-s-$ms-Y-m-d");
+        $imgString = ''.$currentDate.'-'.$_SESSION["user"]->getName().'';
+    
+        $fileName = $imgString.".".$imgLink[count($imgLink)-1];
+        $picContainer = $picSrc . $fileName;
+    
+        move_uploaded_file($_FILES["profilePic"]["tmp_name"],$picContainer);
+        $updateAcc->setPicture($picContainer);
+    
+    }
     
     UserDAO::updateUser($updateAcc);
-}
-
-if(!empty($_FILES)){
-    $imgLink = explode(".",$_FILES["uploadPic"]["name"]);
-    $ms = floor(microtime(true)*1000);
-    $currentDate = date("H-i-s-$ms-Y-m-d");
-    $imgString = ''.$currentDate.'-'.$_SESSION["user"]->getName().'';
-
-    $fileName = $imgString.".".$imgLink[count($imgLink)-1];
-    $picContainer = $picSrc . $fileName;
-    move_uploaded_file($_FILES["uploadPic"]["tmp_name"],$picContainer);
-
-    var_dump($fileName);
-
 }
 
 

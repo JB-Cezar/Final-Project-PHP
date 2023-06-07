@@ -23,7 +23,7 @@ class ProfilePage{
             <div>
             <div class="profile-options">
                 <article>
-                    <img src="';
+                    <img src="./';
                     if(!empty($img)){
                         $ht .= $img;
                     }else{
@@ -75,9 +75,9 @@ class ProfilePage{
                     <input type="text" name="password" id="password">
                 </aside>
                 <aside>
-                    <label for="profilePic">Profile Pic</label>
-                    <input type="file" name="profilePic" id="profilePic">
-                </aside>
+                <label for="profilePic">Profile Pic</label>
+                <input type="file" name="profilePic" id="profilePic">
+            </aside>
             </div>
             <div class="info-2">
                 <h4>Gender</h4>

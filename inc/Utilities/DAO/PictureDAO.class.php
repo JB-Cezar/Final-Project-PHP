@@ -13,10 +13,9 @@ class PictureDAO{
 
         self::$db->query($sql);
 
-        self::$db->bind(":pictureId",$newPicture->getPicId());
+        self::$db->bind(":pictureId",$newPicture->getPictureId());
         self::$db->bind(":picture",$newPicture->getPicture());
         self::$db->bind(":truckId",$newPicture->getTruckId());
-
 
         self::$db->execute();
 
@@ -31,15 +30,15 @@ class PictureDAO{
         return self::$db->resultSet();
     }
 
-    public static function getPictureByPitureId( int $pictureId ) {
+    public static function getPictureByPictureId( int $pictureId ) {
 
-        $sql = "SELECT * FROM picture WHERE pictureId=:pictureId";
+        $sql = "SELECT * FROM picture WHERE truckId=:truckId";
 
         self::$db->query($sql);
 
-        self::$db->bind(":pictureId",$pictureId);
+        self::$db->bind(":truckId",$pictureId);
         self::$db->execute();
 
-        return self::$db->singleResult();
+        return self::$db->resultSet();
     }
 }

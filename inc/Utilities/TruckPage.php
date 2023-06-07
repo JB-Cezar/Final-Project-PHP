@@ -41,157 +41,126 @@ class TruckPage{
         return $header;
     }
 
-    public static function truckMainContent(){
+    public static function truckMainContent($newTruck,$newMenu, $newPicture, $newProduct){
         $truckMainContent = '<main class="truck-main">';
-        $truckMainContent.= self::truckTopRow();
-        $truckMainContent.= self::truckAboutRow();
-        $truckMainContent.= self::truckMenuRow();
-        $truckMainContent.= self::truckInfoRow();
+        $truckMainContent.= self::truckTopRow($newTruck,$newPicture);
+        $truckMainContent.= self::truckAboutRow($newTruck);
+        $truckMainContent.= self::truckMenuRow($newProduct,$newTruck);
+        $truckMainContent.= self::truckInfoRow($newTruck);
         $truckMainContent.= '</main>';
 
         return $truckMainContent;
     }
-    public static function truckTopRow(){
-        $row = '
-        <section class="truck-top">
-            <aside>
-                <h1>'..'</h1>
-                <p>'..'</p>
-            </aside>
-            <img class="logo" src="/img/truck-mexic/Mexican_03.jpg" alt="mexican">
-            <figure>
-                <img src="/img/truck-mexic/tacos-01.jpg" alt="">
-                <img src="/img/truck-mexic/tacos-01.jpg" alt="">
-                <img src="/img/truck-mexic/tacos-01.jpg" alt="">
-                <img src="/img/truck-mexic/tacos-01.jpg" alt="">
-            </figure>
-        </section>
-        ';
-        return $row;
-    }
-    public static function truckAboutRow(){
-        $row = '
-        <section class="truck-about">
-            <section>
-                <h2>About us</h2>
-                <p>
-                    '.$truck['description'].'
-                </p>
+    public static function truckTopRow(array $newTruck,$newPicture){
+        $row = '';
+        foreach($newTruck as $truck){
+            $row .= '
+            <section class="truck-top">
+                <aside>
+                    <h1>'.$truck->getTruckName().'</h1>
+                    <p>'.$truck->getCategory().'</p>
+                </aside>
+                <img class="'.$truck->getLogo().'" alt="mexican">
+                '.self::truckPic($newPicture).'
+
             </section>
-        </section>
-        ';
+            ';
+        }
         return $row;
     }
-    public static function truckMenuRow(){
-        $row='
-        <section class="truck-menu">
-            <h2>'.$menu['menuName'].'</h2>
-            <article>
+    public static function truckPic(array $newPicture){
+        $row = '';
+        foreach($newPicture as $picture){
+            $row .= '
+            <figure>
+                <img src="'.$picture->getPicture().'" alt="">
+            </figure>
+            ';
+        }
+        return $row;
+    }
+    public static function truckAboutRow( array $newTruck){
+        $row = '';
+        foreach($newTruck as $description){
+            $row .= '
+            <section class="truck-about">
+                <section>
+                    <h2>About us</h2>
+                    <p>
+                        '.$description->getDescription().'
+                    </p>
+                </section>
+            </section>
+            ';
+        }
+        return $row;
+    }
+    public static function truckMenuRow(array $newTruck,$newProduct){
+        $row = '';
+        foreach($newTruck as $category){
+            $row .='
+            <section class="truck-menu">
+                <h2>'.$category->getCategory().'</h2>
+                <article>
+                    '. self::menuRow($newProduct).'
+                </article>
+            </section>
+            ';
+        }
+        return $row;
+    }
+
+    public static function menuRow( array $newProduct){
+        $rowList ='';
+        foreach($newProduct as $singleProduct){
+            $rowList .= '
                 <figure>
-                    <img src="'.$picture['picture'].'">
+                    <img src="'.$singleProduct->getPic().'" alt="'.$singleProduct->getProductName().'">
                     <figcaption>
                         <aside class="price">
-                            <h3>'.$product['productName'].'</h3>
-                            <p>'.$product['price'].'</p>
+                            <h3>'.$singleProduct->getProductName().'</h3>
+                            <p>'.$singleProduct->getPrice().'</p>
                         </aside>
                         <p>
-                        '.$product['description'].'
+                            '.$singleProduct->getDescription().'
                         </p>
                     </figcaption>
                 </figure>
-                <figure>
-                    <img src="/img/truck-mexic/tacos-02.jpg" alt="tacos-02">
-                    <figcaption>
-                        <aside>
-                            <h3>Tacos</h3>
-                            <p>$15</p>
-                        </aside>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci nemo reprehenderit, cum iste tenetur assumenda?
-                        </p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="/img/truck-mexic/tacos-03.jpg" alt="tacos-01">
-                    <figcaption>
-                        <aside>
-                            <h3>Tacos</h3>
-                            <p>$15</p>
-                        </aside>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci nemo reprehenderit, cum iste tenetur assumenda?
-                        </p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="/img/truck-mexic/salada-01.jpg" alt="salada-01">
-                    <figcaption>
-                        <aside>
-                            <h3>Tacos</h3>
-                            <p>$15</p>
-                        </aside>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci nemo reprehenderit, cum iste tenetur assumenda?
-                        </p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="/img/truck-mexic/quesadilla-01.jpg" alt="quesadilla-01">
-                    <figcaption>
-                        <aside>
-                            <h3>Tacos</h3>
-                            <p>$15</p>
-                        </aside>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci nemo reprehenderit, cum iste tenetur assumenda?
-                        </p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="/img/truck-mexic/nachos-01.jpg" alt="tacos-01">
-                    <figcaption>
-                        <aside>
-                            <h3>Tacos</h3>
-                            <p>$15</p>
-                        </aside>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci nemo reprehenderit, cum iste tenetur assumenda?
-                        </p>
-                    </figcaption>
-                </figure>
-            </article>
-        </section>
-        ';
-        return $row;
+            ';
+        }
+        return $rowList;
     }
-    public static function truckInfoRow(){
-        $row='
-        <section class="truck-info">
-            <section>
-                <article class="location">
-                    <h2>Location</h2>
-                    <address>'.$truck['address'].'</address>
-                </article>
-                <article class="info">
-                    <aside>
-                        <h2> Open</h2>
-                        <p>'.$truck['openHour'].'</p>
-                        <h2> close</h2>
-                        <p>'.$truck['closeHour'].'</p>
-                    </aside>
-                    <aside>
-                        <h2>Day off</h2>
-                        <p>'.$truck['dayOff'].'</p>
-                    </aside>
-                    <aside class="truck-contact">
-                        <h2>Contact</h2>
-                        <a href="tel">'.$truck['phoneNumber'].'</a>
-                        <a href="#">'.$truck['email'].'</a>
-                    </aside>
-                </article>
+    public static function truckInfoRow(array $newTruck){
+        $row = '';
+        foreach($newTruck as $information){
+            $row='
+            <section class="truck-info">
+                <section>
+                    <article class="location">
+                        <h2>Location</h2>
+                        <address>'.$information->getAddress().'</address>
+                    </article>
+                    <article class="info">
+                        <aside>
+                            <h2> Open</h2>
+                            <p>'.$information->getOpenHour().'</p>
+                            <h2> close</h2>
+                            <p>'.$information->getCloseHour().'</p>
+                        </aside>
+                        <aside>
+                            <h2>Day off</h2>
+                            <p>'.$information->getDayOff().'</p>
+                        </aside>
+                        <aside class="truck-contact">
+                            <h2>Contact</h2>
+                            <a href="tel">'.$information->getPhoneNumber().'</a>
+                            <a href="#">'.$information->getEmail().'</a>
+                        </aside>
+                    </article>
+                </section>
             </section>
-        </section>
-        ';
+            ';
+        }
         return $row;
     }
 

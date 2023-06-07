@@ -32,11 +32,11 @@ class MenuDAO{
     }
 
     public static function getMenuByName( string $name ) {
-        $sql = "SELECT * FROM users WHERE menuName=:menuName";
+        $sql = "SELECT * FROM menu WHERE menuName=:menuName";
 
         self::$db->query($sql);
 
-        self::$db->bind(":menuName",$username);
+        self::$db->bind(":menuName",$name);
         self::$db->execute();
 
         return self::$db->singleResult();

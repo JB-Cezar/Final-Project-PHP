@@ -7,11 +7,11 @@ class Picture{
     private int $truckId;
 
     public function getPictureId(){
-        return $this->picId;
+        return $this->pictureId;
     }
 
-    public function setPictureId(int $picId){
-        $this->picId = $picId;
+    public function setPictureId(int $pictureId){
+        $this->pictureId = $pictureId;
     }
 
     public function getPicture(){

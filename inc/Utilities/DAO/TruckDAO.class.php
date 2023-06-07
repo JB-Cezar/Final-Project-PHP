@@ -14,18 +14,18 @@ class TruckDAO{
 
         self::$db->query($sql);
 
-        self::$db->bind(":truckId",$newUser->getTruckId());
-        self::$db->bind(":truckName",$newUser->getTruckName());
-        self::$db->bind(":category",$newUser->getCategory());
-        self::$db->bind(":dayOff",$newUser->getDayOff());
-        self::$db->bind(":openHour",$newUser->getOpenHour());
-        self::$db->bind(":closeHour",$newUser->getCloseHour());
-        self::$db->bind(":description",$newUser->getDescription());
-        self::$db->bind(":email",$newUser->getEmail());
-        self::$db->bind(":phoneNumber",$newUser->getPhoneNumber());
-        self::$db->bind(":address",$newUser->getAddress());
-        self::$db->bind(":logo",$newUser->getLogo());
-        self::$db->bind(":menuId",$newUser->getMenuId());
+        self::$db->bind(":truckId",$newTruck->getTruckId());
+        self::$db->bind(":truckName",$newTruck->getTruckName());
+        self::$db->bind(":category",$newTruck->getCategory());
+        self::$db->bind(":dayOff",$newTruck->getDayOff());
+        self::$db->bind(":openHour",$newTruck->getOpenHour());
+        self::$db->bind(":closeHour",$newTruck->getCloseHour());
+        self::$db->bind(":description",$newTruck->getDescription());
+        self::$db->bind(":email",$newTruck->getEmail());
+        self::$db->bind(":phoneNumber",$newTruck->getPhoneNumber());
+        self::$db->bind(":address",$newTruck->getAddress());
+        self::$db->bind(":logo",$newTruck->getLogo());
+        self::$db->bind(":menuId",$newTruck->getMenuId());
 
         self::$db->execute();
 
@@ -46,9 +46,17 @@ class TruckDAO{
 
         self::$db->query($sql);
 
-        self::$db->bind(":truckName",$username);
+        self::$db->bind(":truckName",$truckName);
         self::$db->execute();
 
         return self::$db->singleResult();
+    }
+    public static function getTruckById($truckId){
+        $sql = "SELECT * FROM truck WHERE truckId = :truckId";
+        self::$db->query($sql);
+        self::$db->bind(":truckId",$truckId);
+        self::$db->execute();
+
+        return self::$db->resultSet();
     }
 }

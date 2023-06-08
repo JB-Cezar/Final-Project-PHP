@@ -3,14 +3,15 @@
 class Employee{
 
     private int $employeeId;
-    private string $fristName;
-    private string $lastName;
+    private string $first_name;
+    private string $last_name;
     private string $email;
     private string $gender;
     private string $username;
     private string $password;
-    private string $departament;
+    private string $department;
     private float $salary;
+    private string $picture;
     private int $truckId;
 
     public function getEmployeeId(): int{
@@ -22,21 +23,21 @@ class Employee{
         return $this;
     }
 
-    public function getFristName(): string{
-        return $this->fristName;
+    public function getFirstName():string{
+        return $this->first_name;
     }
 
-    public function setFristName(string $fristName){
-        $this->fristName = $fristName;
+    public function setFirstName(string $first_name){
+        $this->first_name = $first_name;
         return $this;
     }
 
     public function getLastName(): string{
-        return $this->lastName;
+        return $this->last_name;
     }
 
-    public function setLastName(string $lastName){
-        $this->lastName = $lastName;
+    public function setLastName(string $last_name){
+        $this->last_name = $last_name;
         return $this;
     }
 
@@ -76,12 +77,12 @@ class Employee{
         return $this;
     }
 
-    public function getDepartament(): string{
-        return $this->departament;
+    public function getDepartment(): string{
+        return $this->department;
     }
 
-    public function setDepartament(string $departament){
-        $this->departament = $departament;
+    public function setDepartment(string $department){
+        $this->department = $department;
         return $this;
     }
 
@@ -91,6 +92,13 @@ class Employee{
 
     public function setSalary(float $salary){
         $this->salary = $salary;
+        return $this;
+    }
+    public function getPicture(): string{
+        return $this->picture;
+    }
+    public function setPicture(string $picture){
+        $this->picture = $picture;
         return $this;
     }
 

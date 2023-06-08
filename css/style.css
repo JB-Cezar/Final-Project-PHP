@@ -185,6 +185,34 @@ li {
   .truck-info .truck-contact a {
     color: black;
   }
+  .truck-employee {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10vh 0;
+  }
+  .truck-employee h2 {
+    padding-bottom: 5vh;
+  }
+  .truck-employee img {
+    width: 10vh;
+    height: 10vh;
+    border-radius: 50%;
+  }
+  .truck-employee aside {
+    display: flex;
+    flex-direction: column;
+    -moz-column-gap: 1vh;
+         column-gap: 1vh;
+  }
+  .truck-employee ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    -moz-column-gap: 1vh;
+         column-gap: 1vh;
+  }
 }
 @media (min-width: 300px) {
   .sign-main {
@@ -332,6 +360,14 @@ li {
     display: flex;
     justify-content: space-between;
   }
+  .truck-employee img {
+    width: 13vh;
+    height: 13vh;
+  }
+  .truck-employee ul {
+    -moz-column-gap: 2vh;
+         column-gap: 2vh;
+  }
 }
 @media (min-width: 700px) {
   .sign-main {
@@ -385,6 +421,15 @@ li {
   }
   .truck-info p {
     font-size: 24px;
+  }
+  .truck-employee img {
+    width: 20vh;
+    height: 20vh;
+  }
+  .truck-employee ul {
+    width: 90%;
+    -moz-column-gap: 5vh;
+         column-gap: 5vh;
   }
 }
 @media (min-width: 1000px) {

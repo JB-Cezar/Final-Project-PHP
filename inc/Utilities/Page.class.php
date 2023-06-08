@@ -48,7 +48,7 @@ class Page{
         ';
         return $htmlPageEnd;
     }
-    public static function truckPage($newProduct,$newTruck,$newPicture){
+    public static function truckPage($newProduct,$newTruck,$newPicture,$employees){
         $htmlTruckPage = '
             <main class="truck-main">
                 '.self::truckTop($newTruck,$newPicture).'
@@ -62,6 +62,12 @@ class Page{
                 </article>
             </section>
             '.self::truckInfoRow($newTruck).'
+            <section class="truck-employee">
+                    <h2> We are waiting for you</h2>
+                    <ul>
+                    '.self::employeesSection($employees).'
+                    </ul>
+                </section>
             </main>
         ';
         return $htmlTruckPage;
@@ -161,6 +167,24 @@ class Page{
                     </article>
                 </section>
             </section>
+            ';
+        }
+        return $row;
+    }
+    public static function employeesSection($employees){
+        $row = '';
+
+        foreach($employees as $employee){
+            $row .='
+                <li>
+                    <img src="'.$employee->getPicture().'" alt="">
+                    <aside>
+                        <h4>'.$employee->getFirstName() ." ". $employee->getLastName().'</h4>
+                        <h4>'.$employee->getGender().'</h4>
+                    </aside>
+                    <h5>'.$employee->getDepartment().'</h5>
+                    <a href="">'.$employee->getEmail().'</a>
+                </li>
             ';
         }
         return $row;

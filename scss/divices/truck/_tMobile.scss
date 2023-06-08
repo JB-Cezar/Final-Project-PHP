@@ -88,5 +88,28 @@
             }
         }
     }
+    .truck-employee{
+        @include flex-column;
+        @include flex-center;
+        padding: 10vh 0;
+        h2{
+            padding-bottom: 5vh;
+        }
+        img{
+            width: 10vh;
+            height: 10vh;
+            border-radius: 50%;
+        }
+        aside{
+            @include flex-column;
+            column-gap: 1vh;
+        }
+        ul{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            column-gap: 1vh;
+        }
+    }
 
 }

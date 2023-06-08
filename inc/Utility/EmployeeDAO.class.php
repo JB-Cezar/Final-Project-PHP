@@ -14,7 +14,7 @@ class EmployeeDAO{
         self::$db->query($sql);
         self::$db->execute();
 
-        return self::$db->getResultSet();
+        return self::$db->resultSet();
     }
 
     public static function getEmployeeById($id){
@@ -24,7 +24,7 @@ class EmployeeDAO{
         self::$db->bind(":employeeId",$id);
         self::$db->execute();
 
-        return self::$db->singleResult();
+        return self::$db->resultSet();
     }
 
     public static function deleteEmployee(int $id){
@@ -83,7 +83,7 @@ class EmployeeDAO{
         
         self::$db->execute();
 
-        return self::$db->getResultSet();
+        return self::$db->resultSet();
     }
 
     

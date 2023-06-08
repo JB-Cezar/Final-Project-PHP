@@ -7,10 +7,9 @@ require_once("./inc/Utilities/DAO/UserDAO.class.php");
 require_once("./inc//Utility/Page.class.php");
 
 session_start();
-if(!empty($_GET)){
-    if($_GET["logged"]=="out"){
-        session_destroy();
-    }
+
+if(!isset($_SESSION["user"])){
+    session_destroy();
 }
 
 // html page

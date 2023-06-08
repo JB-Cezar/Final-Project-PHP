@@ -34,6 +34,7 @@ if(!empty($_POST)){
         $updateAcc->setEmail($_SESSION["user"]->getEmail());
     }
     
+    
     if (!empty($_POST["phone"])) {
         $updateAcc->setPhone($_POST["phone"]);
     } else {
@@ -47,7 +48,12 @@ if(!empty($_POST)){
     }
 
     $pass = password_hash($_POST["password"],PASSWORD_DEFAULT);
-    $updateAcc->setPassword($pass);
+
+    if (!empty($_POST["password"])) {
+        $updateAcc->setPassword($pass);
+    } else {
+        $updateAcc->setPassword($_SESSION["user"]->getPassword());
+    }
 
     if(!empty($_FILES)){
         $imgLink = explode(".",$_FILES["profilePic"]["name"]);

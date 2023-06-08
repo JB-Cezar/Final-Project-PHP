@@ -14,7 +14,7 @@ class UserDAO{
         self::$db->query($sql);
         self::$db->execute();
 
-        return self::$db->getResultSet();
+        return self::$db->resultSet();
     }
 
     public static function getUserByEmail(string $email){

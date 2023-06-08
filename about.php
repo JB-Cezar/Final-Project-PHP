@@ -15,10 +15,9 @@ $empList->setEmpList(EmployeeDAO::getAllEmployees());
 $limit = 15;
 
 session_start();
-if(!empty($_GET) && isset($_SESSION["user"])){
-    if($_GET["logged"]=="out"){
-        session_destroy();
-    }
+
+if(!isset($_SESSION["user"])){
+    session_destroy();
 }
 
 

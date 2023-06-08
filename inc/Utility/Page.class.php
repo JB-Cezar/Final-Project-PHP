@@ -23,21 +23,15 @@ class Page{
         <header id="header">
             <article>
                 <nav>
-                    <a href="';
-                    if(isset($_SESSION["user"])){
-                        $header.= "index.php?logged=in";
-                    }else{
-                        $header.="index.php?logged=out";
-                    }
-                    $header.= '">
+                    <a href="index.php">
                     <img src="https://cdn-icons-png.flaticon.com/512/10344/10344222.png" alt="logo">
                     </a>
                     <ul>
                         <li><a href="';
-                        if(isset($_SESSION["user"])){
-                            $header.= "about.php?logged=in";
+                        if(!isset($_SESSION["user"]) || $_GET["logged"]=="out"){
+                            $header.= "about.php?logged=out";
                         }else{
-                            $header.="about.php?logged=out";
+                            $header.="about.php";
                         }
                         $header.= '">ABOUT</a></li>
                         <li><a href="index.php#truckList">TRUCKS</a></li>
@@ -46,28 +40,18 @@ class Page{
                         <li><a href="#home-footer">CONTACT</a></li>
                     </ul>
                     <a href="';
-                    if(!empty($_GET) && isset($_SESSION["user"])){
-                        if($_GET["logged"]=="out"){
-                            $header .= 'signIn.php"';
-                        }else if($_GET["logged"]=="in"){
-                            $header .= 'profile.php"';
-                        }
+                    if(!isset($_SESSION["user"]) || $_GET["logged"]=="out"){
+                        $header.='signIn.php"';
                     }else{
-                        $header.= 'signIn.php"';
+                        $header.='profile.php"';
                     }
                     
                     $header.='class="signStatus">';
 
-                    if(!empty($_GET)){
-                        if(isset($_SESSION["user"])){
-                            if($_GET["logged"]=="in"){
-                                $header .= $user;
-                            }else if($_GET["logged"]="out"){
-                                $header .= 'SIGN IN';
-                            }
-                        }else{
-                            $header.= 'SIGN IN';
-                        }
+                    if(!isset($_SESSION["user"]) || $_GET["logged"]=="out"){
+                        $header.='SIGN IN';
+                    }else{
+                        $header.=$user;
                     }
                     $header .= '</a>
                 </nav>

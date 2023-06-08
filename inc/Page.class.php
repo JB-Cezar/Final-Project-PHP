@@ -10,7 +10,7 @@ class Page{
             <meta charset="UTF-8">
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <link rel="stylesheet" href="./css/style.css">
+            <link rel="stylesheet" href="./scss/style.scss">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
             <title>final-project</title>
         </head>
@@ -23,15 +23,17 @@ class Page{
         <header>
             <article>
                 <nav>
+                    <a href="#">
                     <img src="https://cdn-icons-png.flaticon.com/512/10344/10344222.png" alt="logo">
+                    </a>
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Sign Up</a></li>
-                        <li><a href="#">Location</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#about">ABOUT</a></li>
+                        <li><a href="#trucks">TRUCKS</a></li>
+                        <li><a href="#location">DINE IN</a></li>
+                        <li><a href="calendar.php">CALENDAR</a></li>
+                        <li><a href="#contact">CONTACT</a></li>
                     </ul>
-                    <a href="#">DELIVERY</a>
+                    <a href="#">PICK-UP & DELIVERY</a>
                 </nav>
             </article>
             <video src="./video/pexels-kelly-2941127-2048x1080-24fps.mp4" autoplay muted loop></video>
@@ -41,7 +43,7 @@ class Page{
 
     public static function about(){
         $about = '
-        <div class="about">
+        <div class="about" id="about">
 
         </div>';
 
@@ -50,15 +52,23 @@ class Page{
 
     public static function truckList(){
         $truckList = '
-        <div class="menu">
+        <div class="menu" id="trucks">
             <h2>Menu</h2>
         </div>';
         return $truckList;
     }
 
+    public static function gallery(){
+        $gallery = '
+        <div class="gallery" id="gallery">
+            <h2>Gallery</h2>
+        </div>';
+        return $gallery;
+    }
+
     public static function reviews(){
         $reviews = '
-        <div class="reviews">
+        <div class="reviews" id="reviews">
         <h2>Reviews from our customers</h2>
         <div class="review">
             
@@ -102,16 +112,16 @@ class Page{
 
     public static function map(){
         $map = '
-        <div class="map">
-            <h2>Location</h2>
+        <div id="location" class="map">
+            <h2>DINE IN</h2>
         </div>';
         return $map;
     }
 
     public static function footer(){
         $footer = '
-        <footer>
-            <h2>A really nice footer</h2>
+        <footer id="contact">
+            <h2>CONTACT</h2>
         </footer>';
         return $footer;
     }

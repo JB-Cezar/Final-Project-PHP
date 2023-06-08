@@ -17,7 +17,7 @@ class HomePage{
         <body>';
         return $htmlHeader;
     }
-
+    
     public static function header($user=""){
         $header = '
         <header id="header">
@@ -309,9 +309,29 @@ class HomePage{
         return $map;
     }
 
-    public static function footer(){
+    public static function contact(){
+        $contact = '
+        <form action="'.$_SERVER["PHP_SELF"].'" method="POST" id="newsletter">
+            <input type="email" name="email" placeholder="Email address">
+            <input type="submit" name="submit" value="Register to our newsletter">
+        </form>';
+        return $contact;
+    }
+
+    public static function notsent(){
+        $notSent = '<div class="newsError">
+        <p>Registration unsuccesful</p>
+        </div>';
+        return $notSent;
+    }
+
+    public static function footer($contact=""){
         $footer = '
-        <footer id="home-footer">
+        <footer id="home-footer">';
+
+        $footer.= $contact;
+        $footer.='
+        <div>
         <ul>
             <li><a href="#">Accessibility</a></li>
             <li><a href="#">Privacy Policy</a></li>
@@ -328,6 +348,7 @@ class HomePage{
             <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
             <li><a href="#"><i class="fa-brands fa-tiktok"></i></a></li>
         </ul>
+        </div>
         </footer>';
         return $footer;
     }

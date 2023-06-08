@@ -818,17 +818,20 @@ video {
 
 #home-footer {
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
   background-image: url("https://uploads-ssl.webflow.com/637f8005cf82256ba6e57888/638a0c88c3725b6817f0e028_contact-us-background.svg");
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  align-items: center;
   padding: 1vh 0;
   height: unset;
   background-color: unset;
 }
-#home-footer > ul {
+#home-footer > div {
+  display: flex;
+  justify-content: space-around;
+}
+#home-footer ul {
   display: flex;
   align-items: center;
   width: 35%;
@@ -855,6 +858,31 @@ video {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+#newsletter {
+  display: flex;
+  justify-content: center;
+  width: 40%;
+  padding: 1vh 0;
+  gap: 2vh;
+}
+#newsletter input[type=email] {
+  padding: 1vh 8vh;
+}
+#newsletter input[type=submit] {
+  padding: 0 1vh;
+  background-color: #B08BBB;
+  border: 1px solid #B08BBB;
+  border-radius: 5px;
+  color: white;
+  font-weight: 600;
+}
+#newsletter input[type=submit]:hover {
+  background-color: white;
+  color: #B08BBB;
+  transition: 0.5s;
+  cursor: pointer;
 }
 
 .reviews {

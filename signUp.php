@@ -5,8 +5,8 @@ require_once("./inc/Entities/UserData.class.php");
 require_once("./inc/Utilities/PDOClass.class.php");
 require_once("./inc/Utilities/DAO/UserDAO.class.php");
 require_once("./inc/Utilities/LoginVerification.class.php");
-require_once("./inc/SignUpPage.php");
-require_once("./inc/Utility/Page.class.php");
+require_once("./inc/Utilities/SignUpPage.php");
+require_once("./inc/Utilities/HomePage.class.php");
 
 session_start();
 LoginVerification::verify();

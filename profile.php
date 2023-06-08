@@ -4,9 +4,9 @@ require_once("./inc/config.inc.php");
 require_once("./inc/Entities/UserData.class.php");
 require_once("./inc/Utilities/PDOClass.class.php");
 require_once("./inc/Utilities/DAO/UserDAO.class.php");
-require_once("./inc/ProfilePage.class.php");
-require_once("./inc/SignInPage.php");
-require_once("./inc/Utility/Page.class.php");
+require_once("./inc/Utilities/ProfilePage.class.php");
+require_once("./inc/Utilities/SignInPage.php");
+require_once("./inc/Utilities/HomePage.class.php");
 
 session_start();
 UserDAO::initDB();
@@ -85,6 +85,6 @@ echo ProfilePage::profile(
     $_SESSION["user"]->getPicture(),
     $_SESSION["user"]->getName()
 );
-echo Page::footer();
+echo HomePage::footer();
 //html presets
 echo SignInPage::htmlFooter();

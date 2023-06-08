@@ -1,6 +1,6 @@
 <?php
 
-class Page{
+class HomePage{
     //html presets
     public static function htmlHeader($title){
         $htmlHeader = '
@@ -23,7 +23,13 @@ class Page{
         <header id="header">
             <article>
                 <nav>
-                    <a href="index.php">
+                    <a href="';
+                    if(!isset($_SESSION["user"]) || $_GET["logged"]=="out"){
+                        $header.= "index.php?logged=out";
+                    }else{
+                        $header.="index.php?logged=in";
+                    }
+                    $header.='">
                     <img src="https://cdn-icons-png.flaticon.com/512/10344/10344222.png" alt="logo">
                     </a>
                     <ul>
@@ -31,7 +37,7 @@ class Page{
                         if(!isset($_SESSION["user"]) || $_GET["logged"]=="out"){
                             $header.= "about.php?logged=out";
                         }else{
-                            $header.="about.php";
+                            $header.="about.php?logged=in";
                         }
                         $header.= '">ABOUT</a></li>
                         <li><a href="index.php#truckList">TRUCKS</a></li>

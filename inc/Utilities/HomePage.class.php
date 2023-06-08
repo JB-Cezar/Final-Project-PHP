@@ -43,6 +43,7 @@ class HomePage{
                         <li><a href="index.php#truckList">TRUCKS</a></li>
                         <li><a href="index.php#location">DINE IN</a></li>
                         <li><a href="#home-footer">CONTACT</a></li>
+                        <li><a href="index.php#gallery">GALLERY</a></li>
                     </ul>
                     <a href="';
                     if(!isset($_SESSION["user"]) || $_GET["logged"]=="out"){

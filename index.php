@@ -69,5 +69,3 @@ if(!empty($_POST)){
 }else{
     echo HomePage::footer(HomePage::contact());
 }
-
-echo HomePage::htmlFooter();

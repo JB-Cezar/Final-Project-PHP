@@ -43,12 +43,12 @@ class SignInPage{
 
     public static function signInMainContent(){
         $signInMainContent = '<main class="sign-main">';
-        $signInMainContent.=self::section();
+        $signInMainContent.=self::sectionIn();
         $signInMainContent .= '</main>';
 
         return $signInMainContent;
     }
-    public static function section(){
+    public static function sectionIn(){
         $section = '
         <section>'.self::signInLeftRow().self::signInRightRow().'
         </section>

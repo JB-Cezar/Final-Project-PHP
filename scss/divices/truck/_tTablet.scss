@@ -30,7 +30,7 @@
     }
     .truck-about{
         >section{
-            padding: 10vh 0;
+            padding: 5vh 0;
             display: flex;
             @include flex-center;
         }
@@ -71,7 +71,12 @@
             height: 13vh;
         }
         ul{
+            flex-direction: row;
+            flex-wrap: wrap;
             column-gap: 2vh;
+        }
+        li{
+            width: 30vh;
         }
     }
 

@@ -86,7 +86,7 @@ li {
 }
 @media (min-width: 300px) {
   .truck-main {
-    padding: 5vh 0;
+    padding-top: 5vh;
     display: flex;
     flex-direction: column;
     row-gap: 5vh;
@@ -190,10 +190,10 @@ li {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 10vh 0;
+    padding: 5vh 0;
   }
   .truck-employee h2 {
-    padding-bottom: 5vh;
+    padding-bottom: 7vh;
   }
   .truck-employee img {
     width: 10vh;
@@ -208,7 +208,7 @@ li {
   }
   .truck-employee ul {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
     -moz-column-gap: 1vh;
          column-gap: 1vh;
@@ -365,8 +365,13 @@ li {
     height: 13vh;
   }
   .truck-employee ul {
+    flex-direction: row;
+    flex-wrap: wrap;
     -moz-column-gap: 2vh;
          column-gap: 2vh;
+  }
+  .truck-employee li {
+    width: 30vh;
   }
 }
 @media (min-width: 700px) {

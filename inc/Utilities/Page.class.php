@@ -150,17 +150,15 @@ class Page{
                     </article>
                     <article class="info">
                         <aside>
-                            <h2> Open</h2>
-                            <p>'.$information->getOpenHour().':00</p>
-                            <h2> close</h2>
-                            <p>'.$information->getCloseHour().':00</p>
+                            <h3> Opening hour</h3>
+                            <p>'.$information->getOpenHour().':00 〜 '.$information->getCloseHour().':00</p>
                         </aside>
                         <aside>
-                            <h2>Day off</h2>
+                            <h3>Day off</h3>
                             <p>'.$information->getDayOff().'</p>
                         </aside>
                         <aside class="truck-contact">
-                            <h2>Contact</h2>
+                            <h3>Contact</h3>
                             <a href="tel">'.$information->getPhoneNumber().'</a>
                             <a href="#">'.$information->getEmail().'</a>
                         </aside>

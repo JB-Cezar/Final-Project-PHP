@@ -105,3 +105,8 @@ class Employee{
     public function getTruckId(): int{
         return $this->truckId;
     }
+    public function setTruckId(int $truckId){
+        $this->truckId = $truckId;
+        return $this;
+    }
+}

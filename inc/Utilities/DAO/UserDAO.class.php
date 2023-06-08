@@ -38,3 +38,5 @@ class UserDAO{
         self::$db->query($sql);
         self::$db->bind(":email", $email);
         self::$db->execute();
+    }
+}

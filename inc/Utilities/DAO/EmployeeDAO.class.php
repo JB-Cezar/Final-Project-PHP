@@ -8,23 +8,23 @@ class EmployeeDAO{
         self::$db = new PDOService("Employee");
     }
 
-    public static function insertEmployee(Employee $newUser) {
+    public static function insertEmployee(Employee $employee) {
 
         $sql = "INSERT INTO employee(employeeId,first_name,last_name,email,gender,username,password,department,salary,picture,truckId) VALUES(:employeeId,:first_name,:last_name,:email,:gender,:username,:password,:department,:salary,:picture,:truckId)";
 
         self::$db->query($sql);
 
-        self::$db->bind(":employeeId",$newUser->getEmployeeId());
-        self::$db->bind(":first_name",$newUser->getFirstName());
-        self::$db->bind(":last_name",$newUser->getLastName());
-        self::$db->bind(":email",$newUser->getEmail());
-        self::$db->bind(":gender",$newUser->getGender());
-        self::$db->bind(":username",$newUser->getUsername());
-        self::$db->bind(":password",$newUser->getPassword());
-        self::$db->bind(":department",$newUser->getDepartment());
-        self::$db->bind(":salary",$newUser->getSalary());
-        self::$db->bind(":picture",$newUser->getPicture());
-        self::$db->bind(":truckId",$newUser->getTruckId());
+        self::$db->bind(":employeeId",$employee->getEmployeeId());
+        self::$db->bind(":first_name",$employee->getFirstName());
+        self::$db->bind(":last_name",$employee->getLastName());
+        self::$db->bind(":email",$employee->getEmail());
+        self::$db->bind(":gender",$employee->getGender());
+        self::$db->bind(":username",$employee->getUsername());
+        self::$db->bind(":password",$employee->getPassword());
+        self::$db->bind(":department",$employee->getDepartment());
+        self::$db->bind(":salary",$employee->getSalary());
+        self::$db->bind(":picture",$employee->getPicture());
+        self::$db->bind(":truckId",$employee->getTruckId());
 
         self::$db->execute();
 

@@ -11,102 +11,196 @@ class Employee{
     private string $password;
     private string $department;
     private float $salary;
-    private string $picture;
-    private int $truckId;
+	private string $picture;
 
-    public function getEmployeeId(): int{
-        return $this->employeeId;
-    }
+	/**
+	 * Undocumented function
+	 *
+	 * @return void
+	 */
+	public function getEmployeeId() {
+		return $this->employeeId;
+	}
 
-    public function setEmployeeId(int $employeeId){
-        $this->employeeId = $employeeId;
-        return $this;
-    }
+	/**
+	 * Undocumented function
+	 *
+	 * @param integer $employeeId
+	 * @return void
+	 */
+	public function setEmployeeId(int $employeeId) {
+		$this->employeeId = $employeeId;
+	}
 
-    public function getFirstName():string{
-        return $this->first_name;
-    }
+	/**
+	 * Undocumented function
+	 *
+	 * @return void
+	 */
+	public function getFirst_name() {
+		return $this->first_name;
+	}
 
-    public function setFirstName(string $first_name){
-        $this->first_name = $first_name;
-        return $this;
-    }
+	/**
+	 * Undocumented function
+	 *
+	 * @param string $first_name
+	 * @return void
+	 */
+	public function setFirst_name(string $first_name) {
+		$this->first_name = $first_name;
+	}
 
-    public function getLastName(): string{
-        return $this->last_name;
-    }
+	/**
+	 * Undocumented function
+	 *
+	 * @return void
+	 */
+	public function getLast_name() {
+		return $this->last_name;
+	}
 
-    public function setLastName(string $last_name){
-        $this->last_name = $last_name;
-        return $this;
-    }
+	/**
+	 * Undocumented function
+	 *
+	 * @param string $last_name
+	 * @return void
+	 */
+	public function setLast_name(string $last_name) {
+		$this->last_name = $last_name;
+	}
 
-    public function getEmail(): string{
-        return $this->email;
-    }
+	/**
+	 * Undocumented function
+	 *
+	 * @return void
+	 */
+	public function getEmail() {
+		return $this->email;
+	}
 
-    public function setEmail(string $email){
-        $this->email = $email;
-        return $this;
-    }
+	/**
+	 * Undocumented function
+	 *
+	 * @param string $email
+	 * @return void
+	 */
+	public function setEmail(string $email) {
+		$this->email = $email;
+	}
 
-    public function getGender(): string{
-        return $this->gender;
-    }
+	/**
+	 * Undocumented function
+	 *
+	 * @return void
+	 */
+	public function getGender() {
+		return $this->gender;
+	}
 
-    public function setGender(string $gender){
-        $this->gender = $gender;
-        return $this;
-    }
+	/**
+	 * Undocumented function
+	 *
+	 * @param string $gender
+	 * @return void
+	 */
+	public function setGender(string $gender) {
+		$this->gender = $gender;
+	}
 
-    public function getUsername(): string{
-        return $this->username;
-    }
+	/**
+	 * Undocumented function
+	 *
+	 * @return void
+	 */
+	public function getUsername() {
+		return $this->username;
+	}
 
-    public function setUsername(string $username){
-        $this->username = $username;
-        return $this;
-    }
+	/**
+	 * Undocumented function
+	 *
+	 * @param string $username
+	 * @return void
+	 */
+	public function setUsername(string $username) {
+		$this->username = $username;
+	}
 
-    public function getPassword(): string{
-        return $this->password;
-    }
+	/**
+	 * Undocumented function
+	 *
+	 * @return void
+	 */
+	public function getPassword() {
+		return $this->password;
+	}
 
-    public function setPassword(string $password){
-        $this->password = $password;
-        return $this;
-    }
+	/**
+	 * Undocumented function
+	 *
+	 * @param string $password
+	 * @return void
+	 */
+	public function setPassword(string $password) {
+		$this->password = $password;
+	}
 
-    public function getDepartment(): string{
-        return $this->department;
-    }
+	/**
+	 * Undocumented function
+	 *
+	 * @return void
+	 */
+	public function getDepartment() {
+		return $this->department;
+	}
 
-    public function setDepartment(string $department){
-        $this->department = $department;
-        return $this;
-    }
+	/**
+	 * Undocumented function
+	 *
+	 * @param string $department
+	 * @return void
+	 */
+	public function setDepartment(string $department) {
+		$this->department = $department;
+	}
 
-    public function getSalary(): float{
-        return $this->salary;
-    }
+	/**
+	 * Undocumented function
+	 *
+	 * @return void
+	 */
+	public function getSalary() {
+		return $this->salary;
+	}
 
-    public function setSalary(float $salary){
-        $this->salary = $salary;
-        return $this;
-    }
-    public function getPicture(): string{
-        return $this->picture;
-    }
-    public function setPicture(string $picture){
-        $this->picture = $picture;
-        return $this;
-    }
+	/**
+	 * Undocumented function
+	 *
+	 * @param float $salary
+	 * @return void
+	 */
+	public function setSalary(float $salary) {
+		$this->salary = $salary;
+	}
 
-    public function getTruckId(): int{
-        return $this->truckId;
-    }
-    public function setTruckId(int $truckId){
-        $this->truckId = $truckId;
-        return $this;
-    }
+	/**
+	 * Undocumented function
+	 *
+	 * @return void
+	 */
+	public function getPicture(){
+		return $this->picture;
+	}
+
+	/**
+	 * Undocumented function
+	 *
+	 * @param string $picture
+	 * @return void
+	 */
+	public function setPicture(string $picture){
+		$this->picture = $picture;
+	}
+
 }

@@ -4,56 +4,14 @@ class EmployeeDAO{
 
     private static $db;
 
-    public static function startDb() {
+    public static function startDB(){
         self::$db = new PDOClass("Employee");
     }
 
-    public static function insertEmployee(Employee $employee) {
-
-        $sql = "INSERT INTO employee(employeeId,first_name,last_name,email,gender,username,password,department,salary,picture,truckId) VALUES(:employeeId,:first_name,:last_name,:email,:gender,:username,:password,:department,:salary,:picture,:truckId)";
-
-        self::$db->query($sql);
-
-        self::$db->bind(":employeeId",$employee->getEmployeeId());
-        self::$db->bind(":first_name",$employee->getFirstName());
-        self::$db->bind(":last_name",$employee->getLastName());
-        self::$db->bind(":email",$employee->getEmail());
-        self::$db->bind(":gender",$employee->getGender());
-        self::$db->bind(":username",$employee->getUsername());
-        self::$db->bind(":password",$employee->getPassword());
-        self::$db->bind(":department",$employee->getDepartment());
-        self::$db->bind(":salary",$employee->getSalary());
-        self::$db->bind(":picture",$employee->getPicture());
-        self::$db->bind(":truckId",$employee->getTruckId());
-
-        self::$db->execute();
-
-        return self::$db->lastInsertedId();
-    }
-
-    public static function getAllEmployee(){
+    public static function getAllEmployees(){
         $sql = "SELECT * FROM employee";
 
         self::$db->query($sql);
-        self::$db->execute();
-
-        return self::$db->resultSet();
-    }
-
-    public static function getEmployeeByUsername( string $username ) {
-        $sql = "SELECT * FROM employee WHERE username=:user";
-
-        self::$db->query($sql);
-
-        self::$db->bind(":user",$username);
-        self::$db->execute();
-
-        return self::$db->singleResult();
-    }
-    public static function getEmployeeByTruckId($truckId){
-        $sql = "SELECT * FROM employee WHERE truckId = :truckId";
-        self::$db->query($sql);
-        self::$db->bind(":truckId",$truckId);
         self::$db->execute();
 
         return self::$db->resultSet();
@@ -79,8 +37,25 @@ class EmployeeDAO{
         return self::$db->countRow();
     }
 
+    public static function insertEmployee(Employee $employee){
+        $sql = "INSERT INTO employee(first_name,last_name,email,gender,username,password,department,salary) VALUES(:first_name,:last_name,:email,:gender,:username,:password,:department,:salary)";
+
+        self::$db->query($sql);
+        self::$db->bind(":first_name",$employee->getFirst_name());
+        self::$db->bind(":last_name",$employee->getLast_name());
+        self::$db->bind(":email",$employee->getEmail());
+        self::$db->bind(":gender",$employee->getGender());
+        self::$db->bind(":username",$employee->getUsername());
+        self::$db->bind(":password",$employee->getPassword());
+        self::$db->bind(":department",$employee->getDepartment());
+        self::$db->bind(":salary",$employee->getSalary());
+        self::$db->execute();
+
+        return self::$db->lastInsertedId();
+    }
+
     public static function updateEmployee(Employee $employee){
-        $sql = "UPDATE employee SET first_name=:first_name,last_name=:last_name,email=:email,gender=:gender,username=:username,password=:password,department=:department,salary=:salary,truckId=:truckId WHERE employeeId=:employeeId";
+        $sql = "UPDATE employee SET first_name=:first_name,last_name=:last_name,email=:email,gender=:gender,username=:username,password=:password,department=:department,salary=:salary WHERE employeeId=:employeeId";
 
         self::$db->query($sql);
         self::$db->bind(":employeeId",$employee->getEmployeeId());
@@ -92,7 +67,6 @@ class EmployeeDAO{
         self::$db->bind(":password",$employee->getPassword());
         self::$db->bind(":department",$employee->getDepartment());
         self::$db->bind(":salary",$employee->getSalary());
-        self::$db->bind(":truckId",$employee->getTruckId());
         self::$db->execute();
 
         return self::$db->lastInsertedId();
@@ -113,5 +87,4 @@ class EmployeeDAO{
     }
 
     
-
 }

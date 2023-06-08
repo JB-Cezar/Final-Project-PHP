@@ -3,5 +3,5 @@
 define("DB_USER","root");
 define("DB_PASS","");
 define("DB_HOST","localhost");
-define("DB_NAME","FinalProjectPHP");
+define("DB_NAME","FinalProjeckPHP");
 

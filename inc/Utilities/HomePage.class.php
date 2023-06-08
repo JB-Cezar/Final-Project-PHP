@@ -42,7 +42,6 @@ class HomePage{
                         $header.= '">ABOUT</a></li>
                         <li><a href="index.php#truckList">TRUCKS</a></li>
                         <li><a href="index.php#location">DINE IN</a></li>
-                        <li><a href="calendar.php">CALENDAR</a></li>
                         <li><a href="#home-footer">CONTACT</a></li>
                     </ul>
                     <a href="';

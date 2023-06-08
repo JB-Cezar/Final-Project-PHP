@@ -5,7 +5,7 @@ class EmployeeDAO{
     private static $db;
 
     public static function startDb() {
-        self::$db = new PDOService("Employee");
+        self::$db = new PDOClass("Employee");
     }
 
     public static function insertEmployee(Employee $employee) {

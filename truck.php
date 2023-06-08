@@ -13,6 +13,7 @@ require_once("./inc/Utilities/DAO/TruckDAO.class.php");
 require_once("./inc/Utilities/DAO/EmployeeDAO.class.php");
 require_once("./inc/Utilities/PDOService.class.php");
 require_once("./inc/Utilities/Page.class.php");
+require_once("./inc/Utilities/HomePage.class.php");
 
 $number = 1;
 
@@ -46,13 +47,12 @@ MenuDAO::startDb();
 PictureDAO::startDb();
 ProductDAO::startDb();
 TruckDAO::startDb();
-EmployeeDAO::startDb();
 
 echo Page::pageHeader("Food Truck");
-echo Page::pageHead();
-$employees = EmployeeDAO::getEmployeeByTruckId($number);
+echo HomePage::header();
 $newProduct = ProductDAO::getProductsByMenuId($number);
 $newTruck = TruckDAO::getTruckById($number);
 $newPicture = PictureDAO::getPictureByPictureId($number);
-echo Page::truckPage($newProduct,$newTruck,$newPicture,$employees);
+echo Page::truckPage($newProduct,$newTruck,$newPicture);
+echo HomePage::footer();
 echo Page::pageEnd();

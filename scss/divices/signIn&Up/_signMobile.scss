@@ -1,5 +1,14 @@
 @media(min-width: $mobileScreen){
 
+    #error{
+        color: crimson;
+        text-align: center;
+        font-size: 1.1rem;
+        font-weight: 600;
+        padding: 2vh 0;
+        background-color: lightpink;
+    }
+
     .sign-main{
         height: 90vh;
         @include flex-column;
@@ -74,6 +83,7 @@
         }
 
     }
+    
     footer{
         height: 20vh;
         background-color: black;

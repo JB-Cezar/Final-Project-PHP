@@ -59,7 +59,7 @@ class signUpPage{
         $row='
         <section class="sign-left">
                 <h2>Sign up</h2>
-                <form action="">
+                <form action="'.$_SERVER["PHP_SELF"].'" method="POST">
                     <input type="text" name="name" id="name" required placeholder="Your name">
                     <input type="email" name="email" id="email" required placeholder="Email">
                     <input type="password" name="password" id="password" required placeholder="Password">
@@ -95,7 +95,7 @@ class signUpPage{
                         </p>
                     </article>
                     <aside>
-                        <a href="signIn.html">
+                        <a href="signIn.php">
                             <i class="fa-solid fa-circle-arrow-right"></i>
                             Sign in</a>
                     </aside>
@@ -103,6 +103,16 @@ class signUpPage{
             </section>
         ';
         return $row;
+    }
+
+    public static function errorPass(){
+        $ht = '<h6 id="error">Your password does not match</h6>';
+        return $ht;
+    }
+
+    public static function errorPassLength(){
+        $ht = '<h6 id="error">Your password needs to have at least 8 characters</h6>';
+        return $ht;
     }
 
 

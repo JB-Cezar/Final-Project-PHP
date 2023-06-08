@@ -1,5 +1,3 @@
-@charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,500;0,700;0,800;1,300;1,400;1,500;1,700;1,800&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -202,54 +200,89 @@ p {
   opacity: 0.8;
   transition: 0.7s;
 }
-
-.mexican {
-  background-image: url("https://ontheborder.com.au/wp-content/uploads/2022/03/Mexican-Cuisine-scaled.jpg");
-  background-position: center;
-  background-size: cover;
-  display: flex;
-  width: 100%;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-weight: 900;
-  font-size: 2rem;
-}
-.mexican:hover {
-  opacity: 0.8;
-  transition: 0.7s;
-}
-
-.korea {
-  background-image: url("https://www.ragus.co.uk/wp-content/uploads/2022/12/Korean_cuisine_01_ss_1588959085_1295x715px.jpg");
-  background-position: center;
-  background-size: cover;
-  display: flex;
-  width: 100%;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-weight: 900;
-  font-size: 2rem;
-}
-.korea:hover {
-  opacity: 0.8;
-  transition: 0.7s;
-}
-
-.gallery {
-  width: 100%;
-  height: 400px;
-  background-position: center;
-  background-size: cover;
-  background-image: url("../img/pexels-josé-luis-photographer-2564846.jpg");
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 5rem;
+@media (min-width: 300px) {
+  .sign-main {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url(/img/sign-img/sign-01.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .sign-main > section {
+    display: flex;
+    flex-direction: column;
+    row-gap: 7vh;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .sign-main h2 {
+    color: white;
+    padding-bottom: 5vh;
+    text-align: center;
+  }
+  .sign-main .sign-left,
+  .sign-main .signIn-right {
+    width: 60%;
+  }
+  .sign-main form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3vh;
+  }
+  .sign-main input {
+    padding: 3%;
+    border: none;
+    border-radius: 5px;
+    opacity: 0.4;
+  }
+  .sign-main [type=submit] {
+    background-color: #FFC300;
+    opacity: 0.8;
+  }
+  .sign-main ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -moz-column-gap: 2vh;
+         column-gap: 2vh;
+  }
+  .sign-main i {
+    font-size: 30px;
+    color: white;
+  }
+  .sign-main h3, .sign-main p {
+    color: white;
+  }
+  .sign-main h3 {
+    text-align: center;
+  }
+  .sign-main aside {
+    display: flex;
+    justify-content: center;
+  }
+  .sign-main a {
+    cursor: pointer;
+    width: 40%;
+    color: #FFC300;
+  }
+  .sign-main article {
+    padding-bottom: 2vh;
+  }
+  .sign-main .signIn-right i,
+  .sign-main .signUp-right i {
+    font-size: 18px;
+    padding-right: 2%;
+    color: #FFC300;
+  }
+  footer {
+    height: 20vh;
+    background-color: black;
+  }
 }
 
 .map {
@@ -305,41 +338,91 @@ footer {
   border: 1px solid transparent;
   border-radius: 50%;
 }
-
-.review aside {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+@media (min-width: 1000px) {
+  .truck-top {
+    width: 100%;
+  }
+  .truck-menu {
+    padding: 15vh 0;
+  }
+  .truck-menu figure {
+    width: 32%;
+  }
+  .truck-info {
+    padding-bottom: 20vh;
+  }
+  .truck-info iframe {
+    height: 60vh;
+  }
+  .truck-info p {
+    font-size: 24px;
+  }
 }
-
-.review figcaption {
-  text-align: center;
-}
-
-i {
-  color: #FFC300;
-}
-
-i:last-child {
-  color: gainsboro;
-}
-
-/* navigation arrows */
-#leftA {
-  display: flex;
-  position: absolute;
-  bottom: -1500px;
-  left: 5%;
-  font-size: 2.6rem;
-  color: grey;
-}
-
-#rightA {
-  font-size: 2.6rem;
-  display: flex;
-  position: absolute;
-  bottom: -1500px;
-  right: 5%;
-  color: grey;
+@media (min-width: 1000px) {
+  .sign-main {
+    height: 120vh;
+    background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+  }
+  .sign-main > section {
+    padding: 10vh 0;
+    flex-direction: row;
+    background-color: rgba(250, 250, 250, 0.1);
+  }
+  .sign-main i, .sign-main h2, .sign-main h3 {
+    color: black;
+  }
+  .sign-main .sign-left {
+    width: 50%;
+    height: 90%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    row-gap: 3vh;
+    align-items: center;
+    justify-content: center;
+  }
+  .sign-main form {
+    row-gap: 6vh;
+  }
+  .sign-main input {
+    padding: 3%;
+    border-bottom: 1px solid gray;
+  }
+  .sign-main .signIn-right {
+    width: 25%;
+    height: 90%;
+    background-image: url(/img/sign-img/sign-02.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .sign-main .signUp-right {
+    width: 25%;
+    height: 90%;
+    background-image: url(/img/sign-img/sign-01.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .sign-main .signIn-right > section,
+  .sign-main .signUp-right > section {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    row-gap: 5vh;
+  }
+  .sign-main article {
+    padding-top: 20vh;
+  }
+  .sign-main h3 {
+    color: white;
+    padding-bottom: 2vh;
+  }
+  .sign-main p {
+    text-align: center;
+    width: 90%;
+    padding-bottom: 13vh;
+  }
 }/*# sourceMappingURL=style.css.map */

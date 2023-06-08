@@ -976,12 +976,3 @@ i:last-child {
   font-size: 2.6rem;
   color: grey;
 }
-
-#rightA {
-  font-size: 2.6rem;
-  display: flex;
-  position: absolute;
-  bottom: -1800px;
-  right: 5%;
-  color: grey;
-}/*# sourceMappingURL=style.css.map */

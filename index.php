@@ -14,8 +14,8 @@ echo Page::header();
 echo Page::about();
 echo Page::truckList();
 echo Page::gallery();
-echo Page::reviews();
 echo Page::container();
+echo Page::reviews();
 echo Page::map();
 echo Page::footer();
 

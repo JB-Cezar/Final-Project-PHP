@@ -44,7 +44,12 @@ class Page{
     public static function about(){
         $about = '
         <div class="about" id="about">
-
+            <h1>
+                About Us
+            </h1>
+            <p>
+                "Food Trucks" is your culinary companion on the move, bringing an exciting world of flavors and tastes directly to your neighborhood. We are a passionate group of food enthusiasts dedicated to satisfying your cravings with our fleet of vibrant food trucks.
+            </p>
         </div>';
 
         return $about;
@@ -142,7 +147,7 @@ class Page{
     public static function map(){
         $map = '
         <div id="location" class="map">
-            <h2>DINE IN</h2>
+            <h2>LOCATION</h2>
         </div>';
         return $map;
     }

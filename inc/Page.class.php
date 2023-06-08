@@ -68,6 +68,21 @@ class Page{
                     Japanese
                 </div>
             </a>
+            <a href="#">
+                <div class="indian">
+                    Indian
+                </div>
+            </a>
+            <a href="#">
+                <div class="mexican">
+                    Mexican
+                </div>
+            </a>
+            <a href="#">
+                <div class="korea">
+                    Korean
+                </div>
+            </a>
         </div>';
         return $truckList;
     }

@@ -1,15 +1,15 @@
 <?php
 
-class Eployee{
+class Employee{
 
     private int $employeeId;
-    private string $fristName;
+    private string $firstName;
     private string $lastName;
     private string $email;
     private string $gender;
     private string $username;
     private string $password;
-    private string $departament;
+    private string $department;
     private float $salary;
     private int $truckId;
 
@@ -22,12 +22,12 @@ class Eployee{
         return $this;
     }
 
-    public function getFristName(): string{
-        return $this->fristName;
+    public function getFristName():string{
+        return $this->firstName;
     }
 
-    public function setFristName(string $fristName){
-        $this->fristName = $fristName;
+    public function setFristName(string $firstName){
+        $this->firstName = $firstName;
         return $this;
     }
 
@@ -77,11 +77,11 @@ class Eployee{
     }
 
     public function getDepartament(): string{
-        return $this->departament;
+        return $this->department;
     }
 
-    public function setDepartament(string $departament){
-        $this->departament = $departament;
+    public function setDepartament(string $department){
+        $this->department = $department;
         return $this;
     }
 

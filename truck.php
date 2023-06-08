@@ -45,8 +45,10 @@ switch ($option) {
 }
 
 ProductDAO::startDb();
+EmployeeDAO::startDb();
 echo Page::pageHeader("test");
 echo Page::pageHead();
-$newMenu = ProductDAO::getProductsByMenuId($number);
-echo Page::truckPage($newMenu);
+$employees = EmployeeDAO::getEmployeeByTruckId($number);
+$newProduct = ProductDAO::getProductsByMenuId($number);
+echo Page::truckPage($newProduct, $employees);
 echo Page::pageEnd();

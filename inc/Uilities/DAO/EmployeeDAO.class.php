@@ -8,14 +8,14 @@ class EmployeeDAO{
         self::$db = new PDOService("Employee");
     }
 
-    public static function insertUser(User $newUser) {
+    public static function insertEmployee(Employee $newUser) {
 
-        $sql = "INSERT INTO employee(employeeId,fristName,lastName,email,gender,username,password,departament,salary,truckId) VALUES(:employeeId,:fristName,:lastName,:email,:gender,:username,:password,:departament,:salary,:truckId)";
+        $sql = "INSERT INTO employee(employeeId,firstName,lastName,email,gender,username,password,departament,salary,truckId) VALUES(:employeeId,:firstName,:lastName,:email,:gender,:username,:password,:departament,:salary,:truckId)";
 
         self::$db->query($sql);
 
         self::$db->bind(":employeeId",$newUser->getEmployeeId());
-        self::$db->bind(":fristName",$newUser->getFristName());
+        self::$db->bind(":firstName",$newUser->getFristName());
         self::$db->bind(":lastName",$newUser->getLastName());
         self::$db->bind(":email",$newUser->getEmail());
         self::$db->bind(":gender",$newUser->getGender());
@@ -48,5 +48,13 @@ class EmployeeDAO{
         self::$db->execute();
 
         return self::$db->singleResult();
+    }
+    public static function getEmployeeByTruckId($truckId){
+        $sql = "SELECT * FROM employee WHERE truckId = :truckId";
+        self::$db->query($sql);
+        self::$db->bind(":truckId",$truckId);
+        self::$db->execute();
+
+        return self::$db->resultSet();
     }
 }

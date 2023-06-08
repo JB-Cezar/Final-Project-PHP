@@ -10,13 +10,13 @@ class EmployeeDAO{
 
     public static function insertEmployee(Employee $newUser) {
 
-        $sql = "INSERT INTO employee(employeeId,firstName,lastName,email,gender,username,password,departament,salary,truckId) VALUES(:employeeId,:firstName,:lastName,:email,:gender,:username,:password,:departament,:salary,:truckId)";
+        $sql = "INSERT INTO employee(employeeId,first_name,last_name,email,gender,username,password,departament,salary,truckId) VALUES(:employeeId,:first_name,:last_name,:email,:gender,:username,:password,:departament,:salary,:truckId)";
 
         self::$db->query($sql);
 
         self::$db->bind(":employeeId",$newUser->getEmployeeId());
-        self::$db->bind(":firstName",$newUser->getFristName());
-        self::$db->bind(":lastName",$newUser->getLastName());
+        self::$db->bind(":first_name",$newUser->getFristName());
+        self::$db->bind(":last_name",$newUser->getLastName());
         self::$db->bind(":email",$newUser->getEmail());
         self::$db->bind(":gender",$newUser->getGender());
         self::$db->bind(":username",$newUser->getUsername());

@@ -18,7 +18,7 @@ require_once("./inc/Uilities/Page.class.php");
 
 $number = 1; 
 
-$option = $_GET['option']; //$_GET['opcao']
+$option = 2; //$_GET['opcao']
 
 switch ($option) {
     case 1:

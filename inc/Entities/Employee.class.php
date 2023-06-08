@@ -3,8 +3,8 @@
 class Employee{
 
     private int $employeeId;
-    private string $firstName;
-    private string $lastName;
+    private string $first_name;
+    private string $last_name;
     private string $email;
     private string $gender;
     private string $username;
@@ -23,20 +23,20 @@ class Employee{
     }
 
     public function getFristName():string{
-        return $this->firstName;
+        return $this->first_name;
     }
 
-    public function setFristName(string $firstName){
-        $this->firstName = $firstName;
+    public function setFristName(string $first_name){
+        $this->first_name = $first_name;
         return $this;
     }
 
     public function getLastName(): string{
-        return $this->lastName;
+        return $this->last_name;
     }
 
-    public function setLastName(string $lastName){
-        $this->lastName = $lastName;
+    public function setLastName(string $last_name){
+        $this->laslast_nametName = $last_name;
         return $this;
     }
 
